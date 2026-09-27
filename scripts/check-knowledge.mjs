@@ -43,6 +43,16 @@ for (const skill of manifest.skills) {
     assert.ok(template.includes(field), `${skill.name}: template omits handoff field ${field}`);
   }
 }
+for (const filename of ['README.md', 'skills/README.md', 'skills/examples/synthetic-workflow.md']) {
+  const source = await readFile(projectPath(filename), 'utf8');
+  for (const [, link] of source.matchAll(/\]\(([^)]+)\)/g)) {
+    if (/^(?:https?:|mailto:)/i.test(link) || link.startsWith('#')) continue;
+    const target = link.split('#')[0].split('?')[0];
+    if (!target) continue;
+    const resolved = projectPath(path.resolve(path.dirname(path.join(root, filename)), decodeURIComponent(target)));
+    assert.ok((await stat(resolved)).isFile(), `Broken repository link: ${filename} -> ${link}`);
+  }
+}
 const pairIndex = await readFile(new URL('../docs/agent-knowledge/README.md', import.meta.url), 'utf8');
 for (const article of articles) assert.ok(pairIndex.includes('`' + article.id + '`'), `Article has no paired-reference index: ${article.id}`);
 // Test a real generated article (including its twenty questions), not just CLI exit status.

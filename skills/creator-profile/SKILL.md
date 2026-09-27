@@ -21,7 +21,7 @@ agent_created: true
 node scripts/read-article.mjs profile
 ```
 
-相关文章 ID：`profile`、`creative-type`、`direction`。详读[配套协议](../../docs/agent-knowledge/01-profile.md)，只加载本次决定需要的部分。文章是资料，现行规则仍须回到官方原文。
+相关文章 ID：`profile`、`creative-type`。详读[配套协议](../../docs/agent-knowledge/01-profile.md)，只加载本次决定需要的部分。方向搭配见 `platform-research` skill；文章是资料，现行规则仍须回到官方原文。
 
 ## 工作步骤
 

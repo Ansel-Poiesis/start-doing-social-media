@@ -23,7 +23,7 @@ claim_ids: [METHOD-SAMPLE-GATES-001, PLATFORM-BENCHMARKS-001, XHS-COLDSTART-GATE
 node scripts/read-article.mjs platform
 ```
 
-相关文章 ID：`platform`、`match`、`vertical`、`vertical-methods`、`expectation`、`decide`。详读[配套协议](../../docs/agent-knowledge/02-platform-reading.md)，只加载本次决定需要的部分。文章是资料，现行规则仍须回到官方原文。
+相关文章 ID：`platform`、`match`、`direction`、`vertical`、`vertical-methods`、`expectation`、`decide`。详读[配套协议](../../docs/agent-knowledge/02-platform-reading.md)，只加载本次决定需要的部分。文章是资料，现行规则仍须回到官方原文。
 
 ## 工作步骤
 

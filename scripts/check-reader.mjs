@@ -43,6 +43,24 @@ for (const id of ['gates', 'hyp-m', 'hyp-c', 'hyp-t', 'hyp-e', 'hyp-l', 'lib-cro
 for (const id of ['platform-contract', 'topic-gate', 'production-brief', 'compliance-diff', 'prereg-manual', 'decision-record']) {
   assert.ok(articleById[id] && readingIds.includes(id), 'Missing guide article: ' + id);
 }
+const workflowSkills = {
+  profile: 'creator-profile', platform: 'platform-research', topic: 'topic-planning',
+  production: 'production-brief', compliance: 'publication-review', iteration: 'content-retrospective',
+};
+for (const [articleId, skill] of Object.entries(workflowSkills)) {
+  const handoff = articleById[articleId].sections.find(section => section.id === 'workflow-handoff');
+  assert.ok(handoff, 'Missing stage handoff on article: ' + articleId);
+  for (const link of [`skills/${skill}/SKILL.md`, `skills/${skill}/assets/template.md`]) {
+    assert.ok(handoff.html.includes(`href="${link}"`), 'Missing skill/template link in ' + articleId + ': ' + link);
+  }
+  assert.ok(handoff.html.includes('输入') && handoff.html.includes('交接物') && handoff.html.includes('下一步'), 'Incomplete handoff fields: ' + articleId);
+}
+for (const id of ['direction', 'topic', 'production', 'iteration']) {
+  const example = articleById[id].sections.find(section => section.id === 'synthetic-artifact');
+  assert.ok(example && example.html.includes('合成教学') && example.html.includes('反例'), 'Missing labeled teaching artifact/counterexample: ' + id);
+}
+assert.ok(articleById.iteration.sections.find(section => section.id === 'synthetic-artifact').html.includes('分母'), 'Retrospective example must cover missing denominator');
+assert.ok(articleById.iteration.sections.find(section => section.id === 'synthetic-artifact').html.includes('回执'), 'Retrospective example must cover missing publication receipt');
 
 assert.equal(coreQuestions.length, 20, 'The creator interview should have twenty core questions');
 assert.equal(new Set(coreQuestions.map(question => question.id)).size, coreQuestions.length, 'Duplicate interview question IDs');

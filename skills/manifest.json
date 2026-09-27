@@ -7,8 +7,7 @@
       "title": "创作者档案",
       "articles": [
         "profile",
-        "creative-type",
-        "direction"
+        "creative-type"
       ],
       "inputs": [
         "创作者自述或已确认档案",
@@ -26,6 +25,7 @@
       "articles": [
         "platform",
         "match",
+        "direction",
         "vertical",
         "vertical-methods",
         "expectation",
