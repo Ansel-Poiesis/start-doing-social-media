@@ -106,4 +106,4 @@ git diff --check: passed.
 
 运行时入口中没有命中的旧样式类已从 `styles.css` 删除：失效面包屑和导航标记、旧访谈/表单、对话、匹配与垂域工作台、输出简报及孤立阅读条目。后续覆盖层中仍服务当前阅读器的设计规则保留。清理基于 `index.html`、`app.js`、`content*.js` 与题库的类名交叉检查；`.question-help`、`.question-example`、`.text-link` 等当前仍用样式保留，最终没有未匹配的类选择器。
 
-本地验证：`npm ci`、`npm run test:browser`（6 passed）、`npm run check`、`npm run check:release`。PR 推送后的远端 Actions 结果需另外记录；本地通过不等于远端 CI 或维护者审查完成。
+本地验证：`npm ci`、`npm run test:browser`（6 passed）、`npm run check`、`npm run check:release`。PR #11 的代码提交 `94cf035` 远端 Actions run [36323714438](https://github.com/Ansel-Poiesis/start-doing-social-media/actions/runs/36323714438) 中 Chromium、Ubuntu 与 Windows 三项均通过。PR 仍开放且未合并；本记录不表示维护者已批准，也不升级 0.11.0 或打 tag。
