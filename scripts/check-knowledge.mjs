@@ -14,6 +14,9 @@ assert.equal(manifest.schemaVersion, 1, 'Unsupported skill manifest schema');
 assert.equal(new Set(manifest.skills.map(skill => skill.name)).size, manifest.skills.length, 'Duplicate skill names');
 assert.ok(manifest.skills.length >= 6, 'Missing workflow skill');
 const names = new Set(manifest.skills.map(skill => skill.name));
+for (const name of ['account-operations', 'cross-platform-adaptation', 'commercial-cooperation']) {
+  assert.ok(names.has(name), 'Missing TASK-10.24 workflow skill: ' + name);
+}
 function projectPath(filename) {
   const resolved = path.resolve(root, filename);
   const relative = path.relative(root, resolved);
@@ -43,7 +46,23 @@ for (const skill of manifest.skills) {
     assert.ok(template.includes(field), `${skill.name}: template omits handoff field ${field}`);
   }
 }
-for (const filename of ['README.md', 'skills/README.md', 'skills/examples/synthetic-workflow.md']) {
+const task24Contracts = {
+  'account-operations': ['本人选择的目标', '缩小、顺延、取消或暂停触发条件', '获准读取', '评论类别', '实际工时与成本'],
+  'cross-platform-adaptation': ['母稿 ID / 版本', '派生 ID / 版本', '许可凭据', '当前官方原文 URL', '发布状态与实际回执'],
+  'commercial-cooperation': ['拒绝 / 暂缓', '验收人', '修订轮次', '付费广告', '实际到账', '凭据']
+};
+for (const [name, fields] of Object.entries(task24Contracts)) {
+  const skill = manifest.skills.find(item => item.name === name);
+  const template = await readFile(projectPath(skill.template), 'utf8');
+  for (const field of fields) assert.ok(template.includes(field), name + ': template omits workflow field ' + field);
+  const linkedArticle = skill.articles.map(id => articleById[id]).find(Boolean);
+  assert.ok(linkedArticle?.sections.some(section => section.html.includes(skill.path) && section.html.includes(skill.template)), name + ': paired article must link its skill and template');
+}
+const task24Example = await readFile(projectPath('skills/examples/operations-distribution-commercial.md'), 'utf8');
+for (const marker of ['合成教学', '未知', '拒绝', '暂停', '没有访问账号', '没有发布']) {
+  assert.ok(task24Example.includes(marker), 'TASK-10.24 example omits boundary marker: ' + marker);
+}
+for (const filename of ['README.md', 'skills/README.md', 'skills/examples/synthetic-workflow.md', 'skills/examples/operations-distribution-commercial.md']) {
   const source = await readFile(projectPath(filename), 'utf8');
   for (const [, link] of source.matchAll(/\]\(([^)]+)\)/g)) {
     if (/^(?:https?:|mailto:)/i.test(link) || link.startsWith('#')) continue;

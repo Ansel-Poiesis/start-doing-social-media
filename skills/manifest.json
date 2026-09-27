@@ -121,6 +121,54 @@
       "path": "skills/content-retrospective/SKILL.md",
       "template": "skills/content-retrospective/assets/template.md",
       "reference": "docs/agent-knowledge/05-observation-and-system-learning.md"
+    },
+    {
+      "name": "account-operations",
+      "title": "账号运营",
+      "articles": [
+        "operations"
+      ],
+      "inputs": [
+        "本人确认的目标、非目标与可承受容量",
+        "内容队列、协作者职责和评论边界"
+      ],
+      "output": "operations-plan",
+      "next": "topic-planning",
+      "path": "skills/account-operations/SKILL.md",
+      "template": "skills/account-operations/assets/template.md",
+      "reference": "docs/agent-knowledge/06-account-operations.md"
+    },
+    {
+      "name": "cross-platform-adaptation",
+      "title": "跨平台版本适配",
+      "articles": [
+        "distribution"
+      ],
+      "inputs": [
+        "带版本的母稿、事实与限定",
+        "目标平台/入口、素材权利和用途范围"
+      ],
+      "output": "distribution-matrix",
+      "next": "publication-review",
+      "path": "skills/cross-platform-adaptation/SKILL.md",
+      "template": "skills/cross-platform-adaptation/assets/template.md",
+      "reference": "docs/agent-knowledge/07-cross-platform-adaptation.md"
+    },
+    {
+      "name": "commercial-cooperation",
+      "title": "可选商业合作",
+      "articles": [
+        "commercial"
+      ],
+      "inputs": [
+        "创作者主动选择与合作方授权",
+        "产品主张、交付验收、使用权和披露范围"
+      ],
+      "output": "cooperation-record",
+      "next": "publication-review",
+      "path": "skills/commercial-cooperation/SKILL.md",
+      "template": "skills/commercial-cooperation/assets/template.md",
+      "reference": "docs/agent-knowledge/08-commercial-cooperation.md"
     }
   ]
 }

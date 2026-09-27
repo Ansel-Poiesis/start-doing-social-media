@@ -1,6 +1,6 @@
 # 内置 skills
 
-这是项目自带的六份工作流协议。克隆完整仓库后，让支持文件读取的协作工具读取指定 SKILL.md 即可；不需要 API Key，也不自动安装到个人技能根。保留整个仓库路径，单独复制一个文件会丢失知识引用。
+这是项目自带的九份工作流协议。克隆完整仓库后，让支持文件读取的协作工具读取指定 SKILL.md 即可；不需要 API Key，也不自动安装到个人技能根。保留整个仓库路径，单独复制一个文件会丢失知识引用。
 
 | 当前任务 | Skill | 交付物 |
 | --- | --- | --- |
@@ -10,9 +10,12 @@
 | 交接图文或视频制作 | [production-brief](production-brief/SKILL.md) | [空白模板](production-brief/assets/template.md) | 制作单、素材和事实清单 |
 | 成品准备发布 | [publication-review](publication-review/SKILL.md) | [空白模板](publication-review/assets/template.md) | 逐平台审核和发布交接单 |
 | 复盘并更新下一条 | [content-retrospective](content-retrospective/SKILL.md) | [空白模板](content-retrospective/assets/template.md) | 观察记录、归因边界、改动提案 |
+| 安排可持续的账号工作与社群边界 | [account-operations](account-operations/SKILL.md) | [空白模板](account-operations/assets/template.md) | 本人确认的计划、权限与暂停条件 |
+| 管理母稿、平台版本和素材权利 | [cross-platform-adaptation](cross-platform-adaptation/SKILL.md) | [空白模板](cross-platform-adaptation/assets/template.md) | 版本矩阵、逐项权利和平台审核状态 |
+| 处理本人选择的商业合作 | [commercial-cooperation](commercial-cooperation/SKILL.md) | [空白模板](commercial-cooperation/assets/template.md) | 交付/验收、使用权、披露与实际核算 |
 
 使用示例：“读取 skills/topic-planning/SKILL.md，依据我提供的研究简报生成三个选题候选；缺少的事实写未知。”
 
-每个目录包含 SKILL.md 和 assets/template.md。清单由 [manifest.json](manifest.json) 管理，共同约定见 [PROTOCOL.md](PROTOCOL.md)。内容依据仍在文章与配套协议中；skill 不复制过期的平台门槛。
+每个目录包含 SKILL.md 和 assets/template.md。清单由 [manifest.json](manifest.json) 管理，共同约定见 [PROTOCOL.md](PROTOCOL.md)。内容依据仍在文章与配套协议中；skill 不复制过期的平台门槛。新增三个工作流的拒绝、未知和暂停分支见[合成教学案例](examples/operations-distribution-commercial.md)。
 
 可以从任意阶段进入。缺少上游材料时先缩小判断，不能强迫每次完成六阶段。相关阅读文章会直接列出本阶段输入、skill、空白模板、交接物和下一步；运行 `node scripts/read-article.mjs --list` 查文章 ID，或 `node scripts/read-article.mjs profile` 导出正文供阅读。完整交接演示见 [synthetic-workflow.md](examples/synthetic-workflow.md)。

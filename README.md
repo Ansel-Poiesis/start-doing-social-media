@@ -1,6 +1,6 @@
 # 开始做自媒体吧
 
-从创作者档案、平台理解、方向与选题，到制作、发布准备、持续运营和复盘的中文知识库。包含 **52 篇阅读文章、配套证据与工作协议、6 个内置 skills**。
+从创作者档案、平台理解、方向与选题，到制作、发布准备、持续运营和复盘的中文知识库。包含 **52 篇阅读文章、配套证据与工作协议、9 个内置 skills**。
 
 当前版本 **0.11.0**：首个公开维护版本。知识链路已有六阶段入口；平台事实、方法效果和真实贯穿案例仍有缺口，具体见 [逐篇审计](docs/audit/README.md) 与 [开发任务索引](TODO.md)。文章数量和工程检查通过不代表全库事实已验证。
 
@@ -14,7 +14,7 @@ cd start-doing-social-media
 npm start
 ```
 
-打开 [本地阅读器](http://127.0.0.1:8784/)。阅读器支持主题切换、章节目录、文章锚点和窄屏表格；不接收账号、访谈答案或模型密钥。浏览器可读取文章直接链接的六个 skill、六份空白模板、合成贯穿样例和指标审计报告；其余仓库文件不由阅读服务提供。
+打开 [本地阅读器](http://127.0.0.1:8784/)。阅读器支持主题切换、章节目录、文章锚点和窄屏表格；不接收账号、访谈答案或模型密钥。浏览器可读取文章直接链接的九个 skill、九份空白模板、合成案例和指标审计报告；其余仓库文件不由阅读服务提供。
 
 ```bash
 npm run check
@@ -34,14 +34,14 @@ node scripts/read-article.mjs profile
 | 怎样把承诺做出来 | production、production-brief | [production-brief](skills/production-brief/SKILL.md) | 制作单、素材/事实清单 |
 | 成品能否进入发布审核 | compliance、compliance-diff | [publication-review](skills/publication-review/SKILL.md) | 按平台分开的检查与交接 |
 | 结果支持改什么 | iteration、competition、decision-record | [content-retrospective](skills/content-retrospective/SKILL.md) | 复盘与下一轮改动 |
-| 运营与跨平台合作 | operations、distribution、commercial | 参考指南与空白记录格式 | 排期、平台版本、授权与交付 |
+| 运营与跨平台合作 | operations、distribution、commercial | [account-operations](skills/account-operations/SKILL.md)、[cross-platform-adaptation](skills/cross-platform-adaptation/SKILL.md)、[commercial-cooperation](skills/commercial-cooperation/SKILL.md) | 可暂停的计划、逐平台版本矩阵、可选合作记录 |
 
-每个 skill 提供触发条件、输入、步骤、模板、停止条件和下一阶段入口。六阶段入口文章会链接对应 skill、空白模板、输入、产物和下一步；方向页、选题页、制作页与复盘页各有合成教学产物及反例。克隆完整仓库后，要求协作工具读取相应 SKILL.md；不需要安装到个人技能目录。详细方法见 [skills 说明](skills/README.md) 和 [合成交接演示](skills/examples/synthetic-workflow.md)。
+每个 skill 提供触发条件、输入、步骤、模板、停止条件和下一阶段入口。六阶段入口文章会链接对应 skill、空白模板、输入、产物和下一步；方向页、选题页、制作页与复盘页各有合成教学产物及反例。克隆完整仓库后，要求协作工具读取相应 SKILL.md；不需要安装到个人技能目录。运营、跨平台与商业分支的拒绝/暂停示例见[合成案例](skills/examples/operations-distribution-commercial.md)，六阶段贯穿示例见 [synthetic-workflow.md](skills/examples/synthetic-workflow.md)。详细方法见 [skills 说明](skills/README.md)。
 
 ## 当前完成度
 
 - **阅读与结构：**六主题、52 篇正文、52 个 article_id 配套协议；运行检查和浏览器核验见 [工程报告](docs/audit/2026-09-27-engineering.md)。
-- **可执行方法：**六技能与六模板已建立；教学干跑用于检查交接，不计入真实案例。
+- **可执行方法：**九技能与九模板已建立；教学干跑用于检查交接，不计入真实案例。
 - **文章质量：**已逐篇阅读全文并记录五维评价；发现旧来源勘误未同步到消费文章、操作模板缺失与过度确定结论。首发修订和剩余问题单独记录，不能把修订前评分当修订后复审。
 - **证据：**G02 的 95 张卡有来源目录，部分仍只到书目/媒体线索；来源定位与主张核验分开记录。平台门槛、费用和 UI 使用前需核当前原文。
 - **真实验证：**尚未完成创作者试答与真实作品贯穿链路。没有真实反馈、后台数据或发布回执的环节保持未验证。
