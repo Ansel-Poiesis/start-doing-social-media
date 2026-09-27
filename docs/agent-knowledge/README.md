@@ -11,7 +11,7 @@
 - 高风险规则与数字登记在 `../claims/registry.json`。修订已有 claim 时先读取消费者清单，逐项更新正文、卡片、协议和 skills；随后运行 `npm run check`。登记尚未覆盖全库，未登记不等于已验证。
 - 涉及具体创作者档案时，应优先复用创作者原话与本人确认过的记录；不得把简短回答改写成稳定人格、能力或市场结论。
 - 创作者档案的题目、理由、示例与选项以 creator-interview.js 为纯题库源；条件追问、字段整理和档案输出由本目录协议及 skills/creator-profile/SKILL.md 维护。网站只加载纯题库生成说明页，不加载执行逻辑，也不保存访客回答。
-- 配对范围覆盖全部 49 篇网站文章。00–02 提供系统导读、档案和平台阅读基础；03–05 按工作阶段归组，并为每个 article_id 保留独立参考说明。新增文章时同步增加对应 ID 说明与索引行。
+- 配对范围覆盖全部 52 篇网站文章。00–02 提供系统导读、档案和平台阅读基础；03–08 按工作阶段归组，并为每个 article_id 保留独立参考说明。新增文章时同步增加对应 ID 说明与索引行。
 
 ## 配对目录
 
@@ -23,3 +23,6 @@
 | `creative-type`、`xhs`、`douyin`、`wechat`、`bilibili`、`zhihu`、`toutiao`、`baijiahao`、`cross-mech`、`platform-contract`、`match`、`direction`、`vertical`、`vertical-methods`、`expectation`、`decide`、`topic`、`topic-gate`、`gates` | 对应人类文章 | [03-platform-and-direction.md](03-platform-and-direction.md) | 每个 ID 有独立任务卡；方向输出保留证据、代价与创作者裁决 |
 | `production`、`production-brief`、`compliance`、`compliance-diff` | 对应人类文章 | [04-production-and-compliance.md](04-production-and-compliance.md) | 制作交接、逐字段制作单与发布硬闸门 |
 | `evidence`、`iteration`、`competition`、`prereg-manual`、`decision-record`、`constitution`、`hypotheses`、`cards`、`hyp-m`、`hyp-c`、`hyp-t`、`hyp-e`、`hyp-l`、`lib-cross`、`lib-platform`、`lib-academic`、`lib-benchmark`、`lib-monetize`、`lib-methods`、`mapping`、`governance`、`resources`、`about` | 对应人类文章 | [05-observation-and-system-learning.md](05-observation-and-system-learning.md) | 每个 ID 有独立处理规则，覆盖证据、复盘、治理与系统维护 |
+| `operations` | 持续运营与评论/社群边界 | [06-account-operations.md](06-account-operations.md) | 可按目标裁剪的排期、评论处理与退出条件 |
+| `distribution` | 跨平台版本适配 | [07-cross-platform-adaptation.md](07-cross-platform-adaptation.md) | 母稿、版本差异、权利和逐平台发布检查 |
+| `commercial` | 商业合作与核算 | [08-commercial-cooperation.md](08-commercial-cooperation.md) | 可选合作流程、授权范围、交付和金额分栏 |
