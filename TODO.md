@@ -12,7 +12,7 @@
 | TASK-10.14–10.17 | 主张登记传播、七平台核验、指标/假设复核、六阶段贯穿样例 | docs/claims/、docs/audit/2026-09-27-claim-propagation.md、各 TASK-10.15/16/17 报告 |
 | TASK-10.13.1 | 修订后 49 篇复评、完成度矩阵与去重后续任务 | docs/audit/2026-09-27-postfix-review.md |
 | TASK-10.19 | 运营、分发与商业资料 | 三篇指南、配套协议、覆盖矩阵 |
-| TASK-10.24 | 将运营、跨平台与可选商业合作接入内置 skills | 九技能/模板、合成分支验证、阅读器白名单 |
+| TASK-10.24 | 将运营、跨平台与可选商业合作接入内置 skills | 九技能/模板、合成分支验证、阅读器白名单、[PR #12](https://github.com/Ansel-Poiesis/start-doing-social-media/pull/12) |
 
 实际提交、远端与 CI 结果见 [首版交付记录](docs/releases/0.11.0.md)。技术检查、内容修订与真实验证分别记录。
 
