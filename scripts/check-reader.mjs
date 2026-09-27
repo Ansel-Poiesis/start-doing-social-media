@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFile, stat } from 'node:fs/promises';
-import { articles, sections, readingIds, articleById, homePage } from '../content.js';
+import { articles, sections, readingIds, articleById, homePage, workflowOverviewStages } from '../content.js';
 import { coreQuestions } from '../creator-interview.js';
 
 assert.equal(new Set(articles.map(article => article.id)).size, articles.length, 'Duplicate article IDs');
@@ -43,10 +43,29 @@ for (const id of ['gates', 'hyp-m', 'hyp-c', 'hyp-t', 'hyp-e', 'hyp-l', 'lib-cro
 for (const id of ['platform-contract', 'topic-gate', 'production-brief', 'compliance-diff', 'prereg-manual', 'decision-record']) {
   assert.ok(articleById[id] && readingIds.includes(id), 'Missing guide article: ' + id);
 }
-const workflowSkills = {
-  profile: 'creator-profile', platform: 'platform-research', topic: 'topic-planning',
-  production: 'production-brief', compliance: 'publication-review', iteration: 'content-retrospective',
-};
+const skillManifest = JSON.parse(await readFile(new URL('../skills/manifest.json', import.meta.url), 'utf8'));
+const overviewSequence = articleById.map.sections.find(section => section.id === 'sequence');
+assert.ok(overviewSequence, 'Missing six-stage overview');
+assert.equal(homePage.secondary.href, '#/map', 'The home page must link to the six-stage overview');
+assert.deepEqual(workflowOverviewStages.map(stage => stage.articleId), ['profile', 'platform', 'topic', 'production', 'compliance', 'iteration'], 'The overview must follow the six-stage workflow order');
+assert.deepEqual(workflowOverviewStages.map(stage => stage.skill), skillManifest.skills.map(skill => skill.name), 'Overview stages must map one-to-one to the six registered skills');
+const workflowSkills = Object.fromEntries(workflowOverviewStages.map(stage => [stage.articleId, stage.skill]));
+const overviewRows = [...overviewSequence.html.matchAll(/<li data-workflow-stage="(\d+)">([\s\S]*?)<\/li>/g)];
+assert.equal(overviewRows.length, workflowOverviewStages.length, 'Every workflow stage needs one overview entry');
+for (const [index, stage] of workflowOverviewStages.entries()) {
+  const row = overviewRows[index];
+  const skill = skillManifest.skills.find(item => item.name === stage.skill);
+  assert.ok(skill, 'Missing registered skill for overview stage: ' + stage.skill);
+  assert.equal(Number(row[1]), index + 1, 'Workflow stage order is inconsistent');
+  assert.ok(articleById[stage.articleId] && readingIds.includes(stage.articleId), 'Overview links to a missing article route: ' + stage.articleId);
+  assert.ok(row[2].includes(`<a href="#/${stage.articleId}">${stage.title}</a>`), 'Overview article link needs a clear stage label: ' + stage.articleId);
+  assert.ok(stage.summary && row[2].includes(stage.summary), 'Overview stage needs a summary: ' + stage.articleId);
+  for (const [path, label] of [[skill.path, '读取内置 skill'], [skill.template, '打开空白模板']]) {
+    assert.ok(path && row[2].includes(`<a href="${path}">${label}</a>`), 'Missing direct skill/template link in overview: ' + stage.articleId + ' -> ' + path);
+    await stat(new URL('../' + path, import.meta.url));
+  }
+}
+assert.ok(overviewSequence.html.includes('不是实际流程或方法效果的验证'), 'The overview must not imply that the workflow has been validated');
 for (const [articleId, skill] of Object.entries(workflowSkills)) {
   const handoff = articleById[articleId].sections.find(section => section.id === 'workflow-handoff');
   assert.ok(handoff, 'Missing stage handoff on article: ' + articleId);
