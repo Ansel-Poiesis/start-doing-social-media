@@ -13,6 +13,8 @@
 !/TODO.md
 !/package.json
 !/package-lock.json
+!/playwright.config.js
+!/tests/
 !/index.html
 !/mark.svg
 !/styles.css
@@ -35,6 +37,8 @@
 **/*.log
 **/.env*
 **/node_modules/
+**/test-results/
+**/playwright-report/
 **/__pycache__/
 **/*.pyc
 /scripts/check-legacy.mjs

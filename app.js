@@ -64,6 +64,7 @@ function renderArticle(article) {
     '<a class="page-card is-next" href="#/' + (next ? next.id : 'resources') + '"><span class="page-card-label">下一篇 →</span><span class="page-card-title">' + escapeHTML(next ? next.title : '研究资料与更新') + '</span></a></nav>';
   $('#main').innerHTML = '<article><header class="article-header"><h1>' + escapeHTML(article.title) + '</h1><p class="lead">' + escapeHTML(article.intro) + '</p><p class="article-status">建设状态：' + escapeHTML(article.status) + '</p></header>' + inlineToc +
     contentSections.map(section => '<section class="article-section" id="' + escapeHTML(section.id) + '"><h2>' + escapeHTML(section.title) + '</h2>' + section.html + '</section>').join('') + sources + pagination + '</article>' + siteFooter();
+  labelScrollableTables();
   renderToc(tocItems, article.id);
 }
 
@@ -94,10 +95,22 @@ function renderToc(items, id) {
   });
 }
 
+function labelScrollableTables() {
+  document.querySelectorAll('#main .table-scroll').forEach((region, index) => {
+    const sectionTitle = region.closest('.article-section')?.querySelector(':scope > h2')?.textContent.trim();
+    const caption = region.querySelector('caption')?.textContent.trim();
+    const label = caption || `${sectionTitle || '文章'}表格 ${index + 1}`;
+    region.tabIndex = 0;
+    region.setAttribute('role', 'group');
+    region.setAttribute('aria-label', `${label}（可横向滚动）`);
+  });
+}
+
 function route() {
   const [rawId, anchor] = location.hash.replace(/^#\/?/, '').split('/');
   const id = rawId || 'home';
   if (id !== currentId) {
+    const shouldMoveFocus = currentId !== '';
     currentId = id;
     renderSidebar(id === 'home' ? '' : id);
     if (id === 'home') renderHomePage();
@@ -110,7 +123,7 @@ function route() {
     }
     document.title = id === 'home' ? '开始做自媒体吧｜创作者学习与实践' : (Object.hasOwn(articleById, id) ? articleById[id].title : '开始做自媒体吧') + ' · 开始做自媒体吧';
     if (isNarrowNav()) setSidebar(false);
-    $('#main').focus({ preventScroll: true });
+    if (shouldMoveFocus) $('#main').focus({ preventScroll: true });
     window.scrollTo(0, 0);
   }
   if (anchor) requestAnimationFrame(() => document.getElementById(anchor)?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' }));

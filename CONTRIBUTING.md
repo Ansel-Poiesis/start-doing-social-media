@@ -7,7 +7,7 @@
 1. 先确认 Issue/维护任务、负责人及影响的 article_id。维护者使用 Player Todo 管理活跃状态，GitHub Issue 是外部讨论入口。
 2. 从 main 新建分支：fix/短描述、docs/短描述 或 feat/短描述。记录基准 commit；同一文件由一个协作者修改。
 3. 修改主事实源，搜索所有消费该主张的文章、参考协议与 skills。新增发现必须附出处或明确写为待核，不以网页命中代替原文阅读。
-4. 运行 npm run check，检查变更后的文章与链接。平台现行门槛/费用/法律主张需要对应官方原文、核验日期与适用条件。
+4. 运行 npm run check，检查变更后的文章与链接。若修改阅读器或样式，另运行 npm ci、npx playwright install chromium 和 npm run test:browser。平台现行门槛/费用/法律主张需要对应官方原文、核验日期与适用条件。
 5. 发 PR，说明问题、读者可见变化、验证、未完成项和任务 ID。由维护者复核后合并；只有维护者打发布 tag。
 
 ## 内容标准

@@ -81,3 +81,29 @@ git diff --check: passed.
 ```
 
 文章锚点与页面链接检查覆盖文章模块；逐个 HTTP GET/HEAD 核对 31 个文件的内容、MIME 和响应头。仓库 README、skills README、六阶段示例及 skill 内部相对链接经文件系统解析检查。此处确认的是资源可达和结构交接，不是创作者试用、平台规则核验或内容效果验证；示例中的虚构数值不属于项目观察。
+
+## TASK-10.20 浏览器回归与历史样式清理
+
+在 Node.js v24.18.0、Playwright 1.63.0、Chromium headless 环境中加入可重复的浏览器测试，并在 GitHub Actions 新增独立 Ubuntu job。Playwright 配置自启仓库静态服务器（127.0.0.1:4173），不读取已有服务状态；依赖版本由 `package-lock.json` 固定。现有 Ubuntu/Windows 结构及发布扫描 job 保持不变。
+
+`npm run test:browser` 的 6 个用例全部通过：
+
+- 逐篇直达全部 49 篇文章，标题、当前导航和每页目录锚点匹配正文。
+- 首次加载后按 Tab 首先聚焦“跳转到正文”，按 Enter 后正文获得焦点，文章路由不变。此前路由初始化提前把焦点移至正文，实测会跳过此链接；现仅在后续路由变化时移动焦点。
+- 首页和未知路由清空本页目录；主题按钮状态、配色变化及本地保存值在重载后保持。
+- 390 × 844 视口下，用 `#/map` 的三列表格（4 行）检查浅色和深色主题。滚动容器有可访问名称、Tab 顺序位置和可见焦点；焦点在容器上时按 ArrowRight 可滚到末列，页面本身没有横向溢出。该用例对应键盘可操作及焦点可见的定向检查，不代表整个产品完成 WCAG 审计。依据：[WCAG 2.1.1 Keyboard](https://www.w3.org/WAI/WCAG21/Understanding/keyboard)、[WCAG 2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html)、[W3C scrollable content focus rule](https://www.w3.org/WAI/standards-guidelines/act/rules/0ssw9k)。
+
+### 截图对照
+
+使用同一版本 Chromium、主题、本地存储值、视口和路由，在清理前后捕获首页（1440 × 1000，全页）与 `#/map` 长表格（390 × 844，视口）。四组 PNG 的前后 SHA-256 完全相同，说明本次无障碍属性及 CSS 删除没有改变这些阅读画面。图像保留在 `docs/audit/evidence/task-10.20/`：
+
+| 场景 | 清理前 | 清理后 | SHA-256（前后相同） |
+| --- | --- | --- | --- |
+| 首页浅色 | [PNG](evidence/task-10.20/before-home-light.png) | [PNG](evidence/task-10.20/after-home-light.png) | `ABBBBC0976B92A5405ED82A5D92641CBE8EE204AEADFD97B04FF5C0E74126B95` |
+| 首页深色 | [PNG](evidence/task-10.20/before-home-dark.png) | [PNG](evidence/task-10.20/after-home-dark.png) | `08B28C6B6B90D51ADC8093BAE94A57D67E2530216485D9A595716E11E484598C` |
+| `#/map` 表格浅色 | [PNG](evidence/task-10.20/before-table-mobile-light.png) | [PNG](evidence/task-10.20/after-table-mobile-light.png) | `C7CB083B2DCF94607CD5D4DF3DC6D4A2C2D7202B5CEB79BEDE8F4559DE1CA04C` |
+| `#/map` 表格深色 | [PNG](evidence/task-10.20/before-table-mobile-dark.png) | [PNG](evidence/task-10.20/after-table-mobile-dark.png) | `156BAB1475A03B9CE40CBAAC44AE1E52C077D9047E41E2840E477C7C1CFEF290` |
+
+运行时入口中没有命中的旧样式类已从 `styles.css` 删除：失效面包屑和导航标记、旧访谈/表单、对话、匹配与垂域工作台、输出简报及孤立阅读条目。后续覆盖层中仍服务当前阅读器的设计规则保留。清理基于 `index.html`、`app.js`、`content*.js` 与题库的类名交叉检查；`.question-help`、`.question-example`、`.text-link` 等当前仍用样式保留，最终没有未匹配的类选择器。
+
+本地验证：`npm ci`、`npm run test:browser`（6 passed）、`npm run check`、`npm run check:release`。PR 推送后的远端 Actions 结果需另外记录；本地通过不等于远端 CI 或维护者审查完成。
