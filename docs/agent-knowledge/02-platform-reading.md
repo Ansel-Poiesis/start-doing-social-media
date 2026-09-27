@@ -5,6 +5,7 @@ paired_human_article: ../../content.js#platform
 version: 0.11.0
 updated: 2026-09-27
 status: working-draft
+claim_ids: [XHS-COLDSTART-GATES-001, XHS-ACCOUNT-COMMERCE-TERMS-001, XHS-PENALTY-SCORES-001, DOUYIN-COMPLETION-BENCHMARK-001, PLATFORM-BENCHMARKS-001, WECHAT-COMMERCE-TERMS-001, WECHAT-OPEN-RATE-BENCHMARKS-001, BILI-WINDOW-THRESHOLDS-001, BILI-RECOMMENDATION-FORMULA-001, BILI-PLAYTIME-METRIC-STATUS-001, ZHIHU-WILSON-SCOPE-001, TOUTIAO-FIRST-PUBLISH-72H-001, TOUTIAO-MULTIPLIERS-001]
 ---
 
 # Agent 阅读版：怎样真正读懂一个平台
@@ -32,6 +33,8 @@ Agent 不得假设自己能读取网站页面状态、浏览器账号、访谈�
 缺少目标观众、内容对象或决策时，不要先生成“适合/不适合”的结论。可以先解释需要哪些观察，再把未知项列出。不要为了走完整流程而要求重建整份创作者档案。
 
 ## 3. 建立来源账本
+
+开始核验前先查 `docs/claims/registry.json`，复用已有 claim_id、范围与状态；若新来源改变已有判断，按该记录的消费者清单逐项修订文章、经验卡、协议和 skills，再运行 `npm run check`。本登记目前只覆盖首批 P0 主张。
 
 每个会影响建议的事实单独分配 claim_id，并留下支持材料：
 

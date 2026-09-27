@@ -3,7 +3,7 @@ const section = (id, title, html) => ({ id, title, html });
 
 export const platformArticlesB = [
   {
-    id: 'wechat', title: '微信生态', short: '微信生态', category: '关于平台的一切', status: "首版勘误 · 待证据复核",
+    id: 'wechat', claimIds: ['WECHAT-COMMERCE-TERMS-001', 'WECHAT-OPEN-RATE-BENCHMARKS-001', 'TOUTIAO-FIRST-PUBLISH-72H-001'], title: '微信生态', short: '微信生态', category: '关于平台的一切', status: "首版勘误 · 待证据复核",
     intro: '社交分发 + 搜索 + 推荐的三引擎系统，三引擎在 2024–2026 年被重新配平；社交链是不可移植的护城河。全文依次覆盖平台画像与用户场景、机制叙事与证据链、规则、商业与变现，以及创作者实作与检查清单。',
     sections: [
       section('open', '订阅触达的六年腰斩', "<p>订阅打开、推荐阅读与总阅读量应分开记录。G02追溯中的新榜2019报告给出特定样本的单篇打开率中位数，不能把它写成当前全平台均值；2025相关二手数字的底层报告与样本尚未完整定位。</p><p>本页不再把0.89%与1.2%–3%拼成统一区间，也不由跨来源数字计算六年跌幅。常读人群与打开率可以关联观察，但不能称为唯一质量指标。</p>"),
@@ -25,7 +25,7 @@ export const platformArticlesB = [
     ]
   },
   {
-    id: 'bilibili', title: 'B站', short: 'B站', category: '关于平台的一切', status: "首版勘误 · 待证据复核",
+    id: 'bilibili', claimIds: ['BILI-WINDOW-THRESHOLDS-001', 'BILI-RECOMMENDATION-FORMULA-001', 'BILI-PLAYTIME-METRIC-STATUS-001', 'PLATFORM-BENCHMARKS-001'], title: 'B站', short: 'B站', category: '关于平台的一切', status: "首版勘误 · 待证据复核",
     intro: "围绕内容发现、互动、系列交付与商业工具理解B站，区分历史产品计划、官方公开条件和未验证运营经验。具体功能以当前作品页和创作中心为准。",
     sections: [
       section('metrics', '北极星指标的官方变迁', "<p>原稿将2023年宣布的播放时长外显计划写成已全面实行的现状，证据不足，现撤回。<a href=\"https://www.huxiu.com/moment/983925.html\">2024-05-23媒体记录</a>引述B站负责人称取消该外显改版；本轮未定位负责人原帖，不能据此宣称已完整核验当前所有端的产品状态。</p><p>以当前作品页与创作中心实际可见的指标为准，区分播放次数、观看时长和收入。历史改版计划不能证明长内容、分P或合集获得固定算法加成。</p>"),

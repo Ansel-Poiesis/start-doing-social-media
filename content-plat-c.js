@@ -3,7 +3,7 @@ const section = (id, title, html) => ({ id, title, html });
 
 export const platformArticlesC = [
   {
-    id: 'zhihu', title: '知乎', short: '知乎', category: '关于平台的一切', status: "首版勘误 · 待证据复核",
+    id: 'zhihu', claimIds: ['ZHIHU-WILSON-SCOPE-001'], title: '知乎', short: '知乎', category: '关于平台的一切', status: "首版勘误 · 待证据复核",
     intro: '分发单位是问题、排序单位是加权投票：问题页自带流量，高权重赞同一票重于百人；百度外溢红利窗口在收窄。全文依次覆盖平台画像与用户场景、机制叙事与证据链、规则、商业与变现，以及创作者实作与检查清单。',
     sections: [
       section('business', '经营面与激励现实', '<p>2025 年营收 27.5 亿、经调整净利 3790 万——上市以来首次全年盈利，但靠降本而非增长。<strong>激励预算收紧是常态</strong>，纯流量补贴只当零花钱；变现真金在盐选故事与好物分成。这决定了在知乎做内容的期望管理：它是“信任与长尾”渠道，不是“流量补贴”渠道。</p>'),
@@ -24,7 +24,7 @@ export const platformArticlesC = [
     ]
   },
   {
-    id: 'toutiao', title: '今日头条', short: '今日头条', category: '关于平台的一切', status: "首版勘误 · 待证据复核",
+    id: 'toutiao', claimIds: ['TOUTIAO-FIRST-PUBLISH-72H-001', 'TOUTIAO-MULTIPLIERS-001'], title: '今日头条', short: '今日头条', category: '关于平台的一切', status: "首版勘误 · 待证据复核",
     intro: "理解头条的内容分发、原创声明、首发激励与收益记录。不同计划和年份的规则不能拼接成统一收益公式；发布前核对当前资格与首发安排。",
     sections: [
       section('price', '单价与系数的现实', '<p>图文单价约 0.4–6 元/千次阅读，系数连乘后可差近一个数量级——同一个人写同一个题材，收益差 10 倍是常态而非异常。体裁收益阶梯：<strong>问答分成已于 2025 年 3 月正式下线</strong>（历史收益可提现，体裁只剩星图商单与涨粉价值）；微头条成为官方定位的“站内涨粉效率最高体裁”。2025 年 12 月官方举办优质深度创作者大会、发布深度图文扶持计划——平台风向明确向深度图文倾斜，与首发补贴、成长权益同向。</p>'),
@@ -65,7 +65,7 @@ export const platformArticlesC = [
     ]
   },
   {
-    id: 'cross-mech', title: "跨平台观察框架：可迁移的方法与适用边界", short: '跨平台共性', category: '关于平台的一切', status: "首版勘误 · 待证据复核",
+    id: 'cross-mech', claimIds: ['TOUTIAO-MULTIPLIERS-001'], title: "跨平台观察框架：可迁移的方法与适用边界", short: '跨平台共性', category: '关于平台的一切', status: "首版勘误 · 待证据复核",
     intro: '平台专栏各自深入之前，先看公共规律：它们决定了“换平台”时哪些经验可以带走，哪些必须重学。',
     sections: [
       section('shared', '全平台共同范式（A 级多源交叉）', "<ol><li><strong>冷启动研究：</strong>部分系统会针对新内容缺数据的问题安排候选、探索或其他策略；不能据此断言全平台采用同一逐级流量池。</li><li><strong>多目标观察：</strong>历史官方算法披露提示需要同时考虑多个行为目标，单一完播率不足以解释所有分发。</li><li><strong>负反馈：</strong>部分平台披露过负反馈特征，但具体输入与权重须逐平台核验；不能由一次划走推断固定处罚。</li><li><strong>竞争背景：</strong>宏观内容供给统计可帮助了解环境，不能直接推导个人爆文概率。</li></ol>"),

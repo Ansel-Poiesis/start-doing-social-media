@@ -2,6 +2,7 @@
 name: content-retrospective
 description: 在作品发布或试读后需要判断结果、区分事实和归因、更新下一条内容时使用。对照事前预测输出复盘与决策记录，不从一次结果提炼普遍规律。
 agent_created: true
+claim_ids: [METHOD-SAMPLE-GATES-001, PLATFORM-BENCHMARKS-001, DOUYIN-COMPLETION-BENCHMARK-001, BILI-WINDOW-THRESHOLDS-001, ZHIHU-WILSON-SCOPE-001]
 ---
 
 # 内容复盘
@@ -26,7 +27,7 @@ node scripts/read-article.mjs iteration
 
 ## 工作步骤
 
-1. 固定作品与观察版本，先读原始记录再写解释。缺数值用未知，不补零；真实发布和教学演示分开保存。
+1. 固定作品与观察版本，先读原始记录和 docs/claims/registry.json 中适用的指标/门槛边界再写解释。缺数值用未知，不补零；真实发布和教学演示分开保存。
 2. 逐项对照事前预测；没有预注册就写事后探索，禁止回填预测。记录平台、账号条件、样本获取方式、指标分母和不可比项。
 3. 至少提出一个替代解释，区分观察、相关和因果。便利样本、极端值与平台外部变化均需处理；没有通用的五条/千曝光有效门槛。
 4. 选择保留、改动、限域或继续观察；把下一轮最小改变、观察信号、停止条件与负责人写清。经验卡只能在证据范围内更新，保留旧版和反例。

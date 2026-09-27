@@ -1,4 +1,11 @@
+---
+document_id: production-and-compliance
+claim_ids: [XHS-ACCOUNT-COMMERCE-TERMS-001, XHS-PENALTY-SCORES-001, WECHAT-COMMERCE-TERMS-001, TOUTIAO-FIRST-PUBLISH-72H-001]
+---
+
 # 制作与发布：Agent 工作协议
+
+核对门槛、首发、资格或处罚时先检索 `docs/claims/registry.json`。沿用登记中的范围和未决状态；来源变化时检查消费者并同步修订，不把阅读器检查当作发布批准。
 
 适用的 `article_id`：`production`、`production-brief`、`compliance`、`compliance-diff`。正式制作先读取已由创作者确认的方向与选题；内部试作可围绕待确认候选进行，但必须标出试作范围和未决项，不把制作交接当作方向自动生效。不重开已确认的方向决定，除非出现新证据或实际风险。
 

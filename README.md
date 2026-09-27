@@ -51,6 +51,7 @@ node scripts/read-article.mjs profile
 - `app.js`、`styles.css`、`server.mjs`：静态阅读器。
 - `docs/agent-knowledge/`：按 article_id 配套的工作协议。
 - `docs/g02-source-*.md`：来源线索与复核记录；`docs/card-registry-mapping.md`：历史研究卡映射。
+- `docs/claims/registry.json`：优先高风险主张、来源状态及正文/卡片/协议/skill消费者索引；`npm run check` 会阻断漏传播。当前登记仅覆盖首批P0修订，未宣称全库来源已核实。
 - `skills/`：可读取工作流、模板、清单与教学示例。
 - `docs/audit/`：逐篇质量、修订证据、工程/技能验证。
 - `TODO.md`：维护任务映射与版本路线快照；活跃状态由维护者的 Player Todo 管理。
