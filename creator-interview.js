@@ -1,4 +1,4 @@
-// 创作者档案静态题库 v2（2026-09-24，设计依据见项目 CREATOR-PERSONA-RESEARCH.md）。
+// 创作者档案静态题库 v2（2026-09-24）；设计依据与证据边界见 docs/audit/2026-09-27-creative-type-source-review.md。
 // 原创题项：六组二十问，覆盖 v1 全部十一题（两处合并）并新增表达风格、观众关系与时间策略。
 // 每题配解释（prompt）、补充说明（help）与示例（example）；示例只示范颗粒度和风格，不是标准答案。
 // 题目及解释供网站静态阅读，也供克隆项目中的 Agent 使用；执行逻辑位于 creator-interview-runtime.js。
