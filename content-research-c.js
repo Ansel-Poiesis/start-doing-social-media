@@ -3,7 +3,7 @@ const section = (id, title, html) => ({ id, title, html });
 
 export const researchArticlesC = [
   {
-    id: 'lib-academic', title: '经验卡库 · 学术机制研究卡', short: '学术机制卡', category: '研究底座', status: '16 张；来源可读性和支持状态逐卡标注',
+    id: 'lib-academic', claimIds: ['AC16-SOCIAL-CHAIN-001'], title: '经验卡库 · 学术机制研究卡', short: '学术机制卡', category: '研究底座', status: '16 张；来源可读性和支持状态逐卡标注',
     intro: '16 条研究线索涉及冷启动、指标建模、流行度预测与中国平台案例。论文方法和样本只支持其具体研究问题；移用于创作者账号时须另标推断与未知，不把学术卡当作排序机制总论。逐条复核见<a href="docs/audit/2026-09-27-metrics-hypothesis-card-review.md#cards">卡库审计</a>。',
     sections: [
       section('cold', '冷启动：新内容的流量是怎么来的', '<ul><li><strong>AC-01 快手新内容推荐研究（WWW 2025，待核）：</strong>原稿指向论文入口，但出版方页面本轮返回 403。关于偏差分类、保量与去偏方案的细节暂记为待核线索，不表述为平台官方政策。</li><li><strong>AC-02 新鲜内容推荐（Google KDD 2023，A）：</strong><a href="https://arxiv.org/abs/2306.01720">论文原文</a>描述专门的新内容推荐栈和多漏斗候选机制，并以线上实验评估；原稿中的“前几百次曝光不与存量直接竞争”未找到该数值依据，不作为通用阈值。</li><li><strong>AC-03 探索与利用（LinUCB WWW 2010，A）：</strong><a href="https://arxiv.org/abs/1003.0146">论文原文</a>使用 Yahoo! 新闻推荐数据研究情境老虎机与 LinUCB。它支持探索/利用是推荐算法问题，不证明各平台固定预留探索流量或早期曝光必然高噪声。</li><li><strong>AC-04 低曝光内容探索（Epinet，B）：</strong><a href="https://arxiv.org/html/2412.04484">论文原文</a>在 Facebook Reels 冷启动召回阶段测试 Epinet；论文把冷启动内容定义为少于 10,000 次展示，并按 0–100、100–200 等区间分桶。低曝光内容的点赞/展示改善较明显，但“前 100 次最盲”不是通用阈值，也不能据此断定前 100 次互动率都不稳定。</li><li><strong>AC-05 随机曝光的历史实测（KuaiRand，A）：</strong><a href="https://arxiv.org/abs/2208.08696">KuaiRand 原文</a>记录快手在 2022 年两周数据采集期间，以随机视频替换正常推荐列表中的一个项目；原稿误写编号 2208.05321，应为 2208.08696。<a href="https://arxiv.org/abs/2202.10842">KuaiRec</a>是全观测评估数据集，不是随机注入来源。该研究说明特定历史采集确实做过随机插入，不代表现行或普遍分发规则。</li></ul>'),

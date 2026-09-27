@@ -3,7 +3,7 @@
   "reviewedAt": "2026-09-27",
   "coverage": {
     "status": "priority_batch",
-    "scope": "2026-09-27首发级勘误中的高风险平台规则、阈值与方法边界，以及指标报告口径",
+    "scope": "2026-09-27首发级勘误中的高风险平台规则、阈值、方法边界与 M29/C2/D17/AC-16 跨文章更正传播",
     "complete": false
   },
   "claims": [
@@ -353,6 +353,71 @@
         { "kind": "article", "articleId": "zhihu", "sectionIds": ["checklist", "monetize"] },
         { "kind": "article", "articleId": "toutiao", "sectionIds": ["checklist"] },
         { "kind": "article", "articleId": "baijiahao", "sectionIds": ["checklist", "pending"] }
+      ]
+    },
+    {
+      "id": "M29-SEARCH-REC-001",
+      "statement": "现有可复核材料不支持把搜索关键词布局说成跨平台通用的推荐画像机制或创作者可获得的搜索与推荐双重收益；逐平台、逐产品核验，并将搜索可见性与推荐曝光分开记录。",
+      "status": "withdrawn_as_unverified_cross_platform_claim",
+      "scope": "跨平台观察页、各平台摘要、研究卡与假设库中的搜索入口/推荐结果关系；不表示平台一定不存在内部联动，只表示当前证据不能支撑跨平台或创作者SEO因果结论。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        {"kind":"audit_record","status":"recorded_ruling","ref":"docs/audit/2026-09-27-metrics-hypothesis-card-review.md#hypotheses","reviewedAt":"2026-09-27","assessment":"TASK-10.17 对 M29 与 L14 撤回跨平台画像回流和SEO双收益结论，要求区分搜索与推荐结果并保留未知。"}
+      ],
+      "consumers": [
+        {"kind":"article","articleId":"cross-mech","sectionIds":["searchfeed","types"]},
+        {"kind":"article","articleId":"xhs","sectionIds":["position","papers","timeline"]},
+        {"kind":"article","articleId":"douyin","sectionIds":["position","searchfeed","seo"]},
+        {"kind":"article","articleId":"wechat","sectionIds":["position"]},
+        {"kind":"article","articleId":"platform-contract","sectionIds":["howto"]},
+        {"kind":"article","articleId":"hyp-m","sectionIds":["m3"]},
+        {"kind":"article","articleId":"hyp-l","sectionIds":["l2"]}
+      ]
+    },
+    {
+      "id": "C2-DEMAND-SIGNAL-001",
+      "statement": "评论、重复表达、搜索热度和新话题均只能作为受抽样与场景影响的需求线索，任何单一信号都不能独自证明稳定市场需求。",
+      "status": "candidate_signals_not_proof_of_demand",
+      "scope": "vertical 与 vertical-methods 的需求判断、C2 栏目假设及评论抽样；探索样本不能通过固定数量自动升级为市场结论。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        {"kind":"audit_record","status":"recorded_ruling","ref":"docs/audit/2026-09-27-metrics-hypothesis-card-review.md#hypotheses","reviewedAt":"2026-09-27","assessment":"TASK-10.17 撤回“反复抱怨才是真需求、热词不是需求”的二分，并记录评论抽样偏差及热度短时性。"}
+      ],
+      "consumers": [
+        {"kind":"article","articleId":"vertical-methods","sectionIds":["m-comments"]},
+        {"kind":"article","articleId":"vertical","sectionIds":["demand"]},
+        {"kind":"article","articleId":"hyp-c","sectionIds":["c1"]}
+      ]
+    },
+    {
+      "id": "AC16-SOCIAL-CHAIN-001",
+      "statement": "AC-16 缺少可复查的原始研究、样本与方法，不能作为微信关系链驱动二级传播或平台固定分型的学术依据；转发、在看等指标须按入口、定义与直接来源单独判断。",
+      "status": "awaiting_direct_source",
+      "scope": "微信社交传播相关页面、跨平台分类建议与 AC-16 学术机制卡；来源缺失不是对关系链作用作相反结论。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        {"kind":"audit_record","status":"recorded_ruling","ref":"docs/audit/2026-09-27-metrics-hypothesis-card-review.md#cards","reviewedAt":"2026-09-27","assessment":"TASK-10.17 记录 AC-16 无可复查原文或样本定位，撤回传播因果及平台分类的学术背书，等待直接来源。"}
+      ],
+      "consumers": [
+        {"kind":"article","articleId":"cross-mech","sectionIds":["types"]},
+        {"kind":"article","articleId":"wechat","sectionIds":["typology"]},
+        {"kind":"article","articleId":"platform-contract","sectionIds":["howto"]},
+        {"kind":"article","articleId":"lib-academic","sectionIds":["china"]}
+      ]
+    },
+    {
+      "id": "D17-INTERACTION-INTENT-001",
+      "statement": "点赞、收藏、评论、转发、在看等行为不各自唯一代表一种心理意图；不能把指标名称直接映射成某一意图或按固定平台分型预设主指标，也不能由审美风格推断内容触达深度或受众层级。",
+      "status": "withdrawn_as_one_to_one_intent_mapping",
+      "scope": "跨平台观察、微信互动解释及选题意图声明；具体行为定义、入口与可用结果按平台和作品分别记录。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        {"kind":"audit_record","status":"recorded_ruling","ref":"docs/audit/2026-09-27-metrics-hypothesis-card-review.md","reviewedAt":"2026-09-27","assessment":"TASK-10.17 D17 撤回互动行为与唯一意图映射及按审美风格推断下沉，并指出微信存在多个入口。"}
+      ],
+      "consumers": [
+        {"kind":"article","articleId":"cross-mech","sectionIds":["types"]},
+        {"kind":"article","articleId":"wechat","sectionIds":["typology"]},
+        {"kind":"article","articleId":"topic-gate","sectionIds":["q1"]}
       ]
     }
   ]
