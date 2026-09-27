@@ -117,4 +117,4 @@
 - `npm run check`：通过。49 篇/6 个主题/20 个档案问题；108 个 HTTP 请求覆盖 31 个公开文件及私有路径拒绝；6 个 skill、49 个配对文章；17 个登记主张/125 个消费者；17 个隔离发布扫描 fixture 全部通过。
 - `npm run check:release`：通过；扫描暂存与工作区的 84 个已跟踪文件。第三方权利仍需人工审查。
 - `git diff --check` 与 `git diff --cached --check`：通过。
-- GitHub CI 与合并：本报告分支/PR 创建后单独记录；不以本地静态检查代替 CI，也不在此任务合并或打标签。
+- GitHub CI：PR [#5](https://github.com/Ansel-Poiesis/start-doing-social-media/pull/5) 的 Linux 与 Windows 检查均通过（两次报告的工作流检查均通过）。PR 保持 Open，base 为 `task-10-16-throughline`；未合并、未打标签、未发布新版本。
