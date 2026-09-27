@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="一套从创作者档案、平台理解、方向与选题，到制作、发布和复盘的创作知识阅读网站。">
+  <meta name="color-scheme" content="light dark">
+  <title>开始做自媒体吧</title>
+  <link rel="icon" type="image/svg+xml" href="./mark.svg">
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('start-media-theme-v1');
+      document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark'
+        ? savedTheme
+        : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    } catch {}
+  </script>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到正文</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/home" aria-label="开始做自媒体吧首页">
+        <img src="./mark.svg" alt="" width="28" height="28">
+        <span>开始做自媒体吧</span>
+      </a>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换到深色模式" aria-pressed="false">
+        <span class="theme-glyph" aria-hidden="true">◐</span>
+        <span data-theme-label>深色</span>
+      </button>
+      <button id="menu-toggle" class="menu-trigger" type="button" aria-expanded="false" aria-controls="sidebar">目录</button>
+    </div>
+  </header>
+  <div class="page-shell">
+    <aside id="sidebar" class="sidebar" aria-label="文章导航">
+      <button id="sidebar-heading" class="sidebar-heading" type="button" aria-expanded="false" aria-controls="chapters">
+        <span class="sidebar-heading-chevron" aria-hidden="true">▾</span>
+        <span>完整目录</span>
+      </button>
+    <nav id="chapters" class="sidebar-inner" aria-label="主题目录"></nav>
+    </aside>
+    <main id="main" tabindex="-1"></main>
+    <aside id="page-toc" class="page-toc" aria-label="本页目录"></aside>
+  </div>
+  <noscript><p class="noscript">请启用 JavaScript 后查看本站内容。</p></noscript>
+</body>
+</html>

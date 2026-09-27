@@ -1,0 +1,16 @@
+{
+  "name": "start-doing-social-media",
+  "version": "0.11.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node check.mjs && node scripts/check-knowledge.mjs && node scripts/test-release.mjs",
+    "check:release": "node scripts/check-release.mjs"
+  },
+  "description": "自媒体全链路知识库、静态阅读器与六个内置 skills",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  }
+}

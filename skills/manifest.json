@@ -1,0 +1,126 @@
+{
+  "version": "0.11.0",
+  "schemaVersion": 1,
+  "skills": [
+    {
+      "name": "creator-profile",
+      "title": "创作者档案",
+      "articles": [
+        "profile",
+        "creative-type",
+        "direction"
+      ],
+      "inputs": [
+        "创作者自述或已确认档案",
+        "可公开作品与反馈（可缺）"
+      ],
+      "output": "profile",
+      "next": "platform-research",
+      "path": "skills/creator-profile/SKILL.md",
+      "template": "skills/creator-profile/assets/template.md",
+      "reference": "docs/agent-knowledge/01-profile.md"
+    },
+    {
+      "name": "platform-research",
+      "title": "平台与垂域研究",
+      "articles": [
+        "platform",
+        "match",
+        "vertical",
+        "vertical-methods",
+        "expectation",
+        "decide"
+      ],
+      "inputs": [
+        "当前决策与候选平台",
+        "相关档案字段",
+        "公开来源或浏览能力"
+      ],
+      "output": "research",
+      "next": "topic-planning",
+      "path": "skills/platform-research/SKILL.md",
+      "template": "skills/platform-research/assets/template.md",
+      "reference": "docs/agent-knowledge/02-platform-reading.md"
+    },
+    {
+      "name": "topic-planning",
+      "title": "方向与选题规划",
+      "articles": [
+        "decide",
+        "topic",
+        "topic-gate",
+        "prereg-manual"
+      ],
+      "inputs": [
+        "已确认方向或待确认候选",
+        "相关研究简报",
+        "可用材料与制作约束"
+      ],
+      "output": "topic",
+      "next": "production-brief",
+      "path": "skills/topic-planning/SKILL.md",
+      "template": "skills/topic-planning/assets/template.md",
+      "reference": "docs/agent-knowledge/03-platform-and-direction.md"
+    },
+    {
+      "name": "production-brief",
+      "title": "制作简报",
+      "articles": [
+        "production",
+        "production-brief",
+        "platform-contract"
+      ],
+      "inputs": [
+        "选题卡与确认记录",
+        "已有素材及权利信息",
+        "工时和交付条件"
+      ],
+      "output": "production",
+      "next": "publication-review",
+      "path": "skills/production-brief/SKILL.md",
+      "template": "skills/production-brief/assets/template.md",
+      "reference": "docs/agent-knowledge/04-production-and-compliance.md"
+    },
+    {
+      "name": "publication-review",
+      "title": "发布前检查",
+      "articles": [
+        "compliance",
+        "compliance-diff",
+        "production-brief"
+      ],
+      "inputs": [
+        "成品及确定版本",
+        "目标平台/账号类型/发布时间",
+        "来源与授权记录"
+      ],
+      "output": "publication-review",
+      "next": "content-retrospective",
+      "path": "skills/publication-review/SKILL.md",
+      "template": "skills/publication-review/assets/template.md",
+      "reference": "docs/agent-knowledge/04-production-and-compliance.md"
+    },
+    {
+      "name": "content-retrospective",
+      "title": "内容复盘",
+      "articles": [
+        "iteration",
+        "competition",
+        "prereg-manual",
+        "decision-record",
+        "governance",
+        "evidence"
+      ],
+      "inputs": [
+        "作品/发布回执或试读记录",
+        "事前预测（可缺）",
+        "可得指标、分母、时间窗与反馈原文"
+      ],
+      "output": "retrospective",
+      "next": null,
+      "path": "skills/content-retrospective/SKILL.md",
+      "template": "skills/content-retrospective/assets/template.md",
+      "reference": "docs/agent-knowledge/05-observation-and-system-learning.md"
+    }
+  ]
+}

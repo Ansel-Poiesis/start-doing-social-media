@@ -1,0 +1,2200 @@
+{
+  "date": "2026-09-27",
+  "assessmentStage": "pre-release baseline; fixes are reported separately, not a full re-score",
+  "articleCount": 49,
+  "counts": {
+    "usable": 8,
+    "revise": 16,
+    "blocked": 25
+  },
+  "meanScores": {
+    "readerValue": 3.63,
+    "evidence": 2.33,
+    "actionability": 2.53,
+    "clarity": 3.55,
+    "maintenance": 1.92
+  },
+  "articles": [
+    {
+      "id": "map",
+      "title": "开始做自媒体吧",
+      "sourceFile": "content.js",
+      "sourceLine": 106,
+      "baselineStatus": "框架已建立",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 4,
+        "actionability": 3,
+        "clarity": 5,
+        "maintenance": 3
+      },
+      "evidence": [
+        {
+          "sectionId": "sequence",
+          "sectionTitle": "从了解创作者到迭代作品",
+          "quote": "每个阶段都要留下可检查的产物"
+        }
+      ],
+      "strengths": [
+        "完整解释六阶段及账号/栏目/单条/措辞四尺度；明确非流量目标和未实测边界。"
+      ],
+      "issues": [
+        "六阶段没有跳转到对应方法、模板或 skill，读者明白流程后仍需自行寻找入口。"
+      ],
+      "actions": [
+        "为每阶段增加输入、产物、文章、模板、skill 五项链接；加入一条贯穿示范。"
+      ],
+      "priority": "P2",
+      "verdict": "usable",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "purpose",
+        "sequence",
+        "scale",
+        "state"
+      ],
+      "renderedTextLength": 1276,
+      "baseline": true,
+      "fixStatus": "not_changed_in_correction_pass",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "开始做自媒体吧",
+        "currentStatus": "框架已建立",
+        "changes": "未改正文；baseline建议保留。",
+        "remaining": "为每阶段增加输入、产物、文章、模板、skill 五项链接；加入一条贯穿示范。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "evidence",
+      "title": "市场研究已经提供了什么依据",
+      "sourceFile": "content.js",
+      "sourceLine": 116,
+      "baselineStatus": "研究已整理；效果待验证",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 4,
+        "actionability": 3,
+        "clarity": 4,
+        "maintenance": 3
+      },
+      "evidence": [
+        {
+          "sectionId": "library",
+          "sectionTitle": "已经整理的材料",
+          "quote": "128张经验卡、98条派生假设"
+        }
+      ],
+      "strengths": [
+        "区分来源权威范围、整理规模与独立证据，明确本地观察尚未形成。"
+      ],
+      "issues": [
+        "规模数字和统一登记簿没有公开可点入口；不易查明本库收录量与全量研究差额。"
+      ],
+      "actions": [
+        "链接公开资料清单及覆盖报告；列出未随开源库分发的资产范围。"
+      ],
+      "priority": "P2",
+      "verdict": "usable",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "library",
+        "authority",
+        "cards",
+        "competition",
+        "limits"
+      ],
+      "renderedTextLength": 1213,
+      "baseline": true,
+      "fixStatus": "not_changed_in_correction_pass",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "市场研究已经提供了什么依据",
+        "currentStatus": "研究已整理；效果待验证",
+        "changes": "未改正文；baseline建议保留。",
+        "remaining": "链接公开资料清单及覆盖报告；列出未随开源库分发的资产范围。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "profile",
+      "title": "用追问建立创作者档案",
+      "sourceFile": "content.js",
+      "sourceLine": 127,
+      "baselineStatus": "档案框架与二十问说明已建立；真实试答待校准",
+      "scores": {
+        "readerValue": 5,
+        "evidence": 4,
+        "actionability": 4,
+        "clarity": 4,
+        "maintenance": 3
+      },
+      "evidence": [
+        {
+          "sectionId": "questions",
+          "sectionTitle": "二十个核心问题：提问、示例与理由",
+          "quote": "先选一到两项当前最重要的回报。"
+        }
+      ],
+      "strengths": [
+        "二十问均附理由与虚构示例，包含停止追问、反例、隐私与本人确认规则；全篇已读。"
+      ],
+      "issues": [
+        "第1问未显示 goalOptions 的七个选项；长文无可复制答卷/样例档案；时间策略栏仍把长青慢热高粘写成定性结论。"
+      ],
+      "actions": [
+        "渲染独立 goalOptions；提供空白和虚构填好档案；时间策略改为待观察差异。"
+      ],
+      "priority": "P1",
+      "verdict": "revise",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "why",
+        "dimensions",
+        "questions",
+        "sequence",
+        "followup",
+        "evidence-chain",
+        "example",
+        "basis",
+        "output"
+      ],
+      "renderedTextLength": 7786,
+      "baseline": true,
+      "fixStatus": "targeted_corrections_applied",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "用追问建立创作者档案",
+        "currentStatus": "档案框架与二十问说明已建立；真实试答待校准",
+        "changes": "第1问从 goalOptions 渲染七个选项；时间策略取消长青必慢热高粘。",
+        "remaining": "真实创作者试答、可复制答卷与完整档案样例仍待补。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "creative-type",
+      "title": "创作型人格参考",
+      "sourceFile": "content.js",
+      "sourceLine": 148,
+      "baselineStatus": "整合框架初稿已写入；分类命名与试答校准待完成",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 2,
+        "actionability": 3,
+        "clarity": 3,
+        "maintenance": 2
+      },
+      "evidence": [
+        {
+          "sectionId": "vcti-source",
+          "sectionTitle": "VCTI：一个观众视角的创作者分类速记",
+          "quote": "原视频尚未直接核看"
+        }
+      ],
+      "strengths": [
+        "五维框架把目标、供给、表达、关系和约束分开，并承认分类未经样本校准。"
+      ],
+      "issues": [
+        "主要开头围绕未核视频；MBTI 无预测价值、大五不能预测成败等绝对判断无文内来源；本机研究文件无公开入口。"
+      ],
+      "actions": [
+        "先呈现原创五维方法，将 VCTI 降为附录；补原视频和原始研究链接，收窄心理测量断言。"
+      ],
+      "priority": "P1",
+      "verdict": "revise",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "vcti-source",
+        "vcti-model",
+        "vcti-use",
+        "creator-framework",
+        "creator-evidence",
+        "classification",
+        "tools",
+        "limits"
+      ],
+      "renderedTextLength": 3308,
+      "baseline": true,
+      "fixStatus": "targeted_corrections_applied",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "创作型人格参考",
+        "currentStatus": "整合框架初稿已写入；分类命名与试答校准待完成",
+        "changes": "VCTI效果标为转录稿主张；收窄 MBTI/大五的绝对预测断言。",
+        "remaining": "原视频、转录疑点和具体研究仍未独立核验；正文结构与公共来源入口仍待改进。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "platform",
+      "title": "怎样真正读懂一个平台",
+      "sourceFile": "content.js",
+      "sourceLine": 171,
+      "baselineStatus": "方法稿首版；未附平台内真实采样结论",
+      "scores": {
+        "readerValue": 5,
+        "evidence": 4,
+        "actionability": 4,
+        "clarity": 5,
+        "maintenance": 3
+      },
+      "evidence": [
+        {
+          "sectionId": "evidence",
+          "sectionTitle": "把看见的现象变成有边界的证据",
+          "quote": "即使扩到更多样本，只要抽样入口和账号条件仍有偏差"
+        }
+      ],
+      "strengths": [
+        "平台入口、可控制变量、样本偏差和相关/因果边界解释完整。"
+      ],
+      "issues": [
+        "阅读合同较强，但无一份实际填写样表；与垂域方法的20/50条硬门槛冲突。"
+      ],
+      "actions": [
+        "附探索性观察示例及可复制记录；统一全站采样口径并链接七平台文章。"
+      ],
+      "priority": "P1",
+      "verdict": "usable",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "series",
+        "evidence",
+        "article-contract",
+        "updates"
+      ],
+      "renderedTextLength": 2243,
+      "baseline": true,
+      "fixStatus": "not_changed_in_correction_pass",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "怎样真正读懂一个平台",
+        "currentStatus": "方法稿首版；未附平台内真实采样结论",
+        "changes": "未改正文；baseline建议保留。",
+        "remaining": "附探索性观察示例及可复制记录；统一全站采样口径并链接七平台文章。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "direction",
+      "title": "把创作者和平台档案交叉成方向",
+      "sourceFile": "content.js",
+      "sourceLine": 181,
+      "baselineStatus": "方法论成稿；搭配方案待真实案例校准（2026-09-24）",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 4,
+        "actionability": 3,
+        "clarity": 5,
+        "maintenance": 3
+      },
+      "evidence": [
+        {
+          "sectionId": "options",
+          "sectionTitle": "方向候选应当可比较、可试作",
+          "quote": "不用未经校准的权重加总成“92分适配度”"
+        }
+      ],
+      "strengths": [
+        "候选字段具体，支持不发布的小试作，保留创作者裁决。"
+      ],
+      "issues": [
+        "仅有字段清单，没有两条完成候选对比；读到结尾不能直接复用一份决策文件。"
+      ],
+      "actions": [
+        "给出同一虚构创作者的两条完整候选及反例，链接方向决策模板。"
+      ],
+      "priority": "P1",
+      "verdict": "usable",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "match",
+        "options",
+        "choice"
+      ],
+      "renderedTextLength": 958,
+      "baseline": true,
+      "fixStatus": "not_changed_in_correction_pass",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "把创作者和平台档案交叉成方向",
+        "currentStatus": "方法论成稿；搭配方案待真实案例校准（2026-09-24）",
+        "changes": "未改正文；baseline建议保留。",
+        "remaining": "给出同一虚构创作者的两条完整候选及反例，链接方向决策模板。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "topic",
+      "title": "从方向落到一条具体选题",
+      "sourceFile": "content.js",
+      "sourceLine": 190,
+      "baselineStatus": "判断框架已建立；效果验证施工中",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 3,
+        "actionability": 3,
+        "clarity": 4,
+        "maintenance": 3
+      },
+      "evidence": [
+        {
+          "sectionId": "vellum",
+          "sectionTitle": "Vellum 一轮选题怎样比较",
+          "quote": "以 Vellum 近期的三类候选为例"
+        }
+      ],
+      "strengths": [
+        "三类作品展示知识、娱乐与观察的不同证据要求，避免统一流量评分。"
+      ],
+      "issues": [
+        "Vellum 的近期指向不适合长期公开资料，案例无出处/日期且没有填成完整选题单；与 topic-gate 的购物五型冲突。"
+      ],
+      "actions": [
+        "明确这些仅为经授权项目案例或改成合成示例；补一份完整选题单，并统一目标与观众定义。"
+      ],
+      "priority": "P1",
+      "verdict": "revise",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "decision",
+        "vellum",
+        "competition"
+      ],
+      "renderedTextLength": 1127,
+      "baseline": true,
+      "fixStatus": "not_changed_in_correction_pass",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "从方向落到一条具体选题",
+        "currentStatus": "判断框架已建立；效果验证施工中",
+        "changes": "未改正文；baseline建议保留。",
+        "remaining": "明确这些仅为经授权项目案例或改成合成示例；补一份完整选题单，并统一目标与观众定义。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "production",
+      "title": "为选题选择合适的载体和制作方式",
+      "sourceFile": "content.js",
+      "sourceLine": 199,
+      "baselineStatus": "作品与分发适配框架初稿；制作交接待真实作品校准",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 4,
+        "actionability": 3,
+        "clarity": 4,
+        "maintenance": 3
+      },
+      "evidence": [
+        {
+          "sectionId": "practice",
+          "sectionTitle": "从建议到成片的通用交接仍在建设",
+          "quote": "尚未把创作者档案、平台判断、选题决策单、完整制作单和成片验收连成本站可复用的交接流程"
+        }
+      ],
+      "strengths": [
+        "载体选择与五段诊断路径有具体检查对象，清楚标出缺字段不可推断。"
+      ],
+      "issues": [
+        "制作内容偏于决策原则；拍摄、剪辑、声音、字幕、封面、文件交付缺独立方法和可用交接包。"
+      ],
+      "actions": [
+        "先做一条明确为合成的选题→脚本→镜头表→验收示例，再补真实演练；增加角色交接和资产版本字段。"
+      ],
+      "priority": "P1",
+      "verdict": "revise",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "forms",
+        "fit",
+        "brief",
+        "practice"
+      ],
+      "renderedTextLength": 2053,
+      "baseline": true,
+      "fixStatus": "not_changed_in_correction_pass",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "为选题选择合适的载体和制作方式",
+        "currentStatus": "作品与分发适配框架初稿；制作交接待真实作品校准",
+        "changes": "未改正文；baseline建议保留。",
+        "remaining": "先做一条明确为合成的选题→脚本→镜头表→验收示例，再补真实演练；增加角色交接和资产版本字段。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "iteration",
+      "title": "发布之后，怎样让经验得到更新",
+      "sourceFile": "content.js",
+      "sourceLine": 209,
+      "baselineStatus": "施工中",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 4,
+        "actionability": 3,
+        "clarity": 4,
+        "maintenance": 3
+      },
+      "evidence": [
+        {
+          "sectionId": "update",
+          "sectionTitle": "什么时候修订、限域或拆分",
+          "quote": "本站尚无真实内容的事前预测、发布观察和方法回写数据"
+        }
+      ],
+      "strengths": [
+        "把原始观察、解释、成本与更新动作分开，允许无法区分和退役。"
+      ],
+      "issues": [
+        "没有展示一条完成复盘的记录，与预注册手册禁止无分母指标的写法不一致。"
+      ],
+      "actions": [
+        "添加含缺失数据的合成复盘；提供可复制 ledger 与决策记录，并把原始计数与比率分开。"
+      ],
+      "priority": "P1",
+      "verdict": "usable",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "before",
+        "funnel",
+        "after",
+        "cycle",
+        "update"
+      ],
+      "renderedTextLength": 1429,
+      "baseline": true,
+      "fixStatus": "not_changed_in_correction_pass",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "发布之后，怎样让经验得到更新",
+        "currentStatus": "施工中",
+        "changes": "未改正文；baseline建议保留。",
+        "remaining": "添加含缺失数据的合成复盘；提供可复制 ledger 与决策记录，并把原始计数与比率分开。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "compliance",
+      "title": "发布前合规检查：法规条目与待核规则",
+      "sourceFile": "content.js",
+      "sourceLine": 220,
+      "baselineStatus": "法规原文已标注；平台细则按来源核验",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 4,
+        "actionability": 3,
+        "clarity": 3,
+        "maintenance": 3
+      },
+      "evidence": [
+        {
+          "sectionId": "four",
+          "sectionTitle": "发布前检查（法规与编辑建议分开）",
+          "quote": "法规与编辑建议分开"
+        }
+      ],
+      "strengths": [
+        "多处链接法律/规则原文，清楚限定转载、场景、未核规则与处罚条件。"
+      ],
+      "issues": [
+        "正文混有大量旧稿纠错过程，发布前使用成本高；相同限定没有传播到 match/expectation；当前审核未重新外网核验全部原文。"
+      ],
+      "actions": [
+        "提炼当前可用检查表与逐平台未知项，把历史纠错移入变更记录；建立主张依赖更新表。"
+      ],
+      "priority": "P1",
+      "verdict": "usable",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "ai",
+        "polish",
+        "limitflow",
+        "redline",
+        "matrix",
+        "review",
+        "four"
+      ],
+      "renderedTextLength": 2951,
+      "baseline": true,
+      "fixStatus": "not_changed_in_correction_pass",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "发布前合规检查：法规条目与待核规则",
+        "currentStatus": "法规原文已标注；平台细则按来源核验",
+        "changes": "未改正文；baseline建议保留。",
+        "remaining": "提炼当前可用检查表与逐平台未知项，把历史纠错移入变更记录；建立主张依赖更新表。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "competition",
+      "title": "让经验竞争：六项可检验的草案",
+      "sourceFile": "content.js",
+      "sourceLine": 233,
+      "baselineStatus": "六份草案就绪；尚未执行",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 4,
+        "actionability": 3,
+        "clarity": 4,
+        "maintenance": 3
+      },
+      "evidence": [
+        {
+          "sectionId": "six",
+          "sectionTitle": "六项首轮竞争草案",
+          "quote": "每项草案在执行前必须补齐"
+        }
+      ],
+      "strengths": [
+        "六项比较确实形成不同预测并承认草案未执行，包含成本/停止要求。"
+      ],
+      "issues": [
+        "“可直接填入真实内容”的模板仍是说明段落，没有完整填好合同与输出样例。"
+      ],
+      "actions": [
+        "为 Q01 提供合成输入/观察/裁决三件套；链接每份空白合同与相关假设，保留未实测。"
+      ],
+      "priority": "P1",
+      "verdict": "usable",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "why",
+        "six",
+        "record",
+        "contract"
+      ],
+      "renderedTextLength": 1082,
+      "baseline": true,
+      "fixStatus": "not_changed_in_correction_pass",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "让经验竞争：六项可检验的草案",
+        "currentStatus": "六份草案就绪；尚未执行",
+        "changes": "未改正文；baseline建议保留。",
+        "remaining": "为 Q01 提供合成输入/观察/裁决三件套；链接每份空白合同与相关假设，保留未实测。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "constitution",
+      "title": "体系宪法：三条公理与三级门禁",
+      "sourceFile": "content.js",
+      "sourceLine": 243,
+      "baselineStatus": "判断层宪法已定稿",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "sectionId": "scope",
+          "sectionTitle": "这个系统做什么、不做什么",
+          "quote": "保证每次输赢都让下一条的期望变高"
+        }
+      ],
+      "strengths": [
+        "尝试统一尺度、证据与创作者确认权。"
+      ],
+      "issues": [
+        "无证据保证改善；将漏斗写成决定因素和因果链；固定互动-心理映射、三平台类型与门禁强化未验证假设，且状态称已定稿。"
+      ],
+      "actions": [
+        "撤回保证与通用因果，改为设计原则草案；目标由创作者与作品任务定义，代理指标仅作线索；将强制技巧降为可修订检查。"
+      ],
+      "priority": "P0",
+      "verdict": "blocked",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "scope",
+        "axioms",
+        "funnel",
+        "intent",
+        "gates",
+        "types"
+      ],
+      "renderedTextLength": 1416,
+      "baseline": true,
+      "fixStatus": "targeted_corrections_applied",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "体系设计原则：目标、证据与分级检查",
+        "currentStatus": "首版勘误 · 待证据复核与实践校准",
+        "changes": "撤回保证下一次改善、通用因果链和平台固定分型；按本人目标选择观察，硬约束与编辑建议分开。",
+        "remaining": "全站配套协议仍需同步；工作方法没有真实效果验证。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "hypotheses",
+      "title": "假设库导览：五层可证伪清单",
+      "sourceFile": "content.js",
+      "sourceLine": 255,
+      "baselineStatus": "98 条已登记；全部待验证",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "sectionId": "lifecycle",
+          "sectionTitle": "状态机与升降级纪律",
+          "quote": "升降级需要 ≥5 个独立样本方向一致"
+        }
+      ],
+      "strengths": [
+        "公开全量待验证和空台账状态。"
+      ],
+      "issues": [
+        "用5样本/1000曝光/7天/均值中位数比硬判统计有效性；摘要把推荐机制和粉丝溢价写为确定事实，没有来源链接。"
+      ],
+      "actions": [
+        "取消通用样本红线，按研究设计/不确定性/效应与成本判定；摘要保留条件与来源状态，链接条目和证据。"
+      ],
+      "priority": "P0",
+      "verdict": "blocked",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "structure",
+        "machine",
+        "lifecycle",
+        "verify"
+      ],
+      "renderedTextLength": 797,
+      "baseline": true,
+      "fixStatus": "targeted_corrections_applied",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "假设库导览：五层可证伪清单",
+        "currentStatus": "首版勘误 · 待证据复核与实践校准",
+        "changes": "取消5样本/1000曝光/7天/均值比的通用判断资格；机制摘要保留条件与未知；允许探索性观察。",
+        "remaining": "98条逐项来源与方法仍待核验，不能视为全部有效。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "cards",
+      "title": "经验卡库导览：两组研究的资产地图",
+      "sourceFile": "content.js",
+      "sourceLine": 265,
+      "baselineStatus": "128 张已登记映射",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 2,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 2
+      },
+      "evidence": [
+        {
+          "sectionId": "overview",
+          "sectionTitle": "卡库全景",
+          "quote": "前 100 次曝光的盲目期"
+        }
+      ],
+      "strengths": [
+        "卡片最小合同清楚区分来源与本项目解释。"
+      ],
+      "issues": [
+        "摘要仍复活已知待核的前100次阈值、B站0.3等表述；A即可引用/D单源默认不采把来源身份与支持力度混同；知识半衰期6个月无依据。"
+      ],
+      "actions": [
+        "让导览只描述主题与核验状态；按主张核对直接支持度；移除通用半衰期，链接逐卡公开清单。"
+      ],
+      "priority": "P0",
+      "verdict": "blocked",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "overview",
+        "grading",
+        "atoms",
+        "reading"
+      ],
+      "renderedTextLength": 1338,
+      "baseline": true,
+      "fixStatus": "targeted_corrections_applied",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "经验卡库导览：两组研究的资产地图",
+        "currentStatus": "首版勘误 · 待证据复核与实践校准",
+        "changes": "导览不再复活固定曝光/完播阈值；来源类型和支持力度分开；移除统一知识半衰期。",
+        "remaining": "公开全量 registry、79/128覆盖差额、逐卡来源依赖仍需维护。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "governance",
+      "title": "治理与更新：系统如何不自欺",
+      "sourceFile": "content.js",
+      "sourceLine": 275,
+      "baselineStatus": "协议已定稿；执行待真实数据",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 4,
+        "actionability": 3,
+        "clarity": 4,
+        "maintenance": 2
+      },
+      "evidence": [
+        {
+          "sectionId": "authority",
+          "sectionTitle": "权威与事实源",
+          "quote": "状态与下一步只回唯一任务栏"
+        }
+      ],
+      "strengths": [
+        "提出有意义的健康检查与退役标准，禁止补造零值和形式委员会。"
+      ],
+      "issues": [
+        "统一登记簿、外部工程、唯一任务栏均无公共路径；读者无法辨认开源协作事实源、维护者和更新责任。"
+      ],
+      "actions": [
+        "补公共 repo/issue/版本/源数据权威映射与主张变更流程；把内部绝对路径及私有状态隔离为贡献者文档。"
+      ],
+      "priority": "P1",
+      "verdict": "revise",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "authority",
+        "update",
+        "audit",
+        "falsify"
+      ],
+      "renderedTextLength": 790,
+      "baseline": true,
+      "fixStatus": "not_changed_in_correction_pass",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "治理与更新：系统如何不自欺",
+        "currentStatus": "协议已定稿；执行待真实数据",
+        "changes": "未改正文；baseline建议保留。",
+        "remaining": "补公共 repo/issue/版本/源数据权威映射与主张变更流程；把内部绝对路径及私有状态隔离为贡献者文档。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "resources",
+      "title": "研究资料与正在补齐的内容",
+      "sourceFile": "content.js",
+      "sourceLine": 285,
+      "baselineStatus": "持续更新",
+      "scores": {
+        "readerValue": 2,
+        "evidence": 3,
+        "actionability": 1,
+        "clarity": 4,
+        "maintenance": 2
+      },
+      "evidence": [
+        {
+          "sectionId": "existing",
+          "sectionTitle": "已经有研究底座的主题",
+          "quote": "已经有研究底座的主题"
+        }
+      ],
+      "strengths": [
+        "简短交代未实测与待核主题。"
+      ],
+      "issues": [
+        "标题承诺研究资料，正文没有一个来源链接；只有299字的范围和待办摘要，不能作为资源入口。"
+      ],
+      "actions": [
+        "改为分类来源目录：原文、类型、日期、适用范围、待核状态；与任务系统链接，避免手工复制进度。"
+      ],
+      "priority": "P1",
+      "verdict": "revise",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "existing",
+        "pending"
+      ],
+      "renderedTextLength": 299,
+      "baseline": true,
+      "fixStatus": "not_changed_in_correction_pass",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "研究资料与正在补齐的内容",
+        "currentStatus": "持续更新",
+        "changes": "未改正文；baseline建议保留。",
+        "remaining": "改为分类来源目录：原文、类型、日期、适用范围、待核状态；与任务系统链接，避免手工复制进度。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "about",
+      "title": "关于「开始做自媒体吧」",
+      "sourceFile": "content.js",
+      "sourceLine": 293,
+      "baselineStatus": "知识资料覆盖 49 个文章 ID；待真实案例校准",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 4,
+        "actionability": 2,
+        "clarity": 5,
+        "maintenance": 2
+      },
+      "evidence": [
+        {
+          "sectionId": "scope",
+          "sectionTitle": "资料范围",
+          "quote": "配有按 article_id 配对的结构化参考资料"
+        }
+      ],
+      "strengths": [
+        "产品边界清晰，未宣称网站执行工作流或保存隐私。"
+      ],
+      "issues": [
+        "作为开源入口没有仓库、许可证、贡献、版本、skill 使用说明链接；49 ID 并不表示内容完成。"
+      ],
+      "actions": [
+        "链接 README/许可/贡献/版本与审计结果；说明内容覆盖、证据核验、真实验证是三种状态。"
+      ],
+      "priority": "P2",
+      "verdict": "revise",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "scope",
+        "boundary"
+      ],
+      "renderedTextLength": 208,
+      "baseline": true,
+      "fixStatus": "not_changed_in_correction_pass",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "关于「开始做自媒体吧」",
+        "currentStatus": "知识资料覆盖 49 个文章 ID；待真实案例校准",
+        "changes": "未改正文；baseline建议保留。",
+        "remaining": "链接 README/许可/贡献/版本与审计结果；说明内容覆盖、证据核验、真实验证是三种状态。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "match",
+      "title": "档案×平台：七种平台的搭配方案",
+      "sourceFile": "content-direction.js",
+      "sourceLine": 7,
+      "baselineStatus": "搭配矩阵首版（站内推断，D 级）；待垂域调研与试作验证",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "sectionId": "matrix",
+          "sectionTitle": "七平台×档案信号总表",
+          "quote": "完播 17% 冷启动生死线（C 级）"
+        }
+      ],
+      "strengths": [
+        "先硬约束、再相遇点、最后代价的比较结构适合方向筛选。"
+      ],
+      "issues": [
+        "大量门槛、费率、平台排他/处罚写成确定建议；与合规页待核状态矛盾；AI最严、同步必触发、固定工时等成为伪硬约束；本页无来源链接。"
+      ],
+      "actions": [
+        "重写七平台矩阵为调查问题和候选假设；撤回生死线及统一排期，链接对应平台与规则原文并保留未核。"
+      ],
+      "priority": "P0",
+      "verdict": "blocked",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "what",
+        "matrix",
+        "patterns",
+        "combine",
+        "discipline"
+      ],
+      "renderedTextLength": 2982,
+      "baseline": true,
+      "fixStatus": "targeted_corrections_applied",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "档案×平台：七种平台的搭配方案",
+        "currentStatus": "首版勘误 · 待证据复核与实践校准",
+        "changes": "七平台矩阵重写为有内部文章链接的调查候选；移除未经核实的收益/门槛硬前提、固定工时、统一排期和必罚判断。",
+        "remaining": "平台规则原文及账号状态仍应逐条复核；搭配未经过真实案例验证。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "vertical",
+      "title": "平台垂域市场调查：查什么",
+      "sourceFile": "content-direction.js",
+      "sourceLine": 18,
+      "baselineStatus": "五层材料框架首版；配有人工调研记录模板",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 2,
+        "actionability": 3,
+        "clarity": 4,
+        "maintenance": 2
+      },
+      "evidence": [
+        {
+          "sectionId": "demand",
+          "sectionTitle": "第一层：需求信号怎么读",
+          "quote": "是最干净的需求证据"
+        }
+      ],
+      "strengths": [
+        "需求/供给/竞争/变现/规则五层具备可复用框架，明确不估对标收入。"
+      ],
+      "issues": [
+        "联想词被当真实需求；两类信号即证成需求；长尾账号被当无存量证明；资质无条件整类拦截；变现不改变做不做与预期门禁矛盾。"
+      ],
+      "actions": [
+        "将信号改为待解释观察并记录偏差；资质按条款场景判断；收入目标才必查变现；删除无来源行情锚点。"
+      ],
+      "priority": "P0",
+      "verdict": "blocked",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "domain",
+        "five",
+        "demand",
+        "supply",
+        "competition",
+        "monetize",
+        "risk",
+        "output"
+      ],
+      "renderedTextLength": 2454,
+      "baseline": true,
+      "fixStatus": "targeted_corrections_applied",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "平台垂域市场调查：查什么",
+        "currentStatus": "首版勘误 · 待证据复核与实践校准",
+        "changes": "搜索/评论/对标都是条件样本；不以两类信号证明需求、不以长尾账号证明无基础；商业层按目标适用，资质按场景核查。",
+        "remaining": "尚无一份完成的真实五层调查；空白记录和完整示例需补。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "vertical-methods",
+      "title": "调研方法手册：怎么查、怎么记录",
+      "sourceFile": "content-direction.js",
+      "sourceLine": 32,
+      "baselineStatus": "方法与记录模板首版；采样纪律待实践校准",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 2,
+        "actionability": 4,
+        "clarity": 4,
+        "maintenance": 2
+      },
+      "evidence": [
+        {
+          "sectionId": "m-supply",
+          "sectionTitle": "方法四：供给密度统计（供给层）",
+          "quote": "同承诺重复度 &gt; 70% 判"
+        }
+      ],
+      "strengths": [
+        "方法分步、外显指标限制、评论排序偏差与字段较完整。"
+      ],
+      "issues": [
+        "20/50样本被误当结论资格；70/40硬阈值无校准；无联想交汇就判没需求；Agent证据一律待人核否定了可核原文取证。"
+      ],
+      "actions": [
+        "样本和预算改成探索起点而非保证；去除饱和阈值；增加缺失/未知分支；按证据可复核性而非人/Agent划分状态。"
+      ],
+      "priority": "P0",
+      "verdict": "blocked",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "discipline",
+        "m-keyword",
+        "m-competitor",
+        "m-comments",
+        "m-supply",
+        "m-cross",
+        "agent",
+        "record"
+      ],
+      "renderedTextLength": 2091,
+      "baseline": true,
+      "fixStatus": "targeted_corrections_applied",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "调研方法手册：怎么查、怎么记录",
+        "currentStatus": "首版勘误 · 待证据复核与实践校准",
+        "changes": "20/50条和时间预算改为探索起点，撤回70/40市场阈值；无搜索交汇不等于无需求；Agent按可复核证据而非身份分级。",
+        "remaining": "样本编码、跨人一致性与实际工时未测；记录模板需与 skill 同步。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "expectation",
+      "title": "调研之后：预期与建议怎么给",
+      "sourceFile": "content-direction.js",
+      "sourceLine": 46,
+      "baselineStatus": "预期框架与建议格式首版；基线数据待真实发布",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "sectionId": "curves",
+          "sectionTitle": "三条线上的合理预期",
+          "quote": "完播 17% 是生死线（C 级）"
+        }
+      ],
+      "strengths": [
+        "时间/成本/指标三线与事前退出条件可作规划骨架，承认无基线。"
+      ],
+      "issues": [
+        "生死线/固定窗口/指标权重直接驱动预期；商业目标成为全创作者门禁；8条低于底线×2等缺定义和依据。"
+      ],
+      "actions": [
+        "取消平台硬线和统一商业门禁；按任务设观测与成本，区分合成预算与平台规则；具体解释重估触发器。"
+      ],
+      "priority": "P0",
+      "verdict": "blocked",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "translate",
+        "curves",
+        "advice",
+        "abort",
+        "honesty"
+      ],
+      "renderedTextLength": 1284,
+      "baseline": true,
+      "fixStatus": "targeted_corrections_applied",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "调研之后：预期与建议怎么给",
+        "currentStatus": "首版勘误 · 待证据复核与实践校准",
+        "changes": "移除17%/48h等平台成功线和所有创作者必须变现的前提；按目标、成本与可见材料设预期，示例明确为合成。",
+        "remaining": "无历史基线和真实退出/重估案例；尚不能提供准确时间或收益预测。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "decide",
+      "title": "确定创作方向，规划选题方向",
+      "sourceFile": "content-direction.js",
+      "sourceLine": 57,
+      "baselineStatus": "决策单与选题规划方法首版；待首个真实案例",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 3,
+        "actionability": 3,
+        "clarity": 4,
+        "maintenance": 2
+      },
+      "evidence": [
+        {
+          "sectionId": "first-batch",
+          "sectionTitle": "首批选题清单怎么配",
+          "quote": "首批 8–10 条按验证目标配比"
+        }
+      ],
+      "strengths": [
+        "方向合同保留放弃原因、依据链和本人确认，明确制作交接三份输入。"
+      ],
+      "issues": [
+        "强制依赖上游三个布尔判断；固定批次可能超过产能；方向不再靠灵感等绝对句压窄创作；只有字段无完整示例。"
+      ],
+      "actions": [
+        "按目标/预算裁减批次和前置调查；提供两种规模示例，链接制作单和决策模板；补授权与版本交接。"
+      ],
+      "priority": "P1",
+      "verdict": "revise",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "decide-how",
+        "decision-record",
+        "topic-pool",
+        "first-batch",
+        "next"
+      ],
+      "renderedTextLength": 1236,
+      "baseline": true,
+      "fixStatus": "targeted_corrections_applied",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "确定创作方向，规划选题方向",
+        "currentStatus": "决策单与选题规划方法首版；待首个真实案例",
+        "changes": "上游三判断改为试作依据；8–10条降为可缩减示例，允许一条内部试片；更新五问接口表述。",
+        "remaining": "完整的方向→选题→制作贯穿样例、首批规划合同及角色交接仍待建立。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "platform-contract",
+      "title": "平台长文写作契约：每篇长文怎么写得可比较",
+      "sourceFile": "content-guides.js",
+      "sourceLine": 6,
+      "baselineStatus": "契约已定稿；随月度核验滚动修订",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 3,
+        "actionability": 3,
+        "clarity": 4,
+        "maintenance": 2
+      },
+      "evidence": [
+        {
+          "sectionId": "maintenance",
+          "sectionTitle": "按月核验与版本差异",
+          "quote": "当前核验队列：百家号七项后台细则"
+        }
+      ],
+      "strengths": [
+        "统一观察路径、来源与维护规则，区分入口和相关性。"
+      ],
+      "issues": [
+        "核验队列易与 README/Todo 漂移；A/B/C/D 混合来源类型与可信程度；要求按月核但无责任人与失效状态。"
+      ],
+      "actions": [
+        "链接可维护主张登记表与任务；来源类别和支持力度分列；将维护日期、owner、过期影响写入数据。"
+      ],
+      "priority": "P1",
+      "verdict": "revise",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "structure",
+        "evidence",
+        "maintenance",
+        "howto"
+      ],
+      "renderedTextLength": 901,
+      "baseline": true,
+      "fixStatus": "targeted_corrections_applied",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "平台长文写作契约：每篇长文怎么写得可比较",
+        "currentStatus": "契约已定稿；随月度核验滚动修订",
+        "changes": "来源类别与支持关系分开，不再以A/B/C/D代替主张支持度。",
+        "remaining": "核验队列、公开任务和来源失效影响缺单一可维护关联。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "topic-gate",
+      "title": "选题判定卡：五问逐项与填写示范",
+      "sourceFile": "content-guides.js",
+      "sourceLine": 16,
+      "baselineStatus": "模板就绪；随实践修订",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "sectionId": "q4",
+          "sectionTitle": "第四问：形态匹配",
+          "quote": "意图藏、首图用审美契约=自相矛盾，打回"
+        }
+      ],
+      "strengths": [
+        "差异轴有具体例子，模板提供选题判定的最小形态。"
+      ],
+      "issues": [
+        "强制互动单指标、购物五型、三类证据和首图一一映射排除了娱乐/表达/陪伴；普通极限词等被无语境一票否决。"
+      ],
+      "actions": [
+        "按目标选择主要回报与可见指标；五型仅消费决策例子；形态与承诺可共存，风险按实际规则限域；示例明确为合成。"
+      ],
+      "priority": "P0",
+      "verdict": "blocked",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "demo"
+      ],
+      "renderedTextLength": 1150,
+      "baseline": true,
+      "fixStatus": "targeted_corrections_applied",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "选题判定卡：五问逐项与填写示范",
+        "currentStatus": "首版勘误 · 待证据复核与实践校准",
+        "changes": "按观众与回报选择主问题，五型仅消费决策提示；允许复合形态；风险限域，示范标为合成且未取证。",
+        "remaining": "仍需多体裁完整填表示范，以及与旧门禁/配套文档的依赖同步。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "production-brief",
+      "title": "制作单逐字段详解：把建议变成可拍的作品",
+      "sourceFile": "content-guides.js",
+      "sourceLine": 28,
+      "baselineStatus": "模板就绪；待真实作品验证",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 2,
+        "actionability": 3,
+        "clarity": 4,
+        "maintenance": 2
+      },
+      "evidence": [
+        {
+          "sectionId": "f2",
+          "sectionTitle": "字段二：内容结构",
+          "quote": "每 15 秒（视频）或每屏（图文）有信息变化点"
+        }
+      ],
+      "strengths": [
+        "七字段有验收动作，负责人和阻塞预案有协作价值。"
+      ],
+      "issues": [
+        "3秒/5行/15秒/每图三层固定形式缺依据，五型继承窄域；无机器编译痕迹不能作为可检验的质量标准；无完整制作单。"
+      ],
+      "actions": [
+        "移除固定时长和图示层数硬规；按原速理解、音量和阅读验证；提供脚本/镜头/资产/审批版本样例。"
+      ],
+      "priority": "P0",
+      "verdict": "blocked",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6",
+        "f7"
+      ],
+      "renderedTextLength": 751,
+      "baseline": true,
+      "fixStatus": "targeted_corrections_applied",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "制作单逐字段详解：把建议变成可拍的作品",
+        "currentStatus": "首版勘误 · 待证据复核与实践校准",
+        "changes": "移除3秒/5行/15秒、固定三层图示和AI腔判据；加入原速声音字幕验收、作品版本、实际发布与内容验收区分。",
+        "remaining": "完整脚本、镜头/素材表、角色接力和真实成片验证仍缺。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "compliance-diff",
+      "title": "各平台合规差异对照表",
+      "sourceFile": "content-guides.js",
+      "sourceLine": 41,
+      "baselineStatus": "首版；按月核验",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 4,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 3
+      },
+      "evidence": [
+        {
+          "sectionId": "matrix",
+          "sectionTitle": "矩阵与首发规则（按来源分开核验）",
+          "quote": "来源确认前不作为执行规则"
+        }
+      ],
+      "strengths": [
+        "清楚区分全国规则、平台适用范围与未核处罚，和合规文章形成证据互补。"
+      ],
+      "issues": [
+        "标题是各平台差异对照表，正文却无七平台对照表且内容大量重复；仍不能帮助读者找到某平台待核事项。"
+      ],
+      "actions": [
+        "建立平台×发布入口×义务×证据日期×待核项矩阵；法律共性链接主文，不复制长段落。"
+      ],
+      "priority": "P1",
+      "verdict": "revise",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "ai",
+        "diversion",
+        "ads",
+        "matrix",
+        "credit"
+      ],
+      "renderedTextLength": 1210,
+      "baseline": true,
+      "fixStatus": "not_changed_in_correction_pass",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "各平台合规差异对照表",
+        "currentStatus": "首版；按月核验",
+        "changes": "未改正文；baseline建议保留。",
+        "remaining": "建立平台×发布入口×义务×证据日期×待核项矩阵；法律共性链接主文，不复制长段落。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "prereg-manual",
+      "title": "预注册卡字段手册：各平台专属字段",
+      "sourceFile": "content-guides.js",
+      "sourceLine": 52,
+      "baselineStatus": "字段字典就绪；台账为空待填",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 2,
+        "actionability": 3,
+        "clarity": 3,
+        "maintenance": 2
+      },
+      "evidence": [
+        {
+          "sectionId": "ledger",
+          "sectionTitle": "台账与字段映射",
+          "quote": "缺分母的指标不记"
+        }
+      ],
+      "strengths": [
+        "有 asset_id/checkpoint/分子分母/源文件字段，明确空台账。"
+      ],
+      "issues": [
+        "固定互动主目标/P75/时间点冒充通用合同；后台字段未证实可取得；缺分母不记会删除合法计数；硬币率=真粉属未经验证心理归因。"
+      ],
+      "actions": [
+        "允许目标观测和计数，分母缺失只禁造比率；时间点/P75按设计选择；字段标可见性/来源日期/缺失处理。"
+      ],
+      "priority": "P0",
+      "verdict": "blocked",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "common",
+        "dict",
+        "ledger"
+      ],
+      "renderedTextLength": 758,
+      "baseline": true,
+      "fixStatus": "targeted_corrections_applied",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "预注册卡字段手册：各平台专属字段",
+        "currentStatus": "首版勘误 · 待证据复核与实践校准",
+        "changes": "允许非流量目标、探索数据及缺分母计数；P75和观察时刻不作通用门槛；平台字段逐账号核可得性。",
+        "remaining": "需公开可复制台账和账号字段实际取证；没有真实发布数据。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "decision-record",
+      "title": "决策记录示范：从措辞级到栏目级",
+      "sourceFile": "content-guides.js",
+      "sourceLine": 61,
+      "baselineStatus": "模板就绪；等待首个真实案例",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 2,
+        "actionability": 3,
+        "clarity": 4,
+        "maintenance": 2
+      },
+      "evidence": [
+        {
+          "sectionId": "word",
+          "sectionTitle": "措辞级示范（一段话版本）",
+          "quote": "预注册主指标为进详情率（封面点击）与藏率"
+        }
+      ],
+      "strengths": [
+        "区分事前预测和事后解释，栏目级字段较全，保留无法区分。"
+      ],
+      "issues": [
+        "改首段句却用封面点击判断效果，观测发生在处理前；两位复述不能撤销一般门槛；又用≥5一律改状态，与唯一主指标互相矛盾。"
+      ],
+      "actions": [
+        "把句子理解作为内部观察，若研究点击需改实际可见包装并记录混杂；去固定样本线，主/辅助观察分列。"
+      ],
+      "priority": "P0",
+      "verdict": "blocked",
+      "fullTextRead": true,
+      "sectionsRead": [
+        "word",
+        "column",
+        "discipline"
+      ],
+      "renderedTextLength": 881,
+      "baseline": true,
+      "fixStatus": "targeted_corrections_applied",
+      "postFix": {
+        "rescored": false,
+        "currentTitle": "决策记录示范：从措辞级到栏目级",
+        "currentStatus": "首版勘误 · 待证据复核与实践校准",
+        "changes": "首段改句用理解观察；进入前点击不再归因于进入后文本；合成示例明确标注，撤回固定5样本升级。",
+        "remaining": "需要首个真实、可复查的比较与裁决；更完整抽样设计需按任务确定。"
+      },
+      "reviewFile": "2026-09-27-core-review.json"
+    },
+    {
+      "id": "xhs",
+      "title": "小红书",
+      "sourceFile": "content-plat-a.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "section": "seo / checklist",
+          "quote": "同一长词出现 3 次以上判堆砌降权；同题材错开 48 小时以上"
+        }
+      ],
+      "strengths": [
+        "搜索意图与用户渗透率的区别解释清楚，保留不采 CES 系数的边界。"
+      ],
+      "issues": [
+        "无出处 SEO 次数、推荐低于 10% 限流诊断进入清单；账号费用与保证金大量无当期官方出处；论文任务效果被外推成每篇作品的分发因果。"
+      ],
+      "improvementActions": [
+        "移除硬阈值和固定收费表；论文结论分开列原任务与创作者假设；建立按功能/订单的资格核验表。"
+      ],
+      "priority": "P0",
+      "publicationQuality": "blocked",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "blocked",
+      "actions": [
+        "移除硬阈值和固定收费表；论文结论分开列原任务与创作者假设；建立按功能/订单的资格核验表。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "douyin",
+      "title": "抖音",
+      "sourceFile": "content-plat-a.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 2,
+        "actionability": 3,
+        "clarity": 4,
+        "maintenance": 2
+      },
+      "evidence": [
+        {
+          "section": "horses / credit / paid",
+          "quote": "发布后最初几十分钟的数据实时改变后续分发；直播健康分：≤69 分"
+        }
+      ],
+      "strengths": [
+        "DOU+ 和完播率段明确标出动态页面不可读、匿名问答无样本，是良好收窄范例。"
+      ],
+      "issues": [
+        "Monolith 架构被当作抖音统一首小时收益依据；信用分、星图千粉、随心推价格与直播整点清零仍是未核操作规则。"
+      ],
+      "improvementActions": [
+        "把技术论文改成系统案例；撤下未复核的收费、处罚与自然分发时限；保留订单页核验和自有数据观察步骤。"
+      ],
+      "priority": "P1",
+      "publicationQuality": "revise",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "revise",
+      "actions": [
+        "把技术论文改成系统案例；撤下未复核的收费、处罚与自然分发时限；保留订单页核验和自有数据观察步骤。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "wechat",
+      "title": "微信生态",
+      "sourceFile": "content-plat-b.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "section": "schedule / ai / compliance",
+          "quote": "公众号首发 → 头条首发（72 小时独占）；新内容最长 48 小时才被搜一搜收录"
+        }
+      ],
+      "strengths": [
+        "订阅、社交、搜索入口分开组织，读者能理解同一内容有不同观察口径。"
+      ],
+      "issues": [
+        "排期正文推荐后又否定同一路径；已撤销的 48 小时官方收录说仍存在；原创=必须首发、AI 主动声明=中性流量待遇未有当前原文；全开广告位忽略阅读代价。"
+      ],
+      "improvementActions": [
+        "改成互斥首发路线；撤销固定收录诊断与 AI 流量保证；原创资格与首发补贴分开；商业功能逐项记录当前账户资格。"
+      ],
+      "priority": "P0",
+      "publicationQuality": "blocked",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "blocked",
+      "actions": [
+        "改成互斥首发路线；撤销固定收录诊断与 AI 流量保证；原创资格与首发补贴分开；商业功能逐项记录当前账户资格。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "bilibili",
+      "title": "B站",
+      "sourceFile": "content-plat-b.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "section": "metrics / rule03 / benchmarks",
+          "quote": "外显指标从播放次数改为“播放分钟数”；17% 是冷启动生死线"
+        }
+      ],
+      "strengths": [
+        "花火费用区分客户侧订单类型，专栏申请资格与单篇起算明确分开。"
+      ],
+      "issues": [
+        "把宣布计划当作已上线现状，且存在取消改版的后续公开报道；0.3 法则被称最优近似；17% 生死线、永久失去长尾资格、硬币率真粉因果均无可复核支持。"
+      ],
+      "improvementActions": [
+        "撤回改版现行断言和固定生死线；以可见后台数据为准；将硬币、弹幕记为不同互动而非真实粉丝度量；保留已核花火链接。"
+      ],
+      "priority": "P0",
+      "publicationQuality": "blocked",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "blocked",
+      "actions": [
+        "撤回改版现行断言和固定生死线；以可见后台数据为准；将硬币、弹幕记为不同互动而非真实粉丝度量；保留已核花火链接。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "zhihu",
+      "title": "知乎",
+      "sourceFile": "content-plat-c.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "section": "wilson / weights / craft",
+          "quote": "千字 + 5 图是及格线；定向分享到领域圈层换高权重赞同"
+        }
+      ],
+      "strengths": [
+        "区分知+广告主开户与知+自选创作者资格，历史资料日期明确。"
+      ],
+      "issues": [
+        "高赞样本均值被写为因果及格线；2014 排序披露当现行全站规则；建议按高权重赞同操盘没有效果依据；盐值、稿费、好物分成多未逐项核实。"
+      ],
+      "improvementActions": [
+        "把选问题和配图改为服务读者的编辑建议；删除固定及格线和排名归因；历史算法注明时点；变现资格/费率按当期原文核验。"
+      ],
+      "priority": "P0",
+      "publicationQuality": "blocked",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "blocked",
+      "actions": [
+        "把选问题和配图改为服务读者的编辑建议；删除固定及格线和排名归因；历史算法注明时点；变现资格/费率按当期原文核验。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "toutiao",
+      "title": "今日头条",
+      "sourceFile": "content-plat-c.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 2,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "section": "first / schedule / formula",
+          "quote": "加入前需近 30 天首发内容阅读量占比 ≥70%；公众号首发 → 头条首发"
+        }
+      ],
+      "strengths": [
+        "能区分原创声明和 AI 标识，指出旧收益公式有效性未再确认。"
+      ],
+      "issues": [
+        "首发互斥逻辑未落到排期；2026-05-25 官方首发页改为单篇声明，正文仍列 70% 旧条件；未知是否有效的乘数仍主导介绍；罚分/功能细节缺直链。"
+      ],
+      "improvementActions": [
+        "按当前首发页收窄资格与排期；撤回旧 70% 条件和通用收益倍数；罚分按具体违规类型的官方页而非混合表。"
+      ],
+      "priority": "P0",
+      "publicationQuality": "blocked",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "blocked",
+      "actions": [
+        "按当前首发页收窄资格与排期；撤回旧 70% 条件和通用收益倍数；罚分按具体违规类型的官方页而非混合表。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "baijiahao",
+      "title": "百家号",
+      "sourceFile": "content-plat-c.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 3,
+        "actionability": 3,
+        "clarity": 4,
+        "maintenance": 3
+      },
+      "evidence": [
+        {
+          "section": "why / decay / promotion / pending",
+          "quote": "同样一篇图文，在百度搜索里的起点比站外内容高；指数五维决定权益与推荐权重"
+        }
+      ],
+      "strengths": [
+        "七项后台规则明确哪些只核公开资料、哪些待登录，AI 标识与原创条件分离。"
+      ],
+      "issues": [
+        "第三方排名查询产品和 2019 争议不能证明 2026 系统性优待；衰退判断未给同口径市场数据；promotion 与 rules 对指数的态度冲突。"
+      ],
+      "improvementActions": [
+        "把平台估值写为带证据缺口的编辑判断；删除指数权重确定句；收窄搜索主引擎到官方双入口事实；入口迁移须补官方/商店记录。"
+      ],
+      "priority": "P1",
+      "publicationQuality": "revise",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "revise",
+      "actions": [
+        "把平台估值写为带证据缺口的编辑判断；删除指数权重确定句；收窄搜索主引擎到官方双入口事实；入口迁移须补官方/商店记录。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "cross-mech",
+      "title": "跨平台机制共性：六个平台的公共规律",
+      "sourceFile": "content-plat-c.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "section": "shared / windows / value",
+          "quote": "全平台共同范式（A 级多源交叉）；75% 参与者单价 +20%"
+        }
+      ],
+      "strengths": [
+        "提供平台迁移时可比较的观察维度，提醒不存在单指标决定论。"
+      ],
+      "issues": [
+        "A 官方与 C 共识混合提升成全平台确定规律；已在百家号页撤回的补贴数字重新出现；不同单位和项目的单价表不足以推导最优平台；题为六平台但本站七平台。"
+      ],
+      "improvementActions": [
+        "改称跨平台观察框架；逐个主张限定平台与年代；移除旧补贴/单价结论；把渠道选择回归受众、能力和实测净收益。"
+      ],
+      "priority": "P0",
+      "publicationQuality": "blocked",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "blocked",
+      "actions": [
+        "改称跨平台观察框架；逐个主张限定平台与年代；移除旧补贴/单价结论；把渠道选择回归受众、能力和实测净收益。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "gates",
+      "title": "三级门禁手册：栏目、选题、表达",
+      "sourceFile": "content-research-a.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "section": "column / topic / expression",
+          "quote": "弱信号……不得据此开栏目；硬约束 ≤20 字；首轮候选至少删 60%"
+        }
+      ],
+      "strengths": [
+        "栏目、选题、表达三个决策层分工清楚，暂缓须写证据缺口有用。"
+      ],
+      "issues": [
+        "内部经验被升级为宪法硬门槛；点赞/收藏阈值、20 字和删 60% 没有跨平台适用依据；审美图不能服务收藏是伪互斥；与 mapping D03 冲突。"
+      ],
+      "improvementActions": [
+        "保留评审问题与明确输出，移除无效硬阈值；分开法规必需/项目约定/待验假设；给新手一份填好示例。"
+      ],
+      "priority": "P0",
+      "publicationQuality": "blocked",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "blocked",
+      "actions": [
+        "保留评审问题与明确输出，移除无效硬阈值；分开法规必需/项目约定/待验假设；给新手一份填好示例。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "hyp-m",
+      "title": "假设库 · M 层：机制断言全量",
+      "sourceFile": "content-research-a.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "section": "rules / m2 / m3",
+          "quote": "升降级需 ≥5 个独立样本方向一致；约 100 次曝光前任何比率不稳定"
+        }
+      ],
+      "strengths": [
+        "机制假设逐条配观察方法，能看到原研究如何进入待验规则。"
+      ],
+      "issues": [
+        "5 同向/100 曝光与裁决冲突；M3 把反差帖对审美帖称单变量；Monolith、F1、报备均值、硬币稀缺被转换为因果；表无逐条状态/来源链接。"
+      ],
+      "improvementActions": [
+        "同步裁决撤销确定阈值；拆多因素处理；所有因果假设记录替代解释、单位和最小有意义效果；规则状态与来源做结构化引用。"
+      ],
+      "priority": "P0",
+      "publicationQuality": "blocked",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "blocked",
+      "actions": [
+        "同步裁决撤销确定阈值；拆多因素处理；所有因果假设记录替代解释、单位和最小有意义效果；规则状态与来源做结构化引用。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "hyp-c",
+      "title": "假设库 · C 层：栏目级规则全量",
+      "sourceFile": "content-research-a.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "section": "c1 / c2",
+          "quote": "弱信号开栏目必失败；单篇约 3000 字；穷尽选题空间"
+        }
+      ],
+      "strengths": [
+        "明确保留 C9 悬空而不补造，栏目延展力和差异轴值得继续试验。"
+      ],
+      "issues": [
+        "C1 必失败、C12 行业默认粒度和 C14 排斥热点均与已核方法卡相矛盾；栏目存活缺定义；不处理幸存者偏差。"
+      ],
+      "improvementActions": [
+        "撤回必失败和通用粒度；把固定坐标系表述为组织选题方法；补采样规则、失败样本和观察期限。"
+      ],
+      "priority": "P0",
+      "publicationQuality": "blocked",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "blocked",
+      "actions": [
+        "撤回必失败和通用粒度；把固定坐标系表述为组织选题方法；补采样规则、失败样本和观察期限。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "hyp-t",
+      "title": "假设库 · T 层：选题级规则全量",
+      "sourceFile": "content-research-a.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 2,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 2
+      },
+      "evidence": [
+        {
+          "section": "t2",
+          "quote": "无资质垂类整类拦截；微信原创=首发制；千字+配图 5 张是高赞及格线"
+        }
+      ],
+      "strengths": [
+        "承認体裁测试不可直接外推，意图声明可帮助明确评价目标。"
+      ],
+      "issues": [
+        "法定义务、项目策略和可检验假设混在同表；原创=首发和千字 5 图复制平台稿错误；三类信号并非独立证据。"
+      ],
+      "improvementActions": [
+        "T14/T15 改为按具体主体、内容和现行规范核对；T16 去掉均值及格线；逐行补来源和证据状态。"
+      ],
+      "priority": "P1",
+      "publicationQuality": "revise",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "revise",
+      "actions": [
+        "T14/T15 改为按具体主体、内容和现行规范核对；T16 去掉均值及格线；逐行补来源和证据状态。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "hyp-e",
+      "title": "假设库 · E 层：表达级规则全量",
+      "sourceFile": "content-research-b.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "section": "e2",
+          "quote": "均触发合规限流，机检拦截；F1 +2–10%；同词 ≥3 次判堆砌"
+        }
+      ],
+      "strengths": [
+        "承诺兑现、首图自解释可作为编辑检查；区分图文与视频观测有用。"
+      ],
+      "issues": [
+        "把分类模型 F1 当运营效果；E15 词匹配直接判违法/限流扩大法规；E19 重复次数、E21 禁修改、E14 PK 全量执行均未核；E18 密度代理已被方法卡否定。"
+      ],
+      "improvementActions": [
+        "删除硬门禁，保留人工语境复核；模型性能与干预效果分离；PK 按当前账号可见功能；错误更正不能服从禁改稿。"
+      ],
+      "priority": "P0",
+      "publicationQuality": "blocked",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "blocked",
+      "actions": [
+        "删除硬门禁，保留人工语境复核；模型性能与干预效果分离；PK 按当前账号可见功能；错误更正不能服从禁改稿。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "hyp-l",
+      "title": "假设库 · L 层：校准元规则全量",
+      "sourceFile": "content-research-b.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 1,
+        "actionability": 1,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "section": "l1 / l2",
+          "quote": "小样本（<30）分位数采用威尔逊区间计算；<1000 曝光是噪声"
+        }
+      ],
+      "strengths": [
+        "预注册、反馈写回、时效核验和多维验收值得保留。"
+      ],
+      "issues": [
+        "Wilson 用错对象；一刀切样本过滤造成幸存者偏差；已固化平台规则仍缺当前证据；L16 声称全部修正但同站仍留旧说。"
+      ],
+      "improvementActions": [
+        "Wilson 仅用于满足假设的二项比例；零值和低曝光分别记录；固化只针对核验流程；裁决影响页必须有回归测试。"
+      ],
+      "priority": "P0",
+      "publicationQuality": "blocked",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "blocked",
+      "actions": [
+        "Wilson 仅用于满足假设的二项比例；零值和低曝光分别记录；固化只针对核验流程；裁决影响页必须有回归测试。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "lib-cross",
+      "title": "经验卡库 · 跨平台总卡与大盘锚点",
+      "sourceFile": "content-research-b.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 2,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 2
+      },
+      "evidence": [
+        {
+          "section": "xm01 / mkt01",
+          "quote": "各平台冷启动池普遍在数百–数千曝光量级；正常爆文率本就是个位数百分比"
+        }
+      ],
+      "strengths": [
+        "单指标决定论纠偏有价值，并明示具体池子数字未证实。"
+      ],
+      "issues": [
+        "边界虽说未证，事实栏仍铺数字；宏观供给总量不能推导个人爆文率；报告页面入口不等于图表核完。"
+      ],
+      "improvementActions": [
+        "将 XM-01 收窄为不同系统的冷启动研究；宏观统计带年/单位/图表位置；删除个人成功概率推断。"
+      ],
+      "priority": "P1",
+      "publicationQuality": "revise",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "revise",
+      "actions": [
+        "将 XM-01 收窄为不同系统的冷启动研究；宏观统计带年/单位/图表位置；删除个人成功概率推断。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "lib-platform",
+      "title": "经验卡库 · 平台机制卡（国内 I）",
+      "sourceFile": "content-research-b.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "section": "douyin / xhs / ttblzh",
+          "quote": "DY-02 完播率分时长基准（蝉妈妈，B）；威尔逊区间直接借用进校准层"
+        }
+      ],
+      "strengths": [
+        "卡号和平台分组便于查找，CES 两版冲突保留得好。"
+      ],
+      "issues": [
+        "已被来源追溯撤回的 DY-02 数字仍以 B 级出现；F1 当因果、封面 PK 现役、48h晋级均不稳；TT-02 与另一卡库同号不同义。"
+      ],
+      "improvementActions": [
+        "同步 G02 对 DY/BM 修订；每卡采用带库前缀的唯一 ID；学术/功能/经验分开状态；Wilson 口径只留正确范围。"
+      ],
+      "priority": "P0",
+      "publicationQuality": "blocked",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "blocked",
+      "actions": [
+        "同步 G02 对 DY/BM 修订；每卡采用带库前缀的唯一 ID；学术/功能/经验分开状态；Wilson 口径只留正确范围。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "lib-academic",
+      "title": "经验卡库 · 学术机制研究卡",
+      "sourceFile": "content-research-c.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 4,
+        "actionability": 3,
+        "clarity": 4,
+        "maintenance": 3
+      },
+      "evidence": [
+        {
+          "section": "cold / weights / predict",
+          "quote": "不代表现行或普遍分发规则；AC-11……精度 +23%"
+        }
+      ],
+      "strengths": [
+        "近期修订已区分历史实验与平台政策，KuaiRand 错号修正、各研究范围与未知都具体。"
+      ],
+      "issues": [
+        "AC06/07/08/11/16 仍无逐段原始链接；AC07 从去混淆研究推为必须分桶分位回归；status A/B 为主容易掩盖待核。"
+      ],
+      "improvementActions": [
+        "保留高质量的范围收窄；补剩余论文书目、数据场景及指标定义；实验效果不转成账号收益。"
+      ],
+      "priority": "P1",
+      "publicationQuality": "revise",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "revise",
+      "actions": [
+        "保留高质量的范围收窄；补剩余论文书目、数据场景及指标定义；实验效果不转成账号收益。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "lib-benchmark",
+      "title": "经验卡库 · 行业基准与创作者方法卡",
+      "sourceFile": "content-research-c.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "section": "intro / bm",
+          "quote": "账号自建基准积累超过 20 条后……；栏目健康线应设在“爆文率 ≥5%”"
+        }
+      ],
+      "strengths": [
+        "BM04 明确分母缺失不能作成功线；方法卡提示头部人设不可复制。"
+      ],
+      "issues": [
+        "20篇阈值与裁决冲突；匿名完播率仍作初值；两种打开率口径被拼区间；5%栏目健康线把商业投放样本误作普遍概率。"
+      ],
+      "improvementActions": [
+        "从默认数字表改为指标定义和样本登记表；撤销成功线；方法卡补原文出处、失败案例和适用环境。"
+      ],
+      "priority": "P0",
+      "publicationQuality": "blocked",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "blocked",
+      "actions": [
+        "从默认数字表改为指标定义和样本登记表；撤销成功线；方法卡补原文出处、失败案例和适用环境。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "lib-monetize",
+      "title": "经验卡库 · 机制 II 与变现卡",
+      "sourceFile": "content-research-c.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 3,
+        "evidence": 1,
+        "actionability": 2,
+        "clarity": 3,
+        "maintenance": 1
+      },
+      "evidence": [
+        {
+          "section": "mc / tt / bjzh / blwx",
+          "quote": "问答&gt;微头条；指数 ≥650 开双标题；降幅约 97%"
+        }
+      ],
+      "strengths": [
+        "提醒功能会退役、一稿多版和体裁数据不可直接外推。"
+      ],
+      "issues": [
+        "仍列已停问答分成、百家号旧指数；30降至2–8算97%错误；原创首发和费率简化；分组标题“B站与微信补充七卡”实际列六卡。"
+      ],
+      "improvementActions": [
+        "同步平台稿勘误；按可审计的净收益与成本记录代替统一收购价；修正算术和分组标题；卡 ID 加命名空间。"
+      ],
+      "priority": "P0",
+      "publicationQuality": "blocked",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "blocked",
+      "actions": [
+        "同步平台稿勘误；按可审计的净收益与成本记录代替统一收购价；修正算术和分组标题；卡 ID 加命名空间。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "lib-methods",
+      "title": "经验卡库 · 创作者方法卡 II（按内容形态）",
+      "sourceFile": "content-research-c.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 3,
+        "actionability": 3,
+        "clarity": 4,
+        "maintenance": 3
+      },
+      "evidence": [
+        {
+          "section": "ks2 / csdr",
+          "quote": "不含利益承诺即合规；重质不重量——低频高质可以成立"
+        }
+      ],
+      "strengths": [
+        "KS01–08 来源身份、转载层级和因果边界说明具体；不把作者经验升级为评分器。"
+      ],
+      "issues": [
+        "KS09–10、CS01/02 和 DR01/02 尚未同等核验；CS02 的合规免责句无依据；CS01 不接广告声称需当前一手确认；开源许可不能覆盖来源版权。"
+      ],
+      "improvementActions": [
+        "先撤销自动合规判断；补剩余六卡原文与日期；提供原创填空示例并与他人署名框架区分；为第三方引文建立权利记录。"
+      ],
+      "priority": "P1",
+      "publicationQuality": "revise",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "revise",
+      "actions": [
+        "先撤销自动合规判断；补剩余六卡原文与日期；提供原创填空示例并与他人署名框架区分；为第三方引文建立权利记录。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    },
+    {
+      "id": "mapping",
+      "title": "映射与裁决：两组研究的统一登记",
+      "sourceFile": "content-research-c.js",
+      "assessmentStage": "pre-release baseline before 2026-09-27 fixes",
+      "scores": {
+        "readerValue": 4,
+        "evidence": 4,
+        "actionability": 4,
+        "clarity": 4,
+        "maintenance": 3
+      },
+      "evidence": [
+        {
+          "section": "rulings / gaps",
+          "quote": "取消“5 次同向自动验证”；Wilson 用于二项比例，不是分位数区间"
+        }
+      ],
+      "strengths": [
+        "本组最可靠的自纠错入口：指出同源不计票、因果不可偷换、真实观察为空，并给具体裁决。"
+      ],
+      "issues": [
+        "裁决不驱动正文更新；128/98/22 的登记是内部资产口径，公开读者缺可达的 canonical registry；未列每条裁决影响文章。"
+      ],
+      "improvementActions": [
+        "将裁决与卡/文章建立影响关系及回归检查；对外提供去私有依赖的登记索引；强调裁决登记不等于修订完成。"
+      ],
+      "priority": "P1",
+      "publicationQuality": "usable",
+      "fixStatus": "首发级修订在后续 fixes 记录中逐项登记；本评分未因修订自动上调，待合并复核",
+      "verdict": "usable",
+      "actions": [
+        "将裁决与卡/文章建立影响关系及回归检查；对外提供去私有依赖的登记索引；强调裁决登记不等于修订完成。"
+      ],
+      "reviewFile": "2026-09-27-research-review.json"
+    }
+  ]
+}
