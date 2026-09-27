@@ -11,7 +11,7 @@ export const researchArticlesB = [
     ]
   },
   {
-    id: 'hyp-l', claimIds: ['METHOD-SAMPLE-GATES-001', 'METHOD-METRIC-REPORTING-001', 'ZHIHU-WILSON-SCOPE-001'], title: '假设库 · L 层：校准元规则全量', short: 'L 层校准元规则', category: '研究底座', status: "首版勘误 · 待证据复核",
+    id: 'hyp-l', claimIds: [ 'METHOD-SAMPLE-GATES-001', 'METHOD-METRIC-REPORTING-001', 'ZHIHU-WILSON-SCOPE-001', 'M29-SEARCH-REC-001'], title: '假设库 · L 层：校准元规则全量', short: 'L 层校准元规则', category: '研究底座', status: "首版勘误 · 待证据复核",
     intro: 'L 层记录数据纪律、预注册、对标与维护流程。条目分别标明待检假设、统计方法边界或项目流程约定；约定可为治理需要而执行，但不因此成为经验证的效果规律。逐条复核见<a href="docs/audit/2026-09-27-metrics-hypothesis-card-review.md#hypotheses">假设审计</a>。',
     sections: [
       section('l1', 'L1–L7：种子版', '<div class="table-scroll"><table><thead><tr><th>ID</th><th>假设陈述</th><th>验证方式</th></tr></thead><tbody><tr><td>L1</td><td>不按通用样本数、曝光数或天数自动过滤数据；分别登记零值、缺失和不确定性</td><td>样本与观察窗按问题设计，审计被排除数据的理由</td></tr><tr><td>L2</td><td>事前记录有助于把预测与事后解释分开；未预注册的观察仍可用于描述、探索和生成假设。</td><td>审查预测是否在结果前留存及事后改写；不能用预注册与否给内容结论贴可信/不可信标签。</td></tr><tr><td>L3</td><td>曝光到关系的分段路径是一个整理问题的框架；五段能定位“绝大多数”失败未验证。</td><td>记录每次定位能否改变下一步决策及后来修正；允许多路径、无法定位和数据不可得。</td></tr><tr><td>L4</td><td>来源等级与范围登记是项目治理方法，不是已验证的流量预测器。</td><td>审计超出来源范围的推断和维护负担；等级只作索引，判断须回到具体来源。</td></tr><tr><td>L5</td><td>学习、审美、表达、互动与转化可作为创作者的目标维度，避免默认互动率代表总价值；五维不一定穷尽目标。</td><td>逐项检查目标、观察信号与决策是否对应；记录目标冲突和无适当量化字段的情况。</td></tr><tr><td>L6</td><td>三门检查表是本站的栏目决策流程约定，尚未证明能预测栏目存活；原五个栏目回溯不足以确立效果。</td><td>用流程完整性与真实决策后果分别评估；保留样本来源、失败栏目和未满足条件，不能基于5例升格。</td></tr><tr><td>L7</td><td>复盘回写能改善选题的假设尚未验证；回写本身也有成本并可能固化偏差。</td><td>观察被采纳的记录是否改变后续选择，并记录未采纳、失效和返工；跨期趋势控制内容与团队变化。</td></tr></tbody></table></div>'),

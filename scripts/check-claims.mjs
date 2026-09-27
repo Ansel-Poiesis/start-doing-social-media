@@ -131,5 +131,62 @@ cardSection.html = cardSection.html.replace(firstCardConsumer.consumer.cardIds[0
 const missingCard = validateRegistry({ data: registry, articleList: mutatedCardArticles, documentMarkers });
 assert.ok(missingCard.some(message => message.includes(`card marker ${firstCardConsumer.consumer.cardIds[0]} not found`)), 'Removing a card anchor must fail validation');
 
+function consumerText(articleId, sectionId) {
+  const article = articles.find(item => item.id === articleId);
+  assert.ok(article, "Missing regression article " + articleId);
+  const section = article.sections.find(item => item.id === sectionId);
+  assert.ok(section, "Missing regression section " + articleId + "." + sectionId);
+  return section.title + " " + section.html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ");
+}
+
+const propagationBoundaries = [
+  { articleId: "cross-mech", sectionId: "searchfeed", forbidden: [/双重收益|推荐画像校准|训练出错误画像/], required: [/现有材料不足/, /按平台分别记录/, /M29\/L14/] },
+  { articleId: "cross-mech", sectionId: "types", forbidden: [/算法赛马型|搜索混合型|社交分发型|平台三型分治|二级传播的扳机/], required: [/不预设/, /注明来源、时间、定义与分母/, /都可能对应不同意图/, /不根据审美风格推断/] },
+  { articleId: "xhs", sectionId: "position", forbidden: [/去中心化内容场|搜索余命|不依赖好友关系链|吃不到结构性长尾/], required: [/M29\/L14/, /账号可见数据/] },
+  { articleId: "xhs", sectionId: "papers", forbidden: [/搜索行为反哺推荐流画像|搜索词布局同时在训练系统/], required: [/不单独证明线上搜索/, /分别记录可见搜索与推荐来源/] },
+  { articleId: "douyin", sectionId: "position", forbidden: [/算法赛马型|搜索反哺推荐|搜索兴趣实时调整推荐|冷启动靠内容语义质量/], required: [/没有确认搜索行为/, /编辑候选/] },
+  { articleId: "wechat", sectionId: "typology", forbidden: [/学术侧互证|平台三型分治|预测变量结构不同|主指标应侧重转发与在看/], required: [/已撤回/, /仍需直接证据/, /按作品目标/, /不能唯一代表一种心理意图/] },
+  { articleId: "topic-gate", sectionId: "q1", forbidden: [/按平台类型预设主指标/], required: [/心理动机一一对应/, /下沉也不能由审美风格推断/] },
+  { articleId: "platform-contract", sectionId: "howto", forbidden: [/按账号策略匹配分型/], required: [/不用固定类型代替核验/, /证据范围相符/, /AC-16 来源状态/] },
+  { articleId: "vertical-methods", sectionId: "m-comments", forbidden: [/5–8 条|前 50|50 条评论|是这个垂域的需求证据|只出现一次.*不入结论/], required: [/自我选择/, /不能单独证明稳定需求/, /不设跨垂域通用/] }
+];
+
+for (const boundary of propagationBoundaries) {
+  const text = consumerText(boundary.articleId, boundary.sectionId);
+  for (const pattern of boundary.forbidden) assert.doesNotMatch(text, pattern, boundary.articleId + "." + boundary.sectionId + " reintroduced a withdrawn claim");
+  for (const pattern of boundary.required) assert.match(text, pattern, boundary.articleId + "." + boundary.sectionId + " lost its evidence boundary");
+}
+
+const baijiaChange = articles.find(article => article.id === "baijiahao")?.sections.find(section => section.id === "change");
+assert.ok(baijiaChange, "Baijiahao entrance-change section must remain available");
+assert.doesNotMatch(baijiaChange.title + baijiaChange.html, /2026-09-22/, "An unverified migration date must not return");
+assert.match(baijiaChange.html, /2026-05-26/, "The official announcement date must remain traceable");
+assert.match(baijiaChange.html, /二手报道/);
+assert.match(baijiaChange.html, /待核/);
+
+const requiredConsumers = [
+  ["M29-SEARCH-REC-001", "cross-mech", "searchfeed"],
+  ["M29-SEARCH-REC-001", "xhs", "papers"],
+  ["M29-SEARCH-REC-001", "douyin", "searchfeed"],
+  ["M29-SEARCH-REC-001", "platform-contract", "howto"],
+  ["M29-SEARCH-REC-001", "hyp-m", "m3"],
+  ["M29-SEARCH-REC-001", "hyp-l", "l2"],
+  ["C2-DEMAND-SIGNAL-001", "vertical-methods", "m-comments"],
+  ["C2-DEMAND-SIGNAL-001", "vertical", "demand"],
+  ["C2-DEMAND-SIGNAL-001", "hyp-c", "c1"],
+  ["AC16-SOCIAL-CHAIN-001", "cross-mech", "types"],
+  ["AC16-SOCIAL-CHAIN-001", "wechat", "typology"],
+  ["AC16-SOCIAL-CHAIN-001", "lib-academic", "china"],
+  ["AC16-SOCIAL-CHAIN-001", "platform-contract", "howto"],
+  ["D17-INTERACTION-INTENT-001", "cross-mech", "types"],
+  ["D17-INTERACTION-INTENT-001", "wechat", "typology"],
+  ["D17-INTERACTION-INTENT-001", "topic-gate", "q1"]
+];
+for (const [claimId, articleId, sectionId] of requiredConsumers) {
+  const claim = registry.claims.find(item => item.id === claimId);
+  assert.ok(claim, "Missing correction claim " + claimId);
+  assert.ok(claim.consumers.some(consumer => consumer.kind === "article" && consumer.articleId === articleId && consumer.sectionIds.includes(sectionId)), "Missing consumer map " + claimId + " -> " + articleId + "." + sectionId);
+}
+
 const consumerCount = registry.claims.reduce((total, claim) => total + claim.consumers.length, 0);
-console.log(`Claim checks passed: ${registry.claims.length} registered claims, ${consumerCount} declared consumers; missing article/card/protocol/skill propagation is rejected.`);
+console.log(`Claim checks passed: ${registry.claims.length} registered claims, ${consumerCount} declared consumers; required correction mappings and text/date regression guards pass.`);
