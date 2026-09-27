@@ -303,6 +303,57 @@ const siteArticles = [
 
 export const articles = [...siteArticles, ...platformArticlesA, ...platformArticlesB, ...platformArticlesC, ...researchArticlesA, ...researchArticlesB, ...researchArticlesC, ...guideArticles, ...directionArticles];
 
+// The reader is a public teaching surface; these handoffs make each stage's inputs,
+// working protocol, blank artifact and next deliverable visible at the point of use.
+function addWorkflowHandoff(articleId, skill, input, output, next) {
+  const article = articles.find(item => item.id === articleId);
+  if (!article) throw new Error('Workflow article not found: ' + articleId);
+  article.sections.push(section('workflow-handoff', '本阶段的输入、产物与下一步',
+    '<p><strong>输入：</strong>' + input + '</p>' +
+    '<p><strong>工作协议：</strong><a href="skills/' + skill + '/SKILL.md">读取 ' + skill + ' skill</a>；开始填写前可复制<a href="skills/' + skill + '/assets/template.md">空白模板</a>。</p>' +
+    '<p><strong>本阶段交接物：</strong>' + output + '</p>' +
+    '<p><strong>下一步：</strong>' + next + '</p>' +
+    '<p>字段缺少证据时保留“未知/阻断”，不要把教学选择改写成真实确认。六阶段的同一份合成演示见<a href="skills/examples/synthetic-workflow.md">贯穿交接样例</a>。</p>'));
+}
+
+addWorkflowHandoff('profile', 'creator-profile', '创作者本人的自述、可公开作品与反馈（可以缺；缺少时注明）。', '一份待本人核对的档案草案，包含材料来路、边界、资源和关键未知。', '进入<a href="#/platform">平台研究文章</a>，带上档案版本与待核问题。');
+addWorkflowHandoff('platform', 'platform-research', '已确认或待确认的档案字段、当前决策、候选平台与公开来源。', '来源账本、调查简报和有代价/反例/未知项的方向候选；没有采样就标为待证据。', '进入<a href="#/direction">搭配方向文章</a>，再把保留的候选交给选题规划。');
+addWorkflowHandoff('direction', 'platform-research', 'profile 与 research 产物的具体版本；缺任一项时写明缺口。', '可比较的方向候选及其材料需求、代价、反例和创作者选择状态。', '进入<a href="#/topic">选题文章</a>，把候选作为输入而非既定答案。');
+addWorkflowHandoff('decide', 'topic-planning', '待选择的方向候选、研究简报、已有素材和制作约束。', '有明确观看承诺、依据、反例、主观察信号和改判条件的选题卡。', '按<a href="#/topic">选题比较方法</a>收敛，再进入<a href="#/production">制作交接</a>。');
+addWorkflowHandoff('topic', 'topic-planning', '已确认方向或待确认候选、相关研究版本、可用材料和制作约束。', '选题卡与事前预测；样本、分母或窗口不可得时如实保留未知。', '进入<a href="#/production">制作文章</a>，连同选题版本交接。');
+addWorkflowHandoff('production', 'production-brief', '选题卡、素材及授权状态、工时和交付条件。', '可执行的制作单、素材/事实账本、成品版本与明确的阻断项。', '完成成品后进入<a href="#/compliance">发布前检查文章</a>；素材缺失时先阻断。');
+addWorkflowHandoff('compliance', 'publication-review', '确定版本的成品、目标平台/账号/时间与来源授权记录。', '逐项检查结果和发布交接；没有审核、权限或正式回执时不得写成已发布。', '将已核准且由创作者决定的作品与实际回执交给<a href="#/iteration">复盘文章</a>。');
+addWorkflowHandoff('iteration', 'content-retrospective', '作品及发布回执（若有）、事前预测、实际可见指标及分母、观察窗口和反馈原文。', '保留原始计数、缺失状态、替代解释和下一轮单项改动的复盘记录。', '本轮到此结束；开始下一轮选题时，回到<a href="#/topic">选题规划</a>并引用复盘版本。');
+
+function addTeachingArtifact(articleId, title, html) {
+  const article = articles.find(item => item.id === articleId);
+  if (!article) throw new Error('Teaching article not found: ' + articleId);
+  article.sections.push(section('synthetic-artifact', title, html));
+}
+
+addTeachingArtifact('direction', '合成教学产物：从窗边观察形成方向候选',
+  '<p><strong>性质：合成教学；不是任何真实创作者档案、受众调查或平台结论。</strong>完整六阶段交接记录见<a href="skills/examples/synthetic-workflow.md">合成贯穿样例</a>。</p>' +
+  '<p><strong>输入 profile-demo-v1：</strong>虚构自述“想记录同一扇窗在不同时段的光线变化；不露脸，不拍他人空间”。这是训练用输入，未获真人确认；没有作品、反馈、受众或平台证据。</p>' +
+  '<div class="table-scroll"><table><thead><tr><th>候选</th><th>需要的材料/动作</th><th>主要未知与代价</th></tr></thead><tbody><tr><td>A：同一窗边、不同时段的视觉观察</td><td>自行拍摄同一构图的原始照片，注明日期和拍摄条件；描述可见差异，不扩大成普遍结论。</td><td>观众是否关心、能否持续供给、图像差异是否足够清楚都未知。</td></tr><tr><td>B：窗边用品推荐</td><td>需要具体产品、亲测依据、利益关系与适用边界；产品信息和授权目前均无。</td><td>事实核查、利益披露和素材权利成本更高，不能凭空写推荐。</td></tr></tbody></table></div>' +
+  '<p><strong>教学选择（direction-demo-v1，draft）：</strong>本例暂选 A 作为低外部事实负担的试作方向，不代表真实本人选择或市场机会判断。进入制作前仍需实际拍到并核对原始照片；受众需求、平台匹配和效果保持未知。</p>' +
+  '<p><strong>反例：</strong>“没人做窗边观察，所以这里是蓝海”或“某平台喜欢这种内容”没有样本、来源或平台证据，均不得写入结论。</p>');
+
+addTeachingArtifact('topic', '合成教学产物：把方向收敛为一条可检查的选题',
+  '<p><strong>产物 topic-demo-v1 · 合成教学 · 状态 needs-evidence。</strong>上游是未确认的 direction-demo-v1；本例只演示如何写清承诺和缺口。全链记录见<a href="skills/examples/synthetic-workflow.md">合成贯穿样例</a>。</p>' +
+  '<ul><li><strong>选题：</strong>用同一构图的两张自摄照片，指出窗边在两个记录时段里可见的光线差异。</li><li><strong>观看承诺：</strong>看完能指出画面中实际可见的变化；不承诺改善居家采光，也不提供摄影技巧。</li><li><strong>材料/依据：</strong>需要本人拍摄的原图、时间和拍摄条件记录；照片尚未取得，当前为阻断项。</li><li><strong>主目标：</strong>检查说明文字能否准确带读者对比图片；真实读者任务与价值未知。</li><li><strong>预测与信号：</strong>内部可读性检查时记录读者指出的可见差异及其原话；尚未开展，没有样本、指标结果或观察窗口。</li><li><strong>改判条件：</strong>若两张图无法公平对照，或描述超出画面证据，缩小承诺或停做。</li></ul>' +
+  '<p><strong>分母规则：</strong>尚无参与者记录，不计算比例。若任何字段将来不可得，保留“未收集/不可得”，不得补造固定样本量或达标率。</p>' +
+  '<p><strong>反例：</strong>把“预期收藏率 10%”或“平台偏好风景图”写成事实，没有来源和分母，不能指导本例。</p>');
+
+addTeachingArtifact('production', '合成教学产物：制作简报与素材阻断记录',
+  '<p><strong>产物 production-demo-v1 · 合成教学 · 状态 blocked。</strong>上游 topic-demo-v1 的原始照片尚未拍摄，因此这是一份字段完整、明确停止的制作交接，不是已完成作品。详见<a href="skills/examples/synthetic-workflow.md">合成贯穿样例</a>。</p>' +
+  '<ul><li><strong>载体与承诺：</strong>两张同构图静态图配短说明；只呈现画面可见差异，不给出采光或健康建议。</li><li><strong>画面顺序：</strong>①标题注明“合成教学示例”；②照片 A 和记录时段；③照片 B 和记录时段；④并排标出一处可见变化并说明比较条件；⑤结尾说明本例边界。</li><li><strong>文案草稿：</strong>“比较这两张在不同记录时段拍摄的照片。请先看窗框和亮部位置的可见变化；它只描述这组照片，不代表所有房间或天气。”真实时间、画面位置须拍摄后填写。</li><li><strong>素材账本：</strong>照片 A、B：本人原始素材，状态“未拍摄”，权利/隐私核验未开始；字体与配乐：本静态图文方案不使用。</li><li><strong>交付与验收：</strong>原图、裁切图、说明文字和来源账本；同一机位/构图可辨、记录条件齐全、每句描述能回指画面，且无他人信息。</li><li><strong>阻断与允许动作：</strong>缺少照片时停止成品验收；仅可先准备空版式，之后由创作者拍摄或确认有权使用的素材，再做事实与隐私检查。</li></ul>' +
+  '<p><strong>反例：</strong>以来源不明的网图、未经授权的他人房间照片或生成图片冒充“同一扇窗的实拍对照”，会破坏证据链；本简报要求阻断，不得用替代素材悄悄补齐。</p>');
+
+addTeachingArtifact('iteration', '合成教学产物：没有回执时的复盘',
+  '<p><strong>产物 retrospective-demo-v1 · 合成教学 · 状态 unknown / 无法判断。</strong>没有成品、发布动作或平台回执；本例未发布。完整状态流转见<a href="skills/examples/synthetic-workflow.md">合成贯穿样例</a>。</p>' +
+  '<ul><li><strong>作品版本与回执：</strong>production-demo-v1 被素材缺口阻断；未发布，无 URL、时间戳或平台回执。</li><li><strong>事前预测：</strong>topic-demo-v1 只提出未来内部可读性检查，不构成效果预测或真实观众反馈。</li><li><strong>观察窗口与数据：</strong>未开始；曝光、阅读、互动、反馈均未收集。状态为“未执行/未知”，不是 0。</li><li><strong>分母：</strong>无可用平台字段；任何比率不可计算。若单独演示一条完全虚构的输入“原始保存计数 12、合格触达分母不可得”，只可记录原始计数 12、将比例记为未知；该数值不是本项目数据。</li><li><strong>解释与裁决：</strong>无法判断内容是否被看到、是否有用或是否成功；不评价方法效果，也不把素材阻断解释成受众拒绝。</li><li><strong>下一动作：</strong>先由创作者决定是否拍摄并确认素材边界；获得正式回执与可用指标后，才按对应窗口复盘。</li></ul>' +
+  '<p><strong>反例：</strong>“没有收到发布回执，因此播放量为零、内容失败”把缺失误当成实际零和因果结论，必须拒绝。</p>');
+
 export const articleById = Object.fromEntries(articles.map(article => [article.id, article]));
 export const learningIds = [];
 export const readingIds = sections.flatMap(section => section.groups.flatMap(group => group.ids));

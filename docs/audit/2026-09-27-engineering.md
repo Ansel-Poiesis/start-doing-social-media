@@ -58,3 +58,26 @@ HTTP 检查逐一比对 17 个公开文件的实际响应内容，验证 MIME、
 - 为浏览器回归建立可复用的自动化入口，覆盖窄屏目录、主题切换、表格滚动和键盘导航；本轮记录不替代持续集成中的真实浏览器测试。
 - 当前 `styles.css` 仍有历史工作台样式与多轮覆盖规则，可在保留视觉对照后单独清理。
 - 对来源有效性和内容质量采用独立检查与人工评审；文章长度检查只防止正文意外丢失，不能证明质量。
+
+## TASK-10.16 贯穿样例与资源入口复核
+
+2026-09-27，基于 TASK-10.17 的 `17e4bf6`。此处结果是本次复核的新增证据，前文 17 个公开文件/74 个请求是先前版本的历史快照，未覆盖本次扩展。
+
+- 在 profile、platform、direction、decide、topic、production、compliance、iteration 文章增加阶段输入、对应 skill、空白模板、交接物与下一步链接。方向、选题、制作、复盘页增加合成教学产物和反例。
+- 六阶段样例统一为“同一扇窗的光线观察”，明确档案未经本人确认、平台与受众未调查、照片缺失导致制作阻断、发布前检查阻断，以及没有回执/数据时复盘为未知。另以隔离的虚构输入演示有计数而无分母时不算比例。
+- 将 `direction` 的 skill 归属从 `creator-profile` 更正为 `platform-research`，同步 manifest 和两个 skill 说明。
+- HTTP 白名单由 17 项扩至 31 项，新增精确 14 个 Markdown 资源：六个 skill、六份模板、贯穿样例和指标/假设/卡库复核报告。测试仍拒绝其他审计文档、协议、manifest、私人路径和不存在文件；Markdown 响应按 `text/markdown; charset=utf-8` 提供。
+
+自动核验结果：
+
+```text
+PASS reader: 49 articles, 6 themes, 20 profile questions, internal routes/anchors, reading layout contracts and pure module graph.
+PASS server: 108 HTTP requests; 31 public files, GET/HEAD, MIME, methods, private files, traversal and malformed paths.
+Knowledge checks passed: 6 skills, 49 paired articles, readable full-text export.
+Claim checks passed: 17 registered claims, 125 declared consumers; missing article/card/protocol/skill propagation is rejected.
+PASS release scanner: 17 isolated fixtures; text formats, secret headers, private paths, literal filenames and staged/working differences.
+Release scan passed: 83 tracked files; working and index content checked.
+git diff --check: passed.
+```
+
+文章锚点与页面链接检查覆盖文章模块；逐个 HTTP GET/HEAD 核对 31 个文件的内容、MIME 和响应头。仓库 README、skills README、六阶段示例及 skill 内部相对链接经文件系统解析检查。此处确认的是资源可达和结构交接，不是创作者试用、平台规则核验或内容效果验证；示例中的虚构数值不属于项目观察。

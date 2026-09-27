@@ -3,6 +3,7 @@ import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { once } from 'node:events';
 import { createReaderServer } from '../server.mjs';
+import { articles } from '../content.js';
 
 const expectedFiles = [
   'index.html', 'styles.css', 'app.js', 'content.js', 'content-plat-a.js',
@@ -10,8 +11,15 @@ const expectedFiles = [
   'content-research-b.js', 'content-research-c.js', 'content-guides.js',
   'content-direction.js', 'creator-interview.js', 'mark.svg',
   'assets/creator-profile-map.webp', 'assets/learning-loop.webp', 'assets/home-hero-art.png',
+  'docs/audit/2026-09-27-metrics-hypothesis-card-review.md', 'skills/examples/synthetic-workflow.md',
+  'skills/creator-profile/SKILL.md', 'skills/creator-profile/assets/template.md',
+  'skills/platform-research/SKILL.md', 'skills/platform-research/assets/template.md',
+  'skills/topic-planning/SKILL.md', 'skills/topic-planning/assets/template.md',
+  'skills/production-brief/SKILL.md', 'skills/production-brief/assets/template.md',
+  'skills/publication-review/SKILL.md', 'skills/publication-review/assets/template.md',
+  'skills/content-retrospective/SKILL.md', 'skills/content-retrospective/assets/template.md',
 ];
-const expectedTypes = { html: 'text/html', css: 'text/css', js: 'text/javascript', svg: 'image/svg+xml', webp: 'image/webp', png: 'image/png' };
+const expectedTypes = { html: 'text/html', css: 'text/css', js: 'text/javascript', md: 'text/markdown', svg: 'image/svg+xml', webp: 'image/webp', png: 'image/png' };
 const server = createReaderServer();
 server.listen(0, '127.0.0.1');
 await once(server, 'listening');
@@ -55,6 +63,8 @@ try {
   assert.equal((await request('/app.js?v=smoke')).status, 200, 'Static file query strings');
   for (const file of [
     'README.md', 'TODO.md', 'CHECKPOINT.md', 'package.json', 'server.mjs', 'check.mjs',
+    'docs/audit/README.md', 'docs/claims/registry.json', 'skills/manifest.json', 'skills/PROTOCOL.md',
+    'skills/platform-research/assets/nonexistent.md', 'skills/creator-profile/private-notes.md',
     'docs/agent-knowledge/01-profile.md', 'creator-interview-runtime.js', 'creator-agent.js',
     'match-engine.js', 'market-agent.js', 'agent.config.json', '.git/config', '.env',
     '.local/baseline-2026-09-27/agent.config.json', 'scripts/test-server.mjs',
@@ -63,6 +73,16 @@ try {
     '..%2fserver.mjs', 'assets/../server.mjs', 'app.js%00',
   ]) {
     assert.equal((await request('/' + file)).status, 404, 'Unexpected public file: ' + file);
+  }
+  for (const article of articles) {
+    for (const section of article.sections) {
+      for (const match of section.html.matchAll(/href=["']([^"']+)["']/g)) {
+        const href = match[1].split('#')[0];
+        if (href.startsWith('skills/') || href.startsWith('docs/audit/')) {
+          assert.ok(expectedFiles.includes(href), 'Reader link must target an explicitly public file: ' + article.id + ' -> ' + href);
+        }
+      }
+    }
   }
   for (const method of ['POST', 'PUT', 'DELETE', 'OPTIONS']) {
     for (const route of ['/app.js', '/api/agent']) {

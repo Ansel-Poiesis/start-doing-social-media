@@ -14,7 +14,7 @@ cd start-doing-social-media
 npm start
 ```
 
-打开 [本地阅读器](http://127.0.0.1:8784/)。阅读器支持主题切换、章节目录、文章锚点和窄屏表格；不接收账号、访谈答案或模型密钥。服务只提供阅读资产，仓库文档与 skills 通过本地文件读取。
+打开 [本地阅读器](http://127.0.0.1:8784/)。阅读器支持主题切换、章节目录、文章锚点和窄屏表格；不接收账号、访谈答案或模型密钥。浏览器可读取文章直接链接的六个 skill、六份空白模板、合成贯穿样例和指标审计报告；其余仓库文件不由阅读服务提供。
 
 ```bash
 npm run check
@@ -29,13 +29,13 @@ node scripts/read-article.mjs profile
 | 要解决的问题 | 阅读入口 ID | 内置 skill | 产物 |
 | --- | --- | --- | --- |
 | 我能持续提供什么 | profile、creative-type | [creator-profile](skills/creator-profile/SKILL.md) | 工作档案与关键未知 |
-| 观众在哪里、候选方向是否有依据 | platform、match、vertical | [platform-research](skills/platform-research/SKILL.md) | 来源账本、研究简报、候选 |
+| 观众在哪里、候选方向是否有依据 | platform、match、direction、vertical | [platform-research](skills/platform-research/SKILL.md) | 来源账本、研究简报、方向候选与代价 |
 | 下一条做什么 | decide、topic、topic-gate | [topic-planning](skills/topic-planning/SKILL.md) | 选题卡与事前预测 |
 | 怎样把承诺做出来 | production、production-brief | [production-brief](skills/production-brief/SKILL.md) | 制作单、素材/事实清单 |
 | 成品能否进入发布审核 | compliance、compliance-diff | [publication-review](skills/publication-review/SKILL.md) | 按平台分开的检查与交接 |
 | 结果支持改什么 | iteration、competition、decision-record | [content-retrospective](skills/content-retrospective/SKILL.md) | 复盘与下一轮改动 |
 
-每个 skill 提供触发条件、输入、步骤、模板、停止条件和下一阶段入口。克隆完整仓库后，要求协作工具读取相应 SKILL.md；不需要安装到个人技能目录。详细方法见 [skills 说明](skills/README.md) 和 [合成交接演示](skills/examples/synthetic-workflow.md)。
+每个 skill 提供触发条件、输入、步骤、模板、停止条件和下一阶段入口。六阶段入口文章会链接对应 skill、空白模板、输入、产物和下一步；方向页、选题页、制作页与复盘页各有合成教学产物及反例。克隆完整仓库后，要求协作工具读取相应 SKILL.md；不需要安装到个人技能目录。详细方法见 [skills 说明](skills/README.md) 和 [合成交接演示](skills/examples/synthetic-workflow.md)。
 
 ## 当前完成度
 
