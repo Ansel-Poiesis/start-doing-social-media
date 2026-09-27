@@ -285,6 +285,46 @@
         { "kind": "protocol", "path": "docs/agent-knowledge/03-platform-and-direction.md" },
         { "kind": "skill", "path": "skills/platform-research/SKILL.md" }
       ]
+    },
+    {
+      "id": "PLATFORM-AI-DECLARATION-001",
+      "statement": "在中国境内向公众发布人工智能生成合成内容，用户应按标识办法主动声明并使用平台提供的标识功能；各平台当前编辑器的具体控件状态按逐平台证据记录。",
+      "status": "legal_duty_verified_platform_ui_varies",
+      "scope": "国家标识义务适用于相关生成合成内容；平台公开说明和登录态发布页面不是同一证据，不能由法律要求推定具体按钮位置。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "official_source", "status": "supports_limited_scope", "url": "https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm", "title": "国家互联网信息办公室等：《人工智能生成合成内容标识办法》", "sourceDate": "2025-03-14", "reviewedAt": "2026-09-27", "assessment": "办法于2025-09-01施行；第十条规定用户发布相关内容时主动声明并使用平台标识功能。" },
+        { "kind": "official_source", "status": "supports_limited_scope", "url": "https://www.cac.gov.cn/2025-03/14/c_1743654685896173.htm", "title": "网信办关于人工智能生成合成内容标识的官方问答", "sourceDate": "2025-03-14", "reviewedAt": "2026-09-27", "assessment": "解释标识和用户声明义务；不提供各平台当前账户界面的逐项证明。" },
+        { "kind": "audit_record", "status": "recorded_platform_evidence_matrix", "ref": "docs/audit/2026-09-27-platform-verification.md", "reviewedAt": "2026-09-27", "assessment": "逐平台分列已公开说明、二手资料和未登录复核的编辑器状态。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "xhs", "sectionIds": ["checklist"] },
+        { "kind": "article", "articleId": "douyin", "sectionIds": ["checklist"] },
+        { "kind": "article", "articleId": "wechat", "sectionIds": ["checklist"] },
+        { "kind": "article", "articleId": "bilibili", "sectionIds": ["checklist"] },
+        { "kind": "article", "articleId": "zhihu", "sectionIds": ["checklist"] },
+        { "kind": "article", "articleId": "toutiao", "sectionIds": ["checklist"] },
+        { "kind": "article", "articleId": "baijiahao", "sectionIds": ["checklist"] }
+      ]
+    },
+    {
+      "id": "PLATFORM-ACCOUNT-UI-STATUS-001",
+      "statement": "未使用创作者账号或发布草稿核查，因此未公开的账号资格、实时费率/处罚、完整权益以及登录态发布控件状态保持待核；已公开的限范围规则只按日期和证据等级记录。",
+      "status": "requires_account_verification",
+      "scope": "本批七个平台文章的登录态权益、费用、处罚、报名条件及AI标识编辑器入口；不表示公开规则均未知。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "audit_record", "status": "recorded_limitation", "ref": "docs/audit/2026-09-27-platform-verification.md", "reviewedAt": "2026-09-27", "assessment": "本轮没有获得账户授权或使用登录态；记录按人工可执行步骤交接。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "xhs", "sectionIds": ["checklist"] },
+        { "kind": "article", "articleId": "douyin", "sectionIds": ["checklist"] },
+        { "kind": "article", "articleId": "wechat", "sectionIds": ["checklist"] },
+        { "kind": "article", "articleId": "bilibili", "sectionIds": ["checklist"] },
+        { "kind": "article", "articleId": "zhihu", "sectionIds": ["checklist", "monetize"] },
+        { "kind": "article", "articleId": "toutiao", "sectionIds": ["checklist"] },
+        { "kind": "article", "articleId": "baijiahao", "sectionIds": ["checklist", "pending"] }
+      ]
     }
   ]
 }
