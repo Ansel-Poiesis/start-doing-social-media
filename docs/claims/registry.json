@@ -3,7 +3,7 @@
   "reviewedAt": "2026-09-27",
   "coverage": {
     "status": "priority_batch",
-    "scope": "2026-09-27首发级勘误中的高风险平台规则、阈值与方法边界",
+    "scope": "2026-09-27首发级勘误中的高风险平台规则、阈值与方法边界，以及指标报告口径",
     "complete": false
   },
   "claims": [
@@ -26,8 +26,37 @@
         { "kind": "article", "articleId": "constitution", "sectionIds": ["gates"] },
         { "kind": "article", "articleId": "hyp-l", "sectionIds": ["l1", "l2"] },
         { "kind": "article", "articleId": "hyp-m", "sectionIds": ["rules"] },
+        { "kind": "article", "articleId": "gates", "sectionIds": ["probe", "topic"] },
+        { "kind": "article", "articleId": "iteration", "sectionIds": ["before", "after"] },
         { "kind": "protocol", "path": "docs/agent-knowledge/05-observation-and-system-learning.md" },
         { "kind": "skill", "path": "skills/platform-research/SKILL.md" },
+        { "kind": "skill", "path": "skills/topic-planning/SKILL.md" },
+        { "kind": "skill", "path": "skills/content-retrospective/SKILL.md" }
+      ]
+    },
+    {
+      "id": "METHOD-METRIC-REPORTING-001",
+      "statement": "计数、比率、分位数与区间须按各自的观测单位、分母/算法及设计假设报告；Wilson区间仅用于适用的二项比例，缺失数据与观测到的零值分开。",
+      "status": "scope_limited_supported",
+      "scope": "本站创作者观察与复盘的报告口径。该主张不规定唯一分析方法，也不表示区间可以修复选择偏差、证明因果或替代创作者目标。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "primary_method_reference", "status": "supports_limited_scope", "url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm", "title": "NIST/SEMATECH e-Handbook: Confidence intervals for proportions", "reviewedAt": "2026-09-27", "assessment": "说明Wilson方法针对比例置信区间；使用时仍需检查二项观测单位与设计条件。" },
+        { "kind": "primary_method_reference", "status": "supports_limited_scope", "url": "https://itl.nist.gov/div898/handbook/prc/section2/prc262.htm", "title": "NIST/SEMATECH e-Handbook: Percentiles", "reviewedAt": "2026-09-27", "assessment": "定义经验分位数基于排序统计量，并列出不同插值算法；不将其等同于二项比例。" },
+        { "kind": "primary_method_reference", "status": "supports_limited_scope", "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35.htm", "title": "NIST/SEMATECH e-Handbook: Interval estimates and quantitative techniques", "reviewedAt": "2026-09-27", "assessment": "区间估计用于表达样本估计的不确定性，解释须考虑统计假设及实务意义。" },
+        { "kind": "primary_method_reference", "status": "supports_limited_scope", "url": "https://unstats.un.org/unsd/publication/seriesf/seriesf_98e.pdf", "title": "UN Statistics Division: Household Sample Surveys in Developing and Transition Countries", "reviewedAt": "2026-09-27", "assessment": "第82段区分正确值未知的缺失数据与零数据；本页只借用此数据定义，不迁移其调查估算方案。" },
+        { "kind": "audit_record", "status": "recorded_revision", "ref": "docs/audit/2026-09-27-metrics-hypothesis-card-review.md", "reviewedAt": "2026-09-27", "assessment": "记录本轮统一报告字段、合成示例以及假设/卡片逐条裁决。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "iteration", "sectionIds": ["before", "after"] },
+        { "kind": "article", "articleId": "prereg-manual", "sectionIds": ["common", "dict", "ledger"] },
+        { "kind": "article", "articleId": "decision-record", "sectionIds": ["column", "discipline"] },
+        { "kind": "article", "articleId": "hyp-l", "sectionIds": ["l1", "l2"] },
+        { "kind": "article", "articleId": "hyp-m", "sectionIds": ["rules"] },
+        { "kind": "article", "articleId": "gates", "sectionIds": ["topic", "probe"] },
+        { "kind": "article", "articleId": "lib-benchmark", "sectionIds": ["bm"] },
+        { "kind": "article", "articleId": "lib-platform", "sectionIds": ["ttblzh"], "cardIds": ["ZH-01"] },
+        { "kind": "protocol", "path": "docs/agent-knowledge/05-observation-and-system-learning.md" },
         { "kind": "skill", "path": "skills/topic-planning/SKILL.md" },
         { "kind": "skill", "path": "skills/content-retrospective/SKILL.md" }
       ]
@@ -43,7 +72,7 @@
         { "kind": "source_inventory", "status": "incomplete", "ref": "docs/g02-source-inventory.md", "reviewedAt": "2026-09-27", "assessment": "部分指标仅有二手线索，来源定位不等于样本或方法支持。" }
       ],
       "consumers": [
-        { "kind": "article", "articleId": "lib-benchmark", "sectionIds": ["bm"], "cardIds": ["BM-01至BM-05"] },
+        { "kind": "article", "articleId": "lib-benchmark", "sectionIds": ["bm"] },
         { "kind": "article", "articleId": "cards", "sectionIds": ["grading", "reading"] },
         { "kind": "article", "articleId": "expectation", "sectionIds": ["curves"] },
         { "kind": "article", "articleId": "xhs", "sectionIds": ["benchmarks"] },

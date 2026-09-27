@@ -10,3 +10,5 @@ registry.json 是主张与消费者的结构化索引。每条记录包含唯一
 
 
 TASK-10.15 的七平台状态矩阵与账号内人工核验步骤见 [平台复核报告](../audit/2026-09-27-platform-verification.md)。AI法律义务与登录态UI状态分为两个独立主张，不将公开公告推定为当前账号界面。
+
+TASK-10.17 的计数、比率、分位数、区间和缺失值报告口径登记为 `METHOD-METRIC-REPORTING-001`；其消费者及审计边界见 [指标、假设与卡库复核](../audit/2026-09-27-metrics-hypothesis-card-review.md)。
