@@ -11,7 +11,7 @@ export const researchArticlesB = [
     ]
   },
   {
-    id: 'hyp-l', title: '假设库 · L 层：校准元规则全量', short: 'L 层校准元规则', category: '研究底座', status: "首版勘误 · 待证据复核",
+    id: 'hyp-l', claimIds: ['METHOD-SAMPLE-GATES-001', 'ZHIHU-WILSON-SCOPE-001'], title: '假设库 · L 层：校准元规则全量', short: 'L 层校准元规则', category: '研究底座', status: "首版勘误 · 待证据复核",
     intro: 'L 层管体系自身：样本纪律、防自欺、分桶对标、现役核验。其中多条是制度性规则，直接固化执行。',
     sections: [
       section('l1', 'L1–L7：种子版', '<div class="table-scroll"><table><thead><tr><th>ID</th><th>假设陈述</th><th>验证方式</th></tr></thead><tbody><tr><td>L1</td><td>不按通用样本数、曝光数或天数自动过滤数据；分别登记零值、缺失和不确定性</td><td>样本与观察窗按问题设计，审计被排除数据的理由</td></tr><tr><td>L2</td><td>预注册-事后归因分离能防止自欺：未预注册的发布事后解释不可信</td><td>双盲抽查：预注册预测 vs 事后复盘结论的一致性差值</td></tr><tr><td>L3</td><td>五段归因顺序（曝光→点击→消费→藏→评）能定位绝大多数失败原因</td><td>归因命中率统计（归因结论被后续修正的比例）</td></tr><tr><td>L4</td><td>证据分级制迁移到流量判断有效：低证据级的流量预测必须降低置信度标注</td><td>审计低证据高置信断言的出现率</td></tr><tr><td>L5</td><td>五维分开验收（值得制作/愿意消费/愿意传播/形成信任/促成行动）防止用错指标</td><td>验收指标与意图声明的一致性审计</td></tr><tr><td>L6</td><td>三门结构与阈值本身有效：三门判定与栏目实际存活的相关性高于单维评分</td><td>五个存量栏目三门判定 vs 实际表现的回溯一致率</td></tr><tr><td>L7</td><td>复盘必写回（评论问题写回选题池）使选题质量随时间提升</td><td>写回率 vs 后续选题表现趋势</td></tr></tbody></table></div>'),
@@ -28,7 +28,7 @@ export const researchArticlesB = [
     ]
   },
   {
-    id: 'lib-platform', title: '经验卡库 · 平台机制卡（国内 I）', short: '平台机制卡 I', category: '研究底座', status: "首版勘误 · 待证据复核",
+    id: 'lib-platform', claimIds: ['XHS-COLDSTART-GATES-001', 'WECHAT-OPEN-RATE-BENCHMARKS-001', 'BILI-WINDOW-THRESHOLDS-001', 'ZHIHU-WILSON-SCOPE-001'], title: '经验卡库 · 平台机制卡（国内 I）', short: '平台机制卡 I', category: '研究底座', status: "首版勘误 · 待证据复核",
     intro: '第一辑平台机制卡：抖音、小红书、微信、头条、B站/知乎的分发与排序证据。总提醒：所有精确阈值类数字（流量池分级、完播晋级线、CES 公式）均为 C/D 级，只能生成假设，不得直接写入门禁。',
     sections: [
       section('douyin', '抖音三卡', "<ul><li><strong>DY-01：</strong>八级流量池和晋级数字属于未获官方证实的流传说法，不作基准。</li><li><strong>DY-02：</strong><a href=\"https://www.chanmama.com/yunyingquan/question/4338.html\">蝉妈妈运营圈问答</a>仅有单条匿名经验回答，无代表性样本和统计方法；原卡部分数字在该页也不存在。本页撤下统一完播率数字，不沿用旧B级标签。比较时按视频长度、品类和来源检查可比性。</li><li><strong>DY-03：</strong>开场权重和收藏核心等比例出处未定位，保持待核，不能转为平台规则。</li></ul>"),

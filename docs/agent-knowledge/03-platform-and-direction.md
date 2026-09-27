@@ -1,3 +1,8 @@
+---
+document_id: platform-and-direction
+claim_ids: [XHS-COLDSTART-GATES-001, XHS-ACCOUNT-COMMERCE-TERMS-001, XHS-PENALTY-SCORES-001, WECHAT-COMMERCE-TERMS-001, BILI-WINDOW-THRESHOLDS-001, TOUTIAO-FIRST-PUBLISH-72H-001, TOUTIAO-MULTIPLIERS-001]
+---
+
 # 平台与方向：Agent 工作协议
 
 适用的 `article_id`：`creative-type`、七个平台文章、`cross-mech`、`platform-contract`、`match`、`direction`、`vertical`、`vertical-methods`、`expectation`、`decide`、`topic`、`topic-gate`、`gates`。
@@ -11,8 +16,9 @@
 1. 明确当前要帮助创作者作出的一个决定，以及决定期限。资料收集不得脱离这个决定无限扩张。
 2. 读取创作者已确认的档案版本、候选方向和资源约束。将原话、可核证据、创作者解释、Agent 推断分别标记；缺失字段保持未知。
 3. 平台信息先回到文章中的原始来源与核验日期。变化中的功能、门槛、处罚、收入和产品入口必须重新查官方原文；无浏览或登录权限时明确说不能核验，并给出人工核验任务。
-4. 提议必须带依据、反例或未知、代价、下一项低成本验证。不得输出“最适合”“成功率”或伪精确总分。
-5. 方向由创作者决定。只有创作者确认的方向进入制作；Agent 不能替签、替发布或把暂定候选写成长期身份。
+4. 先查 `docs/claims/registry.json` 复用现有主张 ID。来源或适用条件变化时，按登记的消费者逐项同步文章、经验卡、协议和 skills；未知项保留未知，并运行 `npm run check`。
+5. 提议必须带依据、反例或未知、代价、下一项低成本验证。不得输出“最适合”“成功率”或伪精确总分。
+6. 方向由创作者决定。只有创作者确认的方向进入制作；Agent 不能替签、替发布或把暂定候选写成长期身份。
 
 ## 按文章 ID 执行
 

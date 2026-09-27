@@ -2,6 +2,7 @@
 name: publication-review
 description: 在已有稿件或成片、准备某个平台发布时使用。核对事实、素材权利、商业披露、AI 标识和平台差异，产出逐目标平台的发布交接单；本技能不执行发布。
 agent_created: true
+claim_ids: [XHS-ACCOUNT-COMMERCE-TERMS-001, XHS-PENALTY-SCORES-001, WECHAT-COMMERCE-TERMS-001, TOUTIAO-FIRST-PUBLISH-72H-001]
 ---
 
 # 发布前检查
@@ -26,7 +27,7 @@ node scripts/read-article.mjs compliance
 
 ## 工作步骤
 
-1. 锁定文件版本与目标平台，读取当前官方规则。把稿件具体位置与规则适用条件一一对应，不能拿总免责声明代替修正。
+1. 锁定文件版本与目标平台，查 docs/claims/registry.json 并读取适用 claim 的范围和状态，再读取当前官方规则。把稿件具体位置与规则适用条件一一对应，不能拿总免责声明代替修正。
 2. 分项检查事实、版权/肖像/隐私、资质、商业关系、AI标识、导流和首发/独家排期。相互冲突的权益不能同时承诺。
 3. 每项记录 pass、blocked、unknown 或 not-applicable，附证据与核验日。规则页面不可访问时写 unknown，并指明需人工查看的界面。
 4. 生成平台变体与发布包；存在 blocked/unknown 的关键项时停止外发建议。全部检查完成也只表示 ready-for-owner-review，由有权限的人决定发布。

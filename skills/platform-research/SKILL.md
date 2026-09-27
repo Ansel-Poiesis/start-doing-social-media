@@ -2,6 +2,7 @@
 name: platform-research
 description: 在比较自媒体平台、调查垂域、核对规则或识别观众场景时使用。输出逐主张有来源与日期的研究简报、候选和代价，不估算算法权重。
 agent_created: true
+claim_ids: [METHOD-SAMPLE-GATES-001, PLATFORM-BENCHMARKS-001, XHS-COLDSTART-GATES-001, XHS-ACCOUNT-COMMERCE-TERMS-001, XHS-PENALTY-SCORES-001, DOUYIN-COMPLETION-BENCHMARK-001, WECHAT-COMMERCE-TERMS-001, WECHAT-OPEN-RATE-BENCHMARKS-001, BILI-WINDOW-THRESHOLDS-001, BILI-RECOMMENDATION-FORMULA-001, BILI-PLAYTIME-METRIC-STATUS-001, ZHIHU-WILSON-SCOPE-001, TOUTIAO-FIRST-PUBLISH-72H-001, TOUTIAO-MULTIPLIERS-001]
 ---
 
 # 平台与垂域研究
@@ -27,7 +28,7 @@ node scripts/read-article.mjs platform
 ## 工作步骤
 
 1. 固定本轮决定、具体产品入口、受众场景、时点和研究预算。只读取候选平台文章；运行 read-article --list 查有效 ID。
-2. 建立 claim_id 账本，记录原文 URL、发布/核验日期、范围、支持片段与未知。费用、门槛、处罚和现役功能回官方原文复核。无法访问则写待核，不用搜索摘要代替。
+2. 先查 docs/claims/registry.json 复用已有 claim_id；建立账本并记录原文 URL、发布/核验日期、范围、支持片段与未知。费用、门槛、处罚和现役功能回官方原文复核。来源改变旧结论时按消费者清单修订所有关联页面与 skills 并运行 npm run check。无法访问则写待核，不用搜索摘要代替。
 3. 分开调查需求、供给、竞争、变现及规则。记录样本单位、获取方式、失败样本和来源独立性；便利样本不推总体，不用固定条数保证有效。
 4. 比较少量候选的支持证据、代价、反证和可行试作，不给适配总分。商业不是目标时注明变现不适用。方向交由创作者确认。
 

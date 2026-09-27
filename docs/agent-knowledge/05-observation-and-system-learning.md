@@ -1,3 +1,8 @@
+---
+document_id: observation-and-system-learning
+claim_ids: [METHOD-SAMPLE-GATES-001, PLATFORM-BENCHMARKS-001, DOUYIN-COMPLETION-BENCHMARK-001, BILI-WINDOW-THRESHOLDS-001, ZHIHU-WILSON-SCOPE-001]
+---
+
 # 观察、研究与系统维护：Agent 工作协议
 
 适用的 `article_id`：`evidence`、`iteration`、`competition`、`prereg-manual`、`decision-record`、`constitution`、`hypotheses`、`cards`、五层假设清单、六类经验卡、`mapping`、`governance`、`resources`、`about`。本组工作用于保存和校准判断，不得把一次发布的结果直接改成通用规则。
@@ -60,7 +65,7 @@
 
 ### `governance`：修订、限域、拆分或退役
 
-新证据进入时先确认事实源和生效范围；判断旧结论是更新、被反例限域、包含多个机制需拆分，还是已失效应退役。每次变更留旧文、差异、依据 ID、影响到的文章/卡/假设、审阅人和日期。执行防自欺检查：预注册与归因分离、同源去重、未知不补造、时间盒防空转。
+新证据进入时先确认事实源和生效范围；判断旧结论是更新、被反例限域、包含多个机制需拆分，还是已失效应退役。先查 `docs/claims/registry.json`，复用已有 claim_id 并按消费者清单更新文章、卡片、协议和 skills。每次变更留旧文、差异、依据 ID、影响到的文章/卡/假设、审阅人和日期；运行 `npm run check` 验证传播。执行防自欺检查：预注册与归因分离、同源去重、未知不补造、时间盒防空转。
 
 ### `resources`：处理资料缺口
 

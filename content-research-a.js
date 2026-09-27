@@ -14,7 +14,7 @@ export const researchArticlesA = [
     ]
   },
   {
-    id: 'hyp-m', title: '假设库 · M 层：机制断言全量', short: 'M 层机制断言', category: '研究底座', status: "首版勘误 · 待证据复核",
+    id: 'hyp-m', claimIds: ['METHOD-SAMPLE-GATES-001'], title: '假设库 · M 层：机制断言全量', short: 'M 层机制断言', category: '研究底座', status: "首版勘误 · 待证据复核",
     intro: 'M 层是跨平台、跨领域声称成立的因果断言——体系的地基。条目按提出顺序编号，出处与验证方式逐条登记。',
     sections: [
       section('rules', '使用规则', "<p>以下是待检验假设，不是执行命令或现行平台规则。每条应记录来源版本、适用范围、观测单位、替代解释与结果。重复转载、拆卡和派生不增加独立证据。</p><p>取消“5个同向样本自动验证”等通用升降级线。保留低曝光、零值与缺失并分别解释；样本量、观察窗和统计方法按具体问题制定。发现来源已撤回时，先修订所有引用它的条目。</p>"),
@@ -33,7 +33,7 @@ export const researchArticlesA = [
     ]
   },
   {
-    id: 'hyp-t', title: '假设库 · T 层：选题级规则全量', short: 'T 层选题规则', category: '研究底座', status: '16 条全部待验证',
+    id: 'hyp-t', claimIds: ['TOUTIAO-FIRST-PUBLISH-72H-001'], title: '假设库 · T 层：选题级规则全量', short: 'T 层选题规则', category: '研究底座', status: '16 条全部待验证',
     intro: 'T 层回答“做不做这一条”。其中 T14、T15 是制度性规则（条文核验确立，不适用流量验证）。',
     sections: [
       section('t1', 'T1–T7：种子版', '<div class="table-scroll"><table><thead><tr><th>ID</th><th>假设陈述</th><th>验证方式</th></tr></thead><tbody><tr><td>T1</td><td>读者画像 ≠ 产品用户画像：按“谁会被说服”（五型）立项优于按“谁会买”</td><td>两法立项稿件的评论相关度对比</td></tr><tr><td>T2</td><td>三类以上现实信号（平台/搜索/电商或行业）支撑的选题，表现稳定高于单信号选题</td><td>信号数 vs 表现分位的等级相关</td></tr><tr><td>T3</td><td>意图声明（预注册主指标）本身提升表现：被迫在赞/藏/评/转中选一，逼出更一致的内容设计</td><td>预注册批次 vs 未预注册历史批次的意图-指标一致率</td></tr><tr><td>T4</td><td>意图与首图契约不一致（如意图是藏、首图用审美契约）是可预测的失败</td><td>回溯已发布内容中不一致案例的实际表现</td></tr><tr><td>T5</td><td>可讲性（3 段讲清）+ 可控分歧 + 可转发理由，三者占其二以上的选题互动率更高</td><td>三维打分 vs 互动率的相关性</td></tr><tr><td>T6</td><td>风险不参与加分：R 类风险单独记录一票否决，不因其他维度高分而豁免</td><td>制度性规则，以“违规事故率”负向验证</td></tr><tr><td>T7</td><td>“为什么是现在”有答案的选题（时效钩子）在发布窗口内表现高于常青选题，但 7d 后衰减更快</td><td>时效 vs 常青选题的 24h/7d 表现曲线对比</td></tr></tbody></table></div>'),

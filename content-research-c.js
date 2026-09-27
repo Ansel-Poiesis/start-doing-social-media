@@ -13,7 +13,7 @@ export const researchArticlesC = [
     ]
   },
   {
-    id: 'lib-benchmark', title: '经验卡库 · 行业基准与创作者方法卡', short: '基准与方法卡', category: '研究底座', status: "首版勘误 · 待证据复核",
+    id: 'lib-benchmark', claimIds: ['PLATFORM-BENCHMARKS-001', 'XHS-COLDSTART-GATES-001', 'DOUYIN-COMPLETION-BENCHMARK-001'], title: '经验卡库 · 行业基准与创作者方法卡', short: '基准与方法卡', category: '研究底座', status: "首版勘误 · 待证据复核",
     intro: "记录指标口径、来源缺口与创作者方法。不同样本不拼接为统一成功线；自有数据也需考虑样本偏差和不确定性，不设满20篇自动优先的门槛。",
     sections: [
       section('bm', '基准卡（BM-01 至 BM-06）', "<p>旧BM-01至BM-05收录过打开率、完播率、爆文率与互动率数字，但多有来源、分母或代表性缺口。本页不将它们作为当前初值或成功线；DY-02/BM-02的匿名完播率来源尤其不能形成行业标准。</p><div class=\"table-scroll\"><table><thead><tr><th>记录对象</th><th>必要定义</th><th>使用限制</th></tr></thead><tbody><tr><td>打开/点击/观看</td><td>分子、分母、平台入口、观察窗</td><td>不同口径不拼接为区间</td></tr><tr><td>完播和时长</td><td>视频长度、品类、受众及来源</td><td>不设统一晋级线</td></tr><tr><td>爆文</td><td>事先定义指标、统计窗与样本范围</td><td>不以投放样本率推出自然内容健康线</td></tr><tr><td>互动</td><td>人数还是次数、是否可重复</td><td>不能默认符合二项分布</td></tr><tr><td>宏观背景</td><td>报告、图表位置、年份与单位</td><td>不能推导个人成功概率</td></tr></tbody></table></div>"),
@@ -21,7 +21,7 @@ export const researchArticlesC = [
     ]
   },
   {
-    id: 'lib-monetize', title: '经验卡库 · 机制 II 与变现卡', short: '机制与变现卡', category: '研究底座', status: "首版勘误 · 待证据复核",
+    id: 'lib-monetize', claimIds: ['XHS-ACCOUNT-COMMERCE-TERMS-001', 'WECHAT-COMMERCE-TERMS-001', 'BILI-WINDOW-THRESHOLDS-001', 'BILI-RECOMMENDATION-FORMULA-001', 'TOUTIAO-FIRST-PUBLISH-72H-001', 'TOUTIAO-MULTIPLIERS-001'], title: '经验卡库 · 机制 II 与变现卡', short: '机制与变现卡', category: '研究底座', status: "首版勘误 · 待证据复核",
     intro: "区分平台计划、商业订单和创作者经验。报价与收益必须带日期、计价单位和适用条件，不能由不同来源的数字推导通用平台收益排名。",
     sections: [
       section('mc', '变现行情总卡（MC-01）', "<p>原稿将不同计划、日期和分母的第三方报价拼成平台收入排名，不能支持同内容跨平台的收益倍数，现撤下统一价目表。</p><p>比较时逐条记录计划名称、自然/付费来源、计价单位、收入、税费、退款、制作与运营时间。判断以可比样本的净回报和创作者目标为依据。</p>"),

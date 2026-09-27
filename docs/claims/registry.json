@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-09-27",
+  "coverage": {
+    "status": "priority_batch",
+    "scope": "2026-09-27首发级勘误中的高风险平台规则、阈值与方法边界",
+    "complete": false
+  },
+  "claims": [
+    {
+      "id": "METHOD-SAMPLE-GATES-001",
+      "statement": "5个同向样本、1000次曝光或7天等数字不构成跨问题通用的有效性门槛；样本单位、观察窗和停止条件须由具体问题与设计确定。",
+      "status": "withdrawn_as_universal_rule",
+      "scope": "本站创作研究与复盘方法；不表示任意样本量都足以支持推断。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "audit_record", "status": "recorded_revision", "ref": "docs/audit/2026-09-27-core-fixes.md", "reviewedAt": "2026-09-27", "assessment": "记录撤销固定样本、曝光与天数升级线；不作为任何具体样本量选择的外部方法学证明。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "evidence", "sectionIds": ["limits"] },
+        { "kind": "article", "articleId": "hypotheses", "sectionIds": ["verify"] },
+        { "kind": "article", "articleId": "cards", "sectionIds": ["grading", "reading"] },
+        { "kind": "article", "articleId": "expectation", "sectionIds": ["curves"] },
+        { "kind": "article", "articleId": "prereg-manual", "sectionIds": ["common", "dict"] },
+        { "kind": "article", "articleId": "decision-record", "sectionIds": ["discipline"] },
+        { "kind": "article", "articleId": "constitution", "sectionIds": ["gates"] },
+        { "kind": "article", "articleId": "hyp-l", "sectionIds": ["l1", "l2"] },
+        { "kind": "article", "articleId": "hyp-m", "sectionIds": ["rules"] },
+        { "kind": "protocol", "path": "docs/agent-knowledge/05-observation-and-system-learning.md" },
+        { "kind": "skill", "path": "skills/platform-research/SKILL.md" },
+        { "kind": "skill", "path": "skills/topic-planning/SKILL.md" },
+        { "kind": "skill", "path": "skills/content-retrospective/SKILL.md" }
+      ]
+    },
+    {
+      "id": "PLATFORM-BENCHMARKS-001",
+      "statement": "历史行业打开率、完播率、爆文率、互动率和进入详情率数字缺少一致口径或代表性来源，不能作为平台统一成功线。",
+      "status": "withdrawn_as_universal_benchmark",
+      "scope": "跨平台经验卡与平台文章中的比较基准；每个样本必须保留平台、时期、账号、分母及观察窗。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "audit_record", "status": "recorded_revision", "ref": "docs/audit/2026-09-27-research-fixes.md", "reviewedAt": "2026-09-27", "assessment": "BM卡修订记录撤下缺代表性证据的10–15%进入详情合格线。" },
+        { "kind": "source_inventory", "status": "incomplete", "ref": "docs/g02-source-inventory.md", "reviewedAt": "2026-09-27", "assessment": "部分指标仅有二手线索，来源定位不等于样本或方法支持。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "lib-benchmark", "sectionIds": ["bm"], "cardIds": ["BM-01至BM-05"] },
+        { "kind": "article", "articleId": "cards", "sectionIds": ["grading", "reading"] },
+        { "kind": "article", "articleId": "expectation", "sectionIds": ["curves"] },
+        { "kind": "article", "articleId": "xhs", "sectionIds": ["benchmarks"] },
+        { "kind": "article", "articleId": "bilibili", "sectionIds": ["benchmarks"] },
+        { "kind": "protocol", "path": "docs/agent-knowledge/02-platform-reading.md" },
+        { "kind": "protocol", "path": "docs/agent-knowledge/05-observation-and-system-learning.md" },
+        { "kind": "skill", "path": "skills/platform-research/SKILL.md" },
+        { "kind": "skill", "path": "skills/content-retrospective/SKILL.md" }
+      ]
+    },
+    {
+      "id": "XHS-COLDSTART-GATES-001",
+      "statement": "小红书固定200–500初始曝光池、互动率5%晋级线及固定存活天数未获本轮可复核的代表性证据，不作现行分发规则。",
+      "status": "withdrawn_unverified_thresholds",
+      "scope": "小红书自然分发与作品观察；不否认平台存在未公开的排序系统。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "audit_record", "status": "recorded_revision", "ref": "docs/audit/2026-09-27-research-fixes.md", "reviewedAt": "2026-09-27", "assessment": "timeline修订撤回初始池、互动等级与固定生命周期。" },
+        { "kind": "official_source", "status": "not_located", "ref": "docs/g02-source-inventory.md", "reviewedAt": "2026-09-27", "assessment": "本轮未定位能支持这些通用阈值的现行官方原文。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "xhs", "sectionIds": ["timeline", "coldstart", "benchmarks", "checklist"] },
+        { "kind": "article", "articleId": "match", "sectionIds": ["matrix", "patterns"] },
+        { "kind": "article", "articleId": "lib-platform", "sectionIds": ["xhs"], "cardIds": ["XHS-03"] },
+        { "kind": "article", "articleId": "lib-benchmark", "sectionIds": ["bm"] },
+        { "kind": "protocol", "path": "docs/agent-knowledge/02-platform-reading.md" },
+        { "kind": "protocol", "path": "docs/agent-knowledge/03-platform-and-direction.md" },
+        { "kind": "skill", "path": "skills/platform-research/SKILL.md" }
+      ]
+    },
+    {
+      "id": "XHS-ACCOUNT-COMMERCE-TERMS-001",
+      "statement": "小红书专业号、投放、店铺、买手与报价的旧门槛和价目表缺少可复核的现行官方依据，不作当前资格或成本承诺。",
+      "status": "withdrawn_unverified_terms",
+      "scope": "小红书账号功能、电商与商业合作；具体资格和费用以当前账号页及对应官方规则为准。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "audit_record", "status": "recorded_revision", "ref": "docs/audit/2026-09-27-research-fixes.md", "reviewedAt": "2026-09-27", "assessment": "修订撤回未核的粉丝门槛、年费、投放起充与成本数字。" },
+        { "kind": "official_source", "status": "not_located", "ref": "docs/g02-source-inventory.md", "reviewedAt": "2026-09-27", "assessment": "未登记到逐项支持旧费率及准入条件的现行官方页面。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "xhs", "sectionIds": ["account", "ecommerce", "pricing", "publishing"] },
+        { "kind": "article", "articleId": "lib-monetize", "sectionIds": ["mc"] },
+        { "kind": "protocol", "path": "docs/agent-knowledge/02-platform-reading.md" },
+        { "kind": "protocol", "path": "docs/agent-knowledge/03-platform-and-direction.md" },
+        { "kind": "protocol", "path": "docs/agent-knowledge/04-production-and-compliance.md" },
+        { "kind": "skill", "path": "skills/platform-research/SKILL.md" },
+        { "kind": "skill", "path": "skills/publication-review/SKILL.md" }
+      ]
+    },
+    {
+      "id": "XHS-PENALTY-SCORES-001",
+      "statement": "小红书旧稿列出的创作者信誉分、品牌违规分和广告积分阈值未在本轮取得现行原文，不能合并成一张通用处罚表。",
+      "status": "withdrawn_unverified_penalties",
+      "scope": "小红书创作者、品牌与广告投放规则；按主体、规则版本和具体作品分别核验。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "audit_record", "status": "recorded_revision", "ref": "docs/audit/2026-09-27-research-fixes.md", "reviewedAt": "2026-09-27", "assessment": "rules修订明确移除未核处罚分数与品牌记分结论。" },
+        { "kind": "official_source", "status": "not_located", "ref": "docs/g02-source-inventory.md", "reviewedAt": "2026-09-27", "assessment": "未定位能支持原表所有主体、版本和处罚条件的现行官方来源。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "xhs", "sectionIds": ["rules", "governance", "checklist"] },
+        { "kind": "protocol", "path": "docs/agent-knowledge/02-platform-reading.md" },
+        { "kind": "protocol", "path": "docs/agent-knowledge/03-platform-and-direction.md" },
+        { "kind": "protocol", "path": "docs/agent-knowledge/04-production-and-compliance.md" },
+        { "kind": "skill", "path": "skills/platform-research/SKILL.md" },
+        { "kind": "skill", "path": "skills/publication-review/SKILL.md" }
+      ]
+    },
+    {
+      "id": "DOUYIN-COMPLETION-BENCHMARK-001",
+      "statement": "抖音匿名答复中的完播数字没有样本与方法说明，不能支持平台通用完播率门槛。",
+      "status": "withdrawn_insufficient_source",
+      "scope": "抖音完播率比较；数字只能作为未核线索，不用于选题或分发晋级。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "secondary_source", "status": "located_but_insufficient", "url": "https://www.chanmama.com/yunyingquan/question/4338.html", "title": "蝉妈妈运营圈答复", "sourceDate": "2026-01-15", "reviewedAt": "2026-09-27", "assessment": "页面仅有单个匿名答复且无样本/方法披露；可定位不等于支持通用阈值。" },
+        { "kind": "audit_record", "status": "recorded_revision", "ref": "docs/g02-source-inventory.md", "reviewedAt": "2026-09-27", "assessment": "G02来源盘点将该材料列为不足以建立行业基准的线索。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "douyin", "sectionIds": ["benchmarks", "horses"] },
+        { "kind": "article", "articleId": "lib-benchmark", "sectionIds": ["bm"], "cardIds": ["DY-02"] },
+        { "kind": "protocol", "path": "docs/agent-knowledge/02-platform-reading.md" },
+        { "kind": "protocol", "path": "docs/agent-knowledge/05-observation-and-system-learning.md" },
+        { "kind": "skill", "path": "skills/platform-research/SKILL.md" },
+        { "kind": "skill", "path": "skills/content-retrospective/SKILL.md" }
+      ]
+    },
+    {
+      "id": "WECHAT-COMMERCE-TERMS-001",
+      "statement": "视频号与微信小店旧稿中的类目保证金、优惠交易额度、带货资格及流量/分成门槛未取得本轮可复核的现行原文，不作当前承诺。",
+      "status": "withdrawn_unverified_terms",
+      "scope": "微信生态交易与创作权益；公众号、视频号、小店及具体类目分别核验。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "audit_record", "status": "recorded_revision", "ref": "docs/audit/2026-09-27-research-fixes.md", "reviewedAt": "2026-09-27", "assessment": "ecommerce修订撤回统一类目数、交易优惠、返流量比例、达人保证金和创作分成门槛。" },
+        { "kind": "official_source", "status": "not_located", "ref": "docs/g02-source-inventory.md", "reviewedAt": "2026-09-27", "assessment": "未在本批登记到逐项支持这些数字的现行官方规则页面。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "wechat", "sectionIds": ["ecommerce", "ads", "paywall", "limits"] },
+        { "kind": "article", "articleId": "lib-monetize", "sectionIds": ["blwx"], "cardIds": ["WX-06"] },
+        { "kind": "protocol", "path": "docs/agent-knowledge/02-platform-reading.md" },
+        { "kind": "protocol", "path": "docs/agent-knowledge/03-platform-and-direction.md" },
+        { "kind": "protocol", "path": "docs/agent-knowledge/04-production-and-compliance.md" },
+        { "kind": "skill", "path": "skills/platform-research/SKILL.md" },
+        { "kind": "skill", "path": "skills/publication-review/SKILL.md" }
+      ]
+    },
+    {
+      "id": "WECHAT-OPEN-RATE-BENCHMARKS-001",
+      "statement": "不同年份和来源中的公众号打开率样本不可拼成0.9%–3%的现行统一区间，也不能据此计算未核实的跨年跌幅。",
+      "status": "narrowed_source_scope",
+      "scope": "公众号特定报告中的样本统计；保留报告日期、样本与中位数/均值定义。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "audit_record", "status": "recorded_revision", "ref": "docs/audit/2026-09-27-research-fixes.md", "reviewedAt": "2026-09-27", "assessment": "打开率修订将2019特定样本与未完整定位的2025二手数字分开。" },
+        { "kind": "source_inventory", "status": "incomplete", "ref": "docs/g02-source-inventory.md", "reviewedAt": "2026-09-27", "assessment": "报告底层样本与方法尚未全部定位。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "wechat", "sectionIds": ["open"] },
+        { "kind": "article", "articleId": "lib-platform", "sectionIds": ["wechat"], "cardIds": ["WX-02"] },
+        { "kind": "protocol", "path": "docs/agent-knowledge/02-platform-reading.md" },
+        { "kind": "skill", "path": "skills/platform-research/SKILL.md" }
+      ]
+    },
+    {
+      "id": "BILI-WINDOW-THRESHOLDS-001",
+      "statement": "B站统一48小时晋级、7天定型及限流后永久失去长尾资格的说法没有现行官方依据，已撤回为观察假设。",
+      "status": "withdrawn_unverified_thresholds",
+      "scope": "B站作品推荐、搜索与长尾观察；按作品状态、内容和实际可见数据确定观察窗。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "audit_record", "status": "recorded_revision", "ref": "docs/audit/2026-09-27-research-fixes.md", "reviewedAt": "2026-09-27", "assessment": "正文撤回48小时、7天与永久失去资格的结论。" },
+        { "kind": "official_source", "status": "not_located", "ref": "docs/audit/2026-09-27-research-fixes.md", "reviewedAt": "2026-09-27", "assessment": "BL-01卡同步撤回固定晋级窗，未定位当前官方阈值。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "bilibili", "sectionIds": ["lifecycle", "benchmarks", "gov"] },
+        { "kind": "article", "articleId": "lib-platform", "sectionIds": ["ttblzh"], "cardIds": ["BL-01"] },
+        { "kind": "article", "articleId": "lib-monetize", "sectionIds": ["blwx"], "cardIds": ["BL-03"] },
+        { "kind": "protocol", "path": "docs/agent-knowledge/02-platform-reading.md" },
+        { "kind": "protocol", "path": "docs/agent-knowledge/03-platform-and-direction.md" },
+        { "kind": "protocol", "path": "docs/agent-knowledge/05-observation-and-system-learning.md" },
+        { "kind": "skill", "path": "skills/platform-research/SKILL.md" },
+        { "kind": "skill", "path": "skills/content-retrospective/SKILL.md" }
+      ]
+    },
+    {
+      "id": "BILI-RECOMMENDATION-FORMULA-001",
+      "statement": "B站0.3法则与互动权重系数属于未获官方确认且缺少可复现样本的历史第三方说法，不是当前推荐公式。",
+      "status": "historical_secondary_unverified",
+      "scope": "B站推荐权重和播放量反推；仅可作为待核历史说法，不可用于诊断或倒推流量。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "audit_record", "status": "recorded_revision", "ref": "docs/audit/2026-09-27-research-fixes.md", "reviewedAt": "2026-09-27", "assessment": "修订记录保留历史归因并撤回当前权重公式。" },
+        { "kind": "secondary_source", "status": "method_not_reproduced", "ref": "docs/audit/2026-09-27-research-fixes.md", "reviewedAt": "2026-09-27", "assessment": "原稿所引第三方逆向无公开可复现样本支撑当前系数。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "bilibili", "sectionIds": ["position", "rule03"] },
+        { "kind": "article", "articleId": "lib-monetize", "sectionIds": ["blwx"], "cardIds": ["BL-02"] },
+        { "kind": "protocol", "path": "docs/agent-knowledge/02-platform-reading.md" },
+        { "kind": "skill", "path": "skills/platform-research/SKILL.md" }
+      ]
+    },
+    {
+      "id": "BILI-PLAYTIME-METRIC-STATUS-001",
+      "statement": "播放时长外显计划的取消目前只有媒体引述，未定位负责人原帖；不能宣称已核验所有端的现行指标展示。",
+      "status": "secondary_source_only_current_ui_unresolved",
+      "scope": "B站播放页和创作中心的当前指标展示；需按设备、账号和日期实测。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "media_report", "status": "secondary_source_only", "url": "https://www.huxiu.com/moment/983925.html", "title": "虎嗅对播放时长外显调整的记录", "sourceDate": "2024-05-23", "reviewedAt": "2026-09-27", "assessment": "媒体引述B站负责人称取消外显改版；负责人原帖未定位。" },
+        { "kind": "audit_record", "status": "recorded_limitation", "ref": "docs/audit/2026-09-27-research-fixes.md", "reviewedAt": "2026-09-27", "assessment": "正文明确撤回全面实行断言并保留界面现状未核。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "bilibili", "sectionIds": ["metrics", "position"] },
+        { "kind": "protocol", "path": "docs/agent-knowledge/02-platform-reading.md" },
+        { "kind": "skill", "path": "skills/platform-research/SKILL.md" }
+      ]
+    },
+    {
+      "id": "ZHIHU-WILSON-SCOPE-001",
+      "statement": "Wilson区间针对满足相应模型条件的二项比例，不是分位数区间，也不自动适用于任意重复互动次数比。",
+      "status": "scope_limited_supported",
+      "scope": "知乎历史排序说法与本站比例估计方法；统计单位、成功定义与依赖结构须先明确。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "primary_method_reference", "status": "supports_limited_scope", "url": "https://itl.nist.gov/div898/handbook/prc/section2/prc241.htm", "title": "NIST/SEMATECH e-Handbook: Confidence intervals", "reviewedAt": "2026-09-27", "assessment": "NIST将Wilson方法说明为比例的置信区间方法；本站收窄其用途，不声称NIST验证知乎采用该排序算法。" },
+        { "kind": "audit_record", "status": "recorded_revision", "ref": "docs/audit/2026-09-27-research-fixes.md", "reviewedAt": "2026-09-27", "assessment": "卡片更正Wilson范围及知乎历史排序材料边界。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "zhihu", "sectionIds": ["wilson"] },
+        { "kind": "article", "articleId": "lib-platform", "sectionIds": ["ttblzh"], "cardIds": ["ZH-01"] },
+        { "kind": "article", "articleId": "hyp-l", "sectionIds": ["l2"] },
+        { "kind": "protocol", "path": "docs/agent-knowledge/02-platform-reading.md" },
+        { "kind": "protocol", "path": "docs/agent-knowledge/05-observation-and-system-learning.md" },
+        { "kind": "skill", "path": "skills/platform-research/SKILL.md" },
+        { "kind": "skill", "path": "skills/content-retrospective/SKILL.md" }
+      ]
+    },
+    {
+      "id": "TOUTIAO-FIRST-PUBLISH-72H-001",
+      "statement": "头条首发激励要求作品先在头条发布，并在此后72小时内不在其他平台发布；公众号原创声明须独立判断。",
+      "status": "verified_as_of_review_limited_to_program",
+      "scope": "头条首发激励计划页面所列条件；不自动适用于其他头条功能、微信原创或其他账号资格。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "official_source", "status": "supports_limited_scope", "url": "https://baike.toutiao.com/detail/242/566/0?enter_from=search", "title": "头条创作者帮助中心：首发激励计划", "sourceDate": "2026-05-25", "reviewedAt": "2026-09-27", "assessment": "页面要求首发在头条且其后72小时未在其他平台发布；另有账号及内容条件。" },
+        { "kind": "audit_record", "status": "recorded_revision", "ref": "docs/audit/2026-09-27-research-fixes.md", "reviewedAt": "2026-09-27", "assessment": "微信生态文章已把两条路线改为互斥，并将微信原创与头条首发分开。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "wechat", "sectionIds": ["schedule"] },
+        { "kind": "article", "articleId": "toutiao", "sectionIds": ["first", "schedule", "checklist"] },
+        { "kind": "article", "articleId": "match", "sectionIds": ["patterns", "combine"] },
+        { "kind": "article", "articleId": "hyp-t", "sectionIds": ["t2"] },
+        { "kind": "article", "articleId": "compliance-diff", "sectionIds": ["matrix"] },
+        { "kind": "article", "articleId": "lib-monetize", "sectionIds": ["blwx"], "cardIds": ["WX-07"] },
+        { "kind": "protocol", "path": "docs/agent-knowledge/02-platform-reading.md" },
+        { "kind": "protocol", "path": "docs/agent-knowledge/03-platform-and-direction.md" },
+        { "kind": "protocol", "path": "docs/agent-knowledge/04-production-and-compliance.md" },
+        { "kind": "skill", "path": "skills/platform-research/SKILL.md" },
+        { "kind": "skill", "path": "skills/publication-review/SKILL.md" }
+      ]
+    },
+    {
+      "id": "TOUTIAO-MULTIPLIERS-001",
+      "statement": "头条不同年份、功能与激励计划的收益乘数不能拼成统一公式；本批官方来源仅支持所列首发计划条件内的最高5倍补贴。",
+      "status": "narrowed_to_current_program_source",
+      "scope": "头条首发激励；补贴动态调整且受内容质量和计划资格影响，不是收益保证。",
+      "reviewedAt": "2026-09-27",
+      "sources": [
+        { "kind": "official_source", "status": "supports_limited_scope", "url": "https://baike.toutiao.com/detail/242/566/0?enter_from=search", "title": "头条创作者帮助中心：首发激励计划", "sourceDate": "2026-05-25", "reviewedAt": "2026-09-27", "assessment": "页面称符合激励条件的首发作品有机会获得最高5倍补贴；没有支持其他历史乘数合并。" },
+        { "kind": "audit_record", "status": "recorded_revision", "ref": "docs/audit/2026-09-27-research-fixes.md", "reviewedAt": "2026-09-27", "assessment": "头条画像与变现卡已移除把不同机制相乘的全局收益公式。" }
+      ],
+      "consumers": [
+        { "kind": "article", "articleId": "toutiao", "sectionIds": ["price", "formula", "position", "growth"] },
+        { "kind": "article", "articleId": "cross-mech", "sectionIds": ["fanpremium"] },
+        { "kind": "article", "articleId": "lib-monetize", "sectionIds": ["tt"] },
+        { "kind": "protocol", "path": "docs/agent-knowledge/02-platform-reading.md" },
+        { "kind": "protocol", "path": "docs/agent-knowledge/03-platform-and-direction.md" },
+        { "kind": "skill", "path": "skills/platform-research/SKILL.md" }
+      ]
+    }
+  ]
+}
